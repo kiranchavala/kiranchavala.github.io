@@ -28,7 +28,7 @@ twitter_username: kiranchavala
 github_username:  kiranchavala
 
 # Build settings
-theme: minima
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
