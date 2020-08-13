@@ -1,4 +1,4 @@
-baseurl = "https://kiranchavala.in/"
+baseurl = "kiranchavala.github.io"
 languageCode = "en-us"
 title = "Kiran Chavala Tech Notes"
 theme = "hugo-future-imperfect"
