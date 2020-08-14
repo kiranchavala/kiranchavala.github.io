@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kiran Chavala Tech Notes</title>
+    <link>kiranchavala.github.io/tags/</link>
+    <description>Recent content in Tags on Kiran Chavala Tech Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Aug 2020 12:35:09 +0530</lastBuildDate>
+    
+	<atom:link href="kiranchavala.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Os</title>
+      <link>kiranchavala.github.io/tags/os/</link>
+      <pubDate>Fri, 14 Aug 2020 12:35:09 +0530</pubDate>
+      
+      <guid>kiranchavala.github.io/tags/os/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
