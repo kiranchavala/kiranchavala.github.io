@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Kiran Chavala Tech Notes</title>
-    <link>kiranchavala.in/blog/</link>
+    <link>/blog/</link>
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 14 Aug 2020 12:43:02 +0530</lastBuildDate>
     
-	<atom:link href="kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using Jekyll</title>
-      <link>kiranchavala.in/blog/using-jekyll/</link>
+      <link>/blog/using-jekyll/</link>
       <pubDate>Fri, 14 Aug 2020 12:43:02 +0530</pubDate>
       
-      <guid>kiranchavala.in/blog/using-jekyll/</guid>
+      <guid>/blog/using-jekyll/</guid>
       <description>Jekyll is popular static site generator
 The steps are here
 https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d</description>
@@ -24,20 +24,20 @@ https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d</descripti
     
     <item>
       <title>Using tmux</title>
-      <link>kiranchavala.in/blog/using-tmux/</link>
+      <link>/blog/using-tmux/</link>
       <pubDate>Fri, 14 Aug 2020 12:35:09 +0530</pubDate>
       
-      <guid>kiranchavala.in/blog/using-tmux/</guid>
+      <guid>/blog/using-tmux/</guid>
       <description>If you want to execute the same command across different server
 https://github.com/tmux/tmux/wiki</description>
     </item>
     
     <item>
       <title>Disable ipv6 in centos 7</title>
-      <link>kiranchavala.in/blog/disable-ipv6-in-centos-7/</link>
+      <link>/blog/disable-ipv6-in-centos-7/</link>
       <pubDate>Thu, 13 Aug 2020 22:55:43 +0530</pubDate>
       
-      <guid>kiranchavala.in/blog/disable-ipv6-in-centos-7/</guid>
+      <guid>/blog/disable-ipv6-in-centos-7/</guid>
       <description>To verify if IPv6 is enabled or not, execute
 ifconfig -a | grep inet6
 inet6 fe80::211:aff:fe6a:9de4 prefixlen 64 scopeid 0x20
