@@ -3,77 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/</loc>
+    <loc>https://kiranchavala.in/blog/</loc>
     <lastmod>2020-08-14T19:39:56+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://kiranchavala.in/</loc>
     <lastmod>2020-08-14T19:39:56+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/blog/test/</loc>
+    <loc>https://kiranchavala.in/blog/test/</loc>
     <lastmod>2020-08-14T19:39:56+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://kiranchavala.in/categories/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/tags/sw/</loc>
+    <loc>https://kiranchavala.in/tags/sw/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/categories/sw/</loc>
+    <loc>https://kiranchavala.in/categories/sw/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/blog/using-jekyll/</loc>
+    <loc>https://kiranchavala.in/blog/using-jekyll/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/categories/mac/</loc>
+    <loc>https://kiranchavala.in/categories/mac/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/tags/os/</loc>
+    <loc>https://kiranchavala.in/tags/os/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/blog/using-tmux/</loc>
+    <loc>https://kiranchavala.in/blog/using-tmux/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/categories/centos/</loc>
+    <loc>https://kiranchavala.in/categories/centos/</loc>
     <lastmod>2020-08-13T22:55:43+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/blog/disable-ipv6-in-centos-7/</loc>
+    <loc>https://kiranchavala.in/blog/disable-ipv6-in-centos-7/</loc>
     <lastmod>2020-08-13T22:55:43+05:30</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://kiranchavala.in/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>https://kiranchavala.in/contact/</loc>
     <priority>0</priority>
   </url>
   
