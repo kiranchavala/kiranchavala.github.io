@@ -1,4 +1,10 @@
 [{
+    "title": "Test",
+    "date": "",
+    "description": "",
+    "body": "",
+    "ref": "/blog/test/"
+  },{
     "title": "Using Jekyll",
     "date": "",
     "description": "",
