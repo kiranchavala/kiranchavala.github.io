@@ -2,30 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Kiran Chavala Tech Notes</title>
-    <link>kiranchavala.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Aug 2020 12:35:09 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2020 12:43:02 +0530</lastBuildDate>
     
-	<atom:link href="kiranchavala.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>SW</title>
+      <link>/categories/sw/</link>
+      <pubDate>Fri, 14 Aug 2020 12:43:02 +0530</pubDate>
+      
+      <guid>/categories/sw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>MAC</title>
-      <link>kiranchavala.github.io/categories/mac/</link>
+      <link>/categories/mac/</link>
       <pubDate>Fri, 14 Aug 2020 12:35:09 +0530</pubDate>
       
-      <guid>kiranchavala.github.io/categories/mac/</guid>
+      <guid>/categories/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Centos</title>
-      <link>kiranchavala.github.io/categories/centos/</link>
+      <link>/categories/centos/</link>
       <pubDate>Thu, 13 Aug 2020 22:55:43 +0530</pubDate>
       
-      <guid>kiranchavala.github.io/categories/centos/</guid>
+      <guid>/categories/centos/</guid>
       <description></description>
     </item>
     

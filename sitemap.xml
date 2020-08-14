@@ -3,62 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>kiranchavala.github.io/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/</loc>
+    <loc>/categories/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/blog/usingjekyll/</loc>
+    <loc>/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/categories/</loc>
+    <loc>/tags/sw/</loc>
+    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/sw/</loc>
+    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/using-jekyll/</loc>
+    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/mac/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/categories/mac/</loc>
+    <loc>/tags/os/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/tags/os/</loc>
+    <loc>/blog/using-tmux/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/tags/</loc>
-    <lastmod>2020-08-14T12:35:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>kiranchavala.github.io/blog/usingtmux/</loc>
-    <lastmod>2020-08-14T12:35:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>kiranchavala.github.io/categories/centos/</loc>
+    <loc>/categories/centos/</loc>
     <lastmod>2020-08-13T22:55:43+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/blog/disable-ipv6-in-centos-7/</loc>
+    <loc>/blog/disable-ipv6-in-centos-7/</loc>
     <lastmod>2020-08-13T22:55:43+05:30</lastmod>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/about/</loc>
+    <loc>/about/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>kiranchavala.github.io/contact/</loc>
+    <loc>/contact/</loc>
     <priority>0</priority>
   </url>
   

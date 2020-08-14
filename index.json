@@ -1,31 +1,31 @@
 [{
-    "title": "Usingjekyll",
+    "title": "Using Jekyll",
     "date": "",
     "description": "",
     "body": "Jekyll is popular static site generator\nThe steps are here\nhttps://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d\n",
-    "ref": "kiranchavala.github.io/blog/usingjekyll/"
+    "ref": "/blog/using-jekyll/"
   },{
-    "title": "Usingtmux",
+    "title": "Using tmux",
     "date": "",
     "description": "",
     "body": "If you want to execute the same command across different server\nhttps://github.com/tmux/tmux/wiki\n",
-    "ref": "kiranchavala.github.io/blog/usingtmux/"
+    "ref": "/blog/using-tmux/"
   },{
     "title": "Disable ipv6 in centos 7",
     "date": "",
     "description": "",
     "body": "  To verify if IPv6 is enabled or not, execute\nifconfig -a | grep inet6\ninet6 fe80::211:aff:fe6a:9de4 prefixlen 64 scopeid 0x20\ninet6 ::1 prefixlen 128 scopeid 0x10[host]\n  Disable Ipv6 in kernel module (requires reboot)\n  Edit /etc/default/grub\nadd ipv6.disable=1 in line GRUB_CMDLINE_LINUX, e.g\ncat /etc/default/grub GRUB_TIMEOUT=5 GRUB_DEFAULT=saved GRUB_DISABLE_SUBMENU=true GRUB_TERMINAL_OUTPUT=\u0026quot;console\u0026quot; GRUB_CMDLINE_LINUX=\u0026quot;ipv6.disable=1 crashkernel=auto rhgb quiet\u0026quot; GRUB_DISABLE_RECOVERY=\u0026quot;true\u0026quot;   Regenerate a GRUB configuration file and overwrite existing one\ngrub2-mkconfig -o /boot/grub2/grub.cfg\n  Restart system and verify no line “inet6” in “ip addr show” command output\nshutdown -r now\n  ",
-    "ref": "kiranchavala.github.io/blog/disable-ipv6-in-centos-7/"
+    "ref": "/blog/disable-ipv6-in-centos-7/"
   },{
     "title": "",
     "date": "",
     "description": "",
     "body": "I am a Software Engineer at Persistent Systems, working on Cloud Stack Orchestration and various tech related to Cloud Infra, container technology like Docker, Kubernetes\n",
-    "ref": "kiranchavala.github.io/about/"
+    "ref": "/about/"
   },{
     "title": "",
     "date": "",
     "description": "",
     "body": "You can reach me\nEmail kiranchavala@gmail.com\nTwitter @kiranchavala\n",
-    "ref": "kiranchavala.github.io/contact/"
+    "ref": "/contact/"
   }]
