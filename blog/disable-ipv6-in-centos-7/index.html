@@ -62,7 +62,27 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-<link rel="stylesheet" href="/css/bundle.min.95af48655a6984dec0953d6a7263749c675813d10ff526c51ad510d65f3d4f8b.css" integrity="sha256-la9IZVpphN7AlT1qcmN0nGdYE9EP9SbFGtUQ1l89T4s="><link rel="stylesheet" href="/css/add-on.css">
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kiranchavala" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a><link rel="stylesheet" href="/css/bundle.min.95af48655a6984dec0953d6a7263749c675813d10ff526c51ad510d65f3d4f8b.css" integrity="sha256-la9IZVpphN7AlT1qcmN0nGdYE9EP9SbFGtUQ1l89T4s="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
