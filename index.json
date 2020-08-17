@@ -2,13 +2,13 @@
     "title": "Using Jekyll",
     "date": "",
     "description": "",
-    "body": "Jekyll is popular static site generator\nThe steps are here\nhttps://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d\n",
+    "body": "Jekyll is popular static site generator\nThe steps are here\nhttps://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d\n Youtube references\nMike Dane\u0026rsquo;s Playlist\n  Bill Raymond\n    Steve Francia   ",
     "ref": "/blog/using-jekyll/"
   },{
     "title": "Using tmux",
     "date": "",
     "description": "",
-    "body": "If you want to execute the same command across different server\nhttps://github.com/tmux/tmux/wiki\n",
+    "body": "If you want to execute the same command across different server\nhttps://github.com/tmux/tmux/wiki\n  ",
     "ref": "/blog/using-tmux/"
   },{
     "title": "Disable ipv6 in centos 7",
