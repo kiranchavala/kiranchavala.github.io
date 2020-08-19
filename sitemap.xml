@@ -4,17 +4,37 @@
   
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/blog/installing-kubernetes-via-kubeadm/</loc>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://kiranchavala.in/</loc>
-    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/kubernetes/</loc>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/categories/kubernetes/</loc>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2020-08-19T17:10:09+05:30</lastmod>
   </url>
   
   <url>
@@ -24,11 +44,6 @@
   
   <url>
     <loc>https://kiranchavala.in/categories/sw/</loc>
-    <lastmod>2020-08-14T12:43:02+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
   </url>
   

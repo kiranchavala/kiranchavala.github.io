@@ -1,4 +1,10 @@
 [{
+    "title": "Installing kubernetes via kubeadm",
+    "date": "",
+    "description": "",
+    "body": "The steps are here\nhttps://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051\n ",
+    "ref": "/blog/installing-kubernetes-via-kubeadm/"
+  },{
     "title": "Using Jekyll",
     "date": "",
     "description": "",

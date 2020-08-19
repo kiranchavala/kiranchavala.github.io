@@ -6,10 +6,21 @@
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Aug 2020 12:43:02 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 17:10:09 +0530</lastBuildDate>
     
 	<atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing kubernetes via kubeadm</title>
+      <link>https://kiranchavala.in/blog/installing-kubernetes-via-kubeadm/</link>
+      <pubDate>Wed, 19 Aug 2020 17:10:09 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/installing-kubernetes-via-kubeadm/</guid>
+      <description>The steps are here
+https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051
+ </description>
+    </item>
     
     <item>
       <title>Using Jekyll</title>

@@ -2,46 +2,34 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Using Jekyll - Kiran Chavala Tech Notes</title>
+<title>Installing kubernetes via kubeadm - Kiran Chavala Tech Notes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.74.3" /><meta itemprop="name" content="Using Jekyll">
-<meta itemprop="description" content="Jekyll is popular static site generator
-The steps are here
-https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d
- Youtube references
-Mike Dane&rsquo;s Playlist
-  Bill Raymond
-  ">
-<meta itemprop="datePublished" content="2020-08-14T12:43:02+05:30" />
-<meta itemprop="dateModified" content="2020-08-14T12:43:02+05:30" />
-<meta itemprop="wordCount" content="18">
+<meta name="generator" content="Hugo 0.74.3" /><meta itemprop="name" content="Installing kubernetes via kubeadm">
+<meta itemprop="description" content="The steps are here
+https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051
+ ">
+<meta itemprop="datePublished" content="2020-08-19T17:10:09+05:30" />
+<meta itemprop="dateModified" content="2020-08-19T17:10:09+05:30" />
+<meta itemprop="wordCount" content="5">
 
 
 
-<meta itemprop="keywords" content="SW," />
-<meta property="og:title" content="Using Jekyll" />
-<meta property="og:description" content="Jekyll is popular static site generator
-The steps are here
-https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d
- Youtube references
-Mike Dane&rsquo;s Playlist
-  Bill Raymond
-  " />
+<meta itemprop="keywords" content="kubernetes," />
+<meta property="og:title" content="Installing kubernetes via kubeadm" />
+<meta property="og:description" content="The steps are here
+https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051
+ " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kiranchavala.in/blog/using-jekyll/" />
-<meta property="article:published_time" content="2020-08-14T12:43:02+05:30" />
-<meta property="article:modified_time" content="2020-08-14T12:43:02+05:30" />
+<meta property="og:url" content="https://kiranchavala.in/blog/installing-kubernetes-via-kubeadm/" />
+<meta property="article:published_time" content="2020-08-19T17:10:09+05:30" />
+<meta property="article:modified_time" content="2020-08-19T17:10:09+05:30" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Using Jekyll"/>
-<meta name="twitter:description" content="Jekyll is popular static site generator
-The steps are here
-https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d
- Youtube references
-Mike Dane&rsquo;s Playlist
-  Bill Raymond
-  "/>
+<meta name="twitter:title" content="Installing kubernetes via kubeadm"/>
+<meta name="twitter:description" content="The steps are here
+https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051
+ "/>
 <meta name="twitter:site" content="@kiranchavala"/>
 
 <script type="application/javascript">
@@ -126,31 +114,31 @@ if (!doNotTrack) {
 
   
     
-    <a href="//twitter.com/share?text=Using%20Jekyll&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Installing%20kubernetes%20via%20kubeadm&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f&amp;title=Using%20Jekyll" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f&amp;title=Installing%20kubernetes%20via%20kubeadm" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f&amp;title=Using%20Jekyll" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f&amp;title=Installing%20kubernetes%20via%20kubeadm" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -227,12 +215,12 @@ if (!doNotTrack) {
     <header>
   <div class="title">
     
-      <h2><a href="/blog/using-jekyll/">Using Jekyll</a></h2>
+      <h2><a href="/blog/installing-kubernetes-via-kubeadm/">Installing kubernetes via kubeadm</a></h2>
     
     
   </div>
   <div class="meta">
-    <time datetime="2020-08-14 12:43:02 &#43;0530 IST">August 14, 2020</time>
+    <time datetime="2020-08-19 17:10:09 &#43;0530 IST">August 19, 2020</time>
     
     <p>1-Minute Read</p>
   </div>
@@ -246,31 +234,31 @@ if (!doNotTrack) {
 
   
     
-    <a href="//twitter.com/share?text=Using%20Jekyll&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Installing%20kubernetes%20via%20kubeadm&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f&amp;title=Using%20Jekyll" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f&amp;title=Installing%20kubernetes%20via%20kubeadm" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f&amp;title=Using%20Jekyll" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f&amp;title=Installing%20kubernetes%20via%20kubeadm" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-jekyll%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2finstalling-kubernetes-via-kubeadm%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -279,23 +267,9 @@ if (!doNotTrack) {
     </div>
     <div class="content">
       
-      <p>Jekyll is popular static site generator</p>
-<p>The steps are here</p>
-<p><a href="https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d">https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d</a></p>
-<script type="application/javascript" src="https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d.js"></script>
-
-<p>Youtube references</p>
-<p>Mike Dane&rsquo;s Playlist</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/T1itpPvFWHI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-<p>Bill Raymond</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/EvYs1idcGnM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <p>The steps are here</p>
+<p><a href="https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051">https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051</a></p>
+<script type="application/javascript" src="https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051.js"></script>
 
 
     </div>
@@ -305,7 +279,7 @@ if (!doNotTrack) {
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/categories/sw/">SW</a></li>
+          <li><a class="article-terms-link" href="/categories/kubernetes/">kubernetes</a></li>
         
       
     </ul>
@@ -314,7 +288,7 @@ if (!doNotTrack) {
     <ul class="tags">
       
         
-          <li><a class="article-terms-link" href="/tags/sw/">SW</a></li>
+          <li><a class="article-terms-link" href="/tags/kubernetes/">kubernetes</a></li>
         
       
     </ul>
@@ -354,10 +328,8 @@ if (!doNotTrack) {
   
   <div class="pagination">
     
-      <a href="/blog/installing-kubernetes-via-kubeadm/" class="button left"><span>Installing kubernetes via kubeadm</span></a>
     
-    
-      <a href="/blog/using-tmux/" class="button right"><span>Using tmux</span></a>
+      <a href="/blog/using-jekyll/" class="button right"><span>Using Jekyll</span></a>
     
   </div>
 
