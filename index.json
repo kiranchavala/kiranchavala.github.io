@@ -1,8 +1,8 @@
 [{
-    "title": "Usingzshhistory",
+    "title": "Enabling zsh history",
     "date": "",
     "description": "",
-    "body": "dtest\n",
+    "body": "Add alias in your .zshrc file\nalias history=\u0026quot;history 0\u0026rdquo;\nsource ~/.zshrc\n",
     "ref": "/blog/usingzshhistory/"
   },{
     "title": "Using Hugo",

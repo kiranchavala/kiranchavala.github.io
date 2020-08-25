@@ -12,12 +12,14 @@
     
     
     <item>
-      <title>Usingzshhistory</title>
+      <title>Enabling zsh history</title>
       <link>https://kiranchavala.in/blog/usingzshhistory/</link>
       <pubDate>Tue, 25 Aug 2020 17:15:07 +0530</pubDate>
       
       <guid>https://kiranchavala.in/blog/usingzshhistory/</guid>
-      <description>dtest</description>
+      <description>Add alias in your .zshrc file
+alias history=&amp;quot;history 0&amp;rdquo;
+source ~/.zshrc</description>
     </item>
     
     <item>
