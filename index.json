@@ -1,5 +1,11 @@
 [{
-    "title": "Installingrancher",
+    "title": "Using Hugo",
+    "date": "",
+    "description": "",
+    "body": "Hugo Requires Go\nbrew install hugo\nhugo server up\nYoutube references\nMike Dane\u0026rsquo;s Playlist\n  Ref\nInstallation\nhttps://gohugo.io/getting-started/installing/\nTheme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite\n",
+    "ref": "/blog/using-hugo/"
+  },{
+    "title": "Installing Rancher",
     "date": "",
     "description": "",
     "body": "Rancher is a tool to manage your kubernetes cluster\nThe installation steps are here\nhttps://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc\n ",
