@@ -4,21 +4,41 @@
   
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/blog/enabling-zsh-history/</loc>
-    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://kiranchavala.in/</loc>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/kubernetes/</loc>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/categories/kubernetes/</loc>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/blog/merging-kube-config-files/</loc>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/blog/enabling-zsh-history/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
   </url>
   
@@ -29,11 +49,6 @@
   
   <url>
     <loc>https://kiranchavala.in/tags/os/</loc>
-    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
   </url>
   
@@ -54,16 +69,6 @@
   
   <url>
     <loc>https://kiranchavala.in/blog/installing-rancher/</loc>
-    <lastmod>2020-08-25T16:20:28+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/tags/kubernetes/</loc>
-    <lastmod>2020-08-25T16:20:28+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/categories/kubernetes/</loc>
     <lastmod>2020-08-25T16:20:28+05:30</lastmod>
   </url>
   
