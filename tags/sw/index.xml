@@ -19,7 +19,10 @@
       <guid>https://kiranchavala.in/blog/using-hugo/</guid>
       <description>Hugo Requires Go
 brew install hugo
-hugo server up
+create a folder for your website files
+hugo server up #It will generate a site locally on port 1313
+Install a theme and copy exampleSite/config.toml to the root folder
+mkdir themes // Creates a &amp;ldquo;themes&amp;rdquo; Folder cd themes // Points to the &amp;ldquo;themes&amp;rdquo; Folder git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git
 Youtube references
 Mike Dane&amp;rsquo;s Playlist
   Ref

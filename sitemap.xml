@@ -8,7 +8,12 @@
   </url>
   
   <url>
-    <loc>https://kiranchavala.in/blog/usingzshhistory/</loc>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/blog/enabling-zsh-history/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
   </url>
   
@@ -18,8 +23,18 @@
   </url>
   
   <url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2020-08-25T16:26:27+05:30</lastmod>
+    <loc>https://kiranchavala.in/categories/mac/</loc>
+    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/os/</loc>
+    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
   </url>
   
   <url>
@@ -29,11 +44,6 @@
   
   <url>
     <loc>https://kiranchavala.in/categories/sw/</loc>
-    <lastmod>2020-08-25T16:26:27+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2020-08-25T16:26:27+05:30</lastmod>
   </url>
   
@@ -65,16 +75,6 @@
   <url>
     <loc>https://kiranchavala.in/blog/using-jekyll/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/categories/mac/</loc>
-    <lastmod>2020-08-14T12:35:09+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/tags/os/</loc>
-    <lastmod>2020-08-14T12:35:09+05:30</lastmod>
   </url>
   
   <url>

@@ -13,10 +13,10 @@
     
     <item>
       <title>Enabling zsh history</title>
-      <link>https://kiranchavala.in/blog/usingzshhistory/</link>
+      <link>https://kiranchavala.in/blog/enabling-zsh-history/</link>
       <pubDate>Tue, 25 Aug 2020 17:15:07 +0530</pubDate>
       
-      <guid>https://kiranchavala.in/blog/usingzshhistory/</guid>
+      <guid>https://kiranchavala.in/blog/enabling-zsh-history/</guid>
       <description>Add alias in your .zshrc file
 alias history=&amp;quot;history 0&amp;rdquo;
 source ~/.zshrc</description>
@@ -30,7 +30,10 @@ source ~/.zshrc</description>
       <guid>https://kiranchavala.in/blog/using-hugo/</guid>
       <description>Hugo Requires Go
 brew install hugo
-hugo server up
+create a folder for your website files
+hugo server up #It will generate a site locally on port 1313
+Install a theme and copy exampleSite/config.toml to the root folder
+mkdir themes // Creates a &amp;ldquo;themes&amp;rdquo; Folder cd themes // Points to the &amp;ldquo;themes&amp;rdquo; Folder git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git
 Youtube references
 Mike Dane&amp;rsquo;s Playlist
   Ref

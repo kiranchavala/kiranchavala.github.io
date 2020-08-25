@@ -3,12 +3,12 @@
     "date": "",
     "description": "",
     "body": "Add alias in your .zshrc file\nalias history=\u0026quot;history 0\u0026rdquo;\nsource ~/.zshrc\n",
-    "ref": "/blog/usingzshhistory/"
+    "ref": "/blog/enabling-zsh-history/"
   },{
     "title": "Using Hugo",
     "date": "",
     "description": "",
-    "body": "Hugo Requires Go\nbrew install hugo\nhugo server up\nYoutube references\nMike Dane\u0026rsquo;s Playlist\n  Ref\nInstallation\nhttps://gohugo.io/getting-started/installing/\nTheme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite\n",
+    "body": "Hugo Requires Go\nbrew install hugo\ncreate a folder for your website files\nhugo server up #It will generate a site locally on port 1313\nInstall a theme and copy exampleSite/config.toml to the root folder\nmkdir themes // Creates a \u0026ldquo;themes\u0026rdquo; Folder cd themes // Points to the \u0026ldquo;themes\u0026rdquo; Folder git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git\nYoutube references\nMike Dane\u0026rsquo;s Playlist\n  Ref\nInstallation\nhttps://gohugo.io/getting-started/installing/\nTheme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite\n",
     "ref": "/blog/using-hugo/"
   },{
     "title": "Installing Rancher",
