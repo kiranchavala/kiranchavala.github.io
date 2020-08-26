@@ -20,8 +20,10 @@
       <description>Merging kubeconfig files
 When you have multiple kubernetes clusters, manually entering to the kubectl config is time consuming and error prone
 Add the two config files to the env var export KUBECONFIG=~/.kube/config:~/Desktop/configFile2.yaml
-Review that you have two configurations in one view kubectl config view
-View the raw config and output to a new file kubectl config view &amp;ndash;raw &amp;gt; test.yaml
+Review that you have two configurations in one view
+kubectl config view
+View the raw config and output to a new file
+kubectl config view &amp;ndash;raw &amp;gt; test.yaml
 cp test.yaml .kube/config
 env
 you can unset the KUBECONFIG later on</description>

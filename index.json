@@ -2,7 +2,7 @@
     "title": "Mergingkubeconfig",
     "date": "",
     "description": "",
-    "body": "Merging kubeconfig files\nWhen you have multiple kubernetes clusters, manually entering to the kubectl config is time consuming and error prone\nAdd the two config files to the env var export KUBECONFIG=~/.kube/config:~/Desktop/configFile2.yaml\nReview that you have two configurations in one view kubectl config view\nView the raw config and output to a new file kubectl config view \u0026ndash;raw \u0026gt; test.yaml\ncp test.yaml .kube/config\nenv\nyou can unset the KUBECONFIG later on\nunset KUBECONFIG\n",
+    "body": "Merging kubeconfig files\nWhen you have multiple kubernetes clusters, manually entering to the kubectl config is time consuming and error prone\nAdd the two config files to the env var export KUBECONFIG=~/.kube/config:~/Desktop/configFile2.yaml\nReview that you have two configurations in one view\nkubectl config view\nView the raw config and output to a new file\nkubectl config view \u0026ndash;raw \u0026gt; test.yaml\ncp test.yaml .kube/config\nenv\nyou can unset the KUBECONFIG later on\nunset KUBECONFIG\n",
     "ref": "/blog/merging-kube-config-files/"
   },{
     "title": "Enabling zsh history",
