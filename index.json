@@ -1,4 +1,10 @@
 [{
+    "title": "K9scli",
+    "date": "",
+    "description": "",
+    "body": "k9s is an excellent cli tool to interact with the kubernetes clusters\nbrew install derailed/k9s/k9s\nRef: https://k9scli.io/topics/install/ https://k9scli.io/\n",
+    "ref": "/blog/k9scli/"
+  },{
     "title": "Installing k3s",
     "date": "",
     "description": "",
