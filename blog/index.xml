@@ -6,10 +6,21 @@
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2020 21:20:00 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2020 13:52:35 +0530</lastBuildDate>
     
 	<atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing k3s</title>
+      <link>https://kiranchavala.in/blog/installing-k3s/</link>
+      <pubDate>Wed, 26 Aug 2020 13:52:35 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/installing-k3s/</guid>
+      <description>K3s is light weight kubernetes distribution from Rancher
+https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744
+ Ref: https://k3s.io/ https://github.com/alexellis/k3sup</description>
+    </item>
     
     <item>
       <title>Mergingkubeconfig</title>

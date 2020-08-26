@@ -1,4 +1,10 @@
 [{
+    "title": "Installing k3s",
+    "date": "",
+    "description": "",
+    "body": "K3s is light weight kubernetes distribution from Rancher\nhttps://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744\n Ref: https://k3s.io/ https://github.com/alexellis/k3sup\n",
+    "ref": "/blog/installing-k3s/"
+  },{
     "title": "Mergingkubeconfig",
     "date": "",
     "description": "",
