@@ -1,4 +1,10 @@
 [{
+    "title": "Downloading songs from Spotify",
+    "date": "",
+    "description": "",
+    "body": "Install youtube-dl\nbrew install youtube-dl\n",
+    "ref": "/blog/downloading-songs-from-spotify/"
+  },{
     "title": "K9scli",
     "date": "",
     "description": "",
@@ -20,7 +26,7 @@
     "title": "Enabling zsh history",
     "date": "",
     "description": "",
-    "body": "Add alias in your .zshrc file\nalias history=\u0026quot;history 0\u0026rdquo;\nsource ~/.zshrc\n",
+    "body": "Add alias in your .zshrc file\nalias history=\u0026ldquo;history 0\u0026rdquo;\nsource ~/.zshrc\n",
     "ref": "/blog/enabling-zsh-history/"
   },{
     "title": "Using Hugo",
