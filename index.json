@@ -2,7 +2,7 @@
     "title": "Downloading songs from Spotify",
     "date": "",
     "description": "",
-    "body": "Install youtube-dl\nbrew install youtube-dl\nInstall ffmpeg for mp3 conversion\nbrew install ffmpeg\nInstalling spotify dl\npip3 install spotify_dl\nLogin to the spotify developer console and create a app\nhttps://developer.spotify.com/dashboard/\nLogin to the google developer console\nhttps://console.developers.google.com/apis/api/youtube/overview?pli=1\nEnable the youtube data API v3 and create api credential\nOn the mac\nexport SPOTIPY_CLIENT_ID=cfbe866b86c2459883fbbbfb23e5f1ba export SPOTIPY_CLIENT_SECRET=c5bdd6fd1fa44acfa72f0428adc6374f export SPOTIPY_REDIRECT_URI=https://spotifydl.sathyabh.at/ export YOUTUBE_DEV_KEY=AIzaSyDTQWAoXr4PIsG7rXkT1HPzgHFTDU3cXxg\nspotify_dl -p playlist_id -u user_name -o download_directory\nyoutube-dl -x \u0026ndash;audio-format mp3 \u0026lsquo;https://www.youtube.com/watch?v=mrqgz4_a4PU'\nspotify_dl -l \u0026lsquo;https://open.spotify.com/playlist/59fysWAvbQfPsy3ECyZj9l?si=f2h5Y7-DTNKP9fxs1e94zw' -o /Users/kiranchavala/Desktop/songs/\nspotify_dl -help\nReferences\nhttps://github.com/SathyaBhat/spotify-dl\nhttps://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/\nhttps://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124\n",
+    "body": "To download the songs from spotify\nhttps://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4\n References\nhttps://github.com/SathyaBhat/spotify-dl\nhttps://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/\nhttps://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124\n",
     "ref": "/blog/downloading-songs-from-spotify/"
   },{
     "title": "K9scli",

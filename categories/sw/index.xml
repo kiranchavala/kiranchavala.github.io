@@ -13,21 +13,12 @@
       <pubDate>Thu, 15 Oct 2020 13:06:51 +0530</pubDate>
       
       <guid>https://kiranchavala.in/blog/downloading-songs-from-spotify/</guid>
-      <description>Install youtube-dl
-brew install youtube-dl
-Install ffmpeg for mp3 conversion
-brew install ffmpeg
-Installing spotify dl
-pip3 install spotify_dl
-Login to the spotify developer console and create a app
-https://developer.spotify.com/dashboard/
-Login to the google developer console
-https://console.developers.google.com/apis/api/youtube/overview?pli=1
-Enable the youtube data API v3 and create api credential
-On the mac
-export SPOTIPY_CLIENT_ID=cfbe866b86c2459883fbbbfb23e5f1ba export SPOTIPY_CLIENT_SECRET=c5bdd6fd1fa44acfa72f0428adc6374f export SPOTIPY_REDIRECT_URI=https://spotifydl.sathyabh.at/ export YOUTUBE_DEV_KEY=AIzaSyDTQWAoXr4PIsG7rXkT1HPzgHFTDU3cXxg
-spotify_dl -p playlist_id -u user_name -o download_directory
-youtube-dl -x &amp;ndash;audio-format mp3 &amp;lsquo;https://www.youtube.com/watch?v=mrqgz4_a4PU&#39;</description>
+      <description>To download the songs from spotify
+https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4
+ References
+https://github.com/SathyaBhat/spotify-dl
+https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/
+https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124</description>
     </item>
     
     <item>
