@@ -1,4 +1,10 @@
 [{
+    "title": "Raspberry pi",
+    "date": "",
+    "description": "",
+    "body": "After hearing frequent mentions of Raspberry pi use cases, I had decided to buy Raspberry pi 4 model.\nThe site https://www.thingbits.in was giving best discounts on pi and it\u0026rsquo;s accessories.\n  The best use case of pi was the implementation of PI-HOLE which blocks all the ads on websites.\nHere are links i used for the complete installation of pi and implementation of PI-HOLE\nhttps://docs.pi-hole.net/\nhttps://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed\nhttps://filterlists.com/lists/pl-host-file\n",
+    "ref": "/blog/raspberrypi/"
+  },{
     "title": "Downloading songs from Spotify",
     "date": "",
     "description": "",
