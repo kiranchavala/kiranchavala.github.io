@@ -2,19 +2,51 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Kiran Chavala Tech Notes</title>
+<title>Terraformcloudstack - Kiran Chavala Tech Notes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.68.3" /><meta itemprop="name" content="Kiran Chavala Tech Notes">
-<meta itemprop="description" content=""><meta property="og:title" content="Kiran Chavala Tech Notes" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kiranchavala.in/" />
-<meta property="og:updated_time" content="2021-05-31T21:38:24+05:30" />
+<meta name="generator" content="Hugo 0.68.3" /><meta itemprop="name" content="Terraformcloudstack">
+<meta itemprop="description" content="Terraform is a tool to deploy resources on cloud
+It is an infrastructure as code tool
+Generally the plugins are available at
+https://registry.terraform.io/
+To use the plugins which are archived and not available in the terraform registry
+Follow the steps a small tweak is necessary
+ Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
+Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/">
+<meta itemprop="datePublished" content="2021-05-31T21:38:24&#43;05:30" />
+<meta itemprop="dateModified" content="2021-05-31T21:38:24&#43;05:30" />
+<meta itemprop="wordCount" content="90">
+
+
+
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Terraformcloudstack" />
+<meta property="og:description" content="Terraform is a tool to deploy resources on cloud
+It is an infrastructure as code tool
+Generally the plugins are available at
+https://registry.terraform.io/
+To use the plugins which are archived and not available in the terraform registry
+Follow the steps a small tweak is necessary
+ Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
+Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kiranchavala.in/blog/terraformcloudstack/" />
+<meta property="article:published_time" content="2021-05-31T21:38:24+05:30" />
+<meta property="article:modified_time" content="2021-05-31T21:38:24+05:30" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kiran Chavala Tech Notes"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Terraformcloudstack"/>
+<meta name="twitter:description" content="Terraform is a tool to deploy resources on cloud
+It is an infrastructure as code tool
+Generally the plugins are available at
+https://registry.terraform.io/
+To use the plugins which are archived and not available in the terraform registry
+Follow the steps a small tweak is necessary
+ Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
+Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/"/>
 <meta name="twitter:site" content="@kiranchavala"/>
 
 <script type="application/javascript">
@@ -35,48 +67,12 @@ if (!doNotTrack) {
   <body>
     
 
-  <div id="theme-message" style="background-color:#3c3b3b;color:#f4f4f4;margin:auto auto;padding:.25em 2em;width:75%;">
-    <p style="text-align:center;">This message, related to the development of the theme, only displays on the
-      <code>localhost</code> homepage to notify you of any important theme changes.</p>
-      <hr>
-      <h5 style="color:#f4f4f4;text-align:center;"><i class="fas fa-exclamation-triangle"></i>Version 2.0.0 - July 20, 2020<i class="fas fa-exclamation-triangle"></i></h5>
-    <p>Below are the following changes that <em>could</em> be breaking changes for your site. For more details on any change, please refer to <a href="https://github.com/pacollins/hugo-future-imperfect-slim/pull/154">PR #154</a>.</p>
-<p>The major breaking change is:</p>
-<ol>
-<li>Users that have front matter that utilize <code>images</code> (backwards compatibility for <code>featured</code> and associated parameters still remains) <em>will</em> need to adjust from <code>[images]=&quot;SRC&quot;</code> to the new format.</li>
-</ol>
-<pre><code>[[images]]
-    src = &quot;&quot; // Link to image
-    alt = &quot;&quot; // Alt text for image
-    stretch = // Optional: See screenshots for referenced values and outcomes
-</code></pre><p>If you utilize any of the following, there <em>might</em> be a breaking:</p>
-<ol>
-<li>User custom templates <em>may</em> require adjustment.</li>
-<li>User custom i18n languages, or custom templates referencing i18n translations <em>may</em> require adjustment.</li>
-<li>User custom template for comments <em>will</em> require adjustment <em>if</em> it uses the theme&rsquo;s CSS and/or JS.</li>
-<li>User custom CSS <em>may</em> need to adjust due to a variety of class name changes and specificity changes.</li>
-</ol>
-<p>While I realize this is inconvenient, I hope that it is worth it to you in the long run. Thanks for using the theme, and feel free to submit issues as needed.</p>
-
-    <div style="text-align:center;">
-      <button onclick="removeBox()" class="button" style="color:#f4f4f4;margin-bottom:1em;">Close Notification Until Next Update</button>
-    </div>
-    <script>
-      if (window.location.href.indexOf('localhost:') < 1 || window.localStorage.getItem('HFIS-version') == '2.0.0') {
-        document.getElementsByTagName("body")[0].removeChild(document.getElementById("theme-message"));
-      }
-      function removeBox() {
-        window.localStorage.setItem('HFIS-version', '2.0.0');
-        document.getElementsByTagName("body")[0].removeChild(document.getElementById("theme-message"));
-      }
-    </script>
-  </div>
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
       <a href="/" class="nav">
         
-          Kiran Chavala Tech Notes
+          Blog
         
       </a>
     </h1>
@@ -135,31 +131,31 @@ if (!doNotTrack) {
 
   
     
-    <a href="//twitter.com/share?text=Kiran%20Chavala%20Tech%20Notes&amp;url=https%3a%2f%2fkiranchavala.in%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Terraformcloudstack&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2f&amp;title=Kiran%20Chavala%20Tech%20Notes" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f&amp;title=Terraformcloudstack" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2f&amp;title=Kiran%20Chavala%20Tech%20Notes" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f&amp;title=Terraformcloudstack" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -232,59 +228,160 @@ if (!doNotTrack) {
 
       <main id="site-main">
         
-  
-  
-    <article class="post">
-  <header>
+  <article class="post">
+    <header>
   <div class="title">
     
-      <h2><a href="/blog/disable-ipv6-in-centos-7/">Disable ipv6 in centos 7</a></h2>
+      <h2><a href="/blog/terraformcloudstack/">Terraformcloudstack</a></h2>
     
     
   </div>
   <div class="meta">
-    <time datetime="2020-08-13 22:55:43 &#43;0530 IST">August 13, 2020</time>
+    <time datetime="2021-05-31 21:38:24 &#43;0530 IST">May 31, 2021</time>
     
     <p>1-Minute Read</p>
   </div>
 </header>
 
-  <div class="content">
+    <div id="socnet-share">
+      
+
+
+
+
+  
     
-    
-    <p>To verify if IPv6 is enabled or not, execute</p>
-  </div>
-  <footer>
-    <a href="/blog/disable-ipv6-in-centos-7/" class="button big">Read More</a>
-    <div class="stats">
+    <a href="//twitter.com/share?text=Terraformcloudstack&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f&amp;title=Terraformcloudstack" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f&amp;title=Terraformcloudstack" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fterraformcloudstack%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <p>Terraform is a tool to deploy resources on cloud</p>
+<p>It is an infrastructure as code tool</p>
+<p>Generally the plugins are available at</p>
+<p><a href="https://registry.terraform.io/">https://registry.terraform.io/</a></p>
+<p>To use the plugins which are archived and not available in the terraform registry</p>
+<p>Follow the steps  a small tweak is necessary</p>
+<ol>
+<li>Currently the cloudstack plugin is archived</li>
+</ol>
+<p><a href="https://github.com/hashicorp/terraform-provider-cloudstack">https://github.com/hashicorp/terraform-provider-cloudstack</a></p>
+<p><a href="https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown">https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown</a></p>
+<ol start="2">
+<li>Download the terrform provider for cloudstack based on the os you are running</li>
+</ol>
+<p><a href="https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/">https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/</a></p>
+<ol start="3">
+<li>On linux and mac</li>
+</ol>
+<p>Move it</p>
+<p>.terraform.d/plugins/localdomain/provider/cloudstack/0.3.0/linux_amd64</p>
+<p>or</p>
+<p>.terraform.d/plugins/localdomain/provider/cloudstack/0.3.0/darwin_amd64</p>
+<ol start="4">
+<li>sample gist</li>
+</ol>
+<p><a href="https://gist.github.com/kiranchavala/ce250d57b49ab1e8112ee0abdc64ff1c">https://gist.github.com/kiranchavala/ce250d57b49ab1e8112ee0abdc64ff1c</a></p>
+<script type="application/javascript" src="https://gist.github.com/kiranchavala/ce250d57b49ab1e8112ee0abdc64ff1c.js"></script>
+
+<ol start="5">
+<li>
+<p>terraform init</p>
+</li>
+<li>
+<p>terraform apply</p>
+</li>
+</ol>
+<p>useful links</p>
+<p><a href="https://www.youtube.com/watch?v=0O5yqQqiQRQ&amp;t=746s">https://www.youtube.com/watch?v=0O5yqQqiQRQ&amp;t=746s</a></p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/0O5yqQqiQRQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><a href="https://www.terraform.io/docs/cli/config/config-file.html">https://www.terraform.io/docs/cli/config/config-file.html</a></p>
+<p><a href="https://stackoverflow.com/questions/63365156/how-to-use-the-ibm-cloud-provider-plug-in-for-terraform-with-terraform-0-13">https://stackoverflow.com/questions/63365156/how-to-use-the-ibm-cloud-provider-plug-in-for-terraform-with-terraform-0-13</a></p>
+<p><a href="https://www.ibm.com/cloud/blog/setting-terraform-ibm-cloud-provider-windows">https://www.ibm.com/cloud/blog/setting-terraform-ibm-cloud-provider-windows</a></p>
+<p><a href="https://stackoverflow.com/questions/63531360/terraform-manually-installed-plugin-fails">https://stackoverflow.com/questions/63531360/terraform-manually-installed-plugin-fails</a></p>
+
+    </div>
+    <footer>
+      <div class="stats">
   
     <ul class="categories">
-      
-        
-          <li><a class="article-terms-link" href="/categories/centos/">Centos</a></li>
-        
-      
+      <li>None</li>
     </ul>
   
   
     <ul class="tags">
-      
-        
-          <li><a class="article-terms-link" href="/tags/os/">Os</a></li>
-        
-      
+      <li>None</li>
     </ul>
   
 </div>
 
-  </footer>
-</article>
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kiranchavala-in" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+
+
+
 
   
   <div class="pagination">
     
-      <a href="/page/4/" class="button left"><span>Previous Page</span></a>
     
+      <a href="/blog/raspberrypi/" class="button right"><span>Raspberry pi</span></a>
     
   </div>
 

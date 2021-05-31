@@ -6,18 +6,26 @@
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 May 2021 20:32:49 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 31 May 2021 21:38:24 +0530</lastBuildDate>
     
 	<atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Terraform</title>
-      <link>https://kiranchavala.in/blog/terraform-cloudstack/</link>
-      <pubDate>Mon, 31 May 2021 20:32:49 +0530</pubDate>
+      <title>Terraformcloudstack</title>
+      <link>https://kiranchavala.in/blog/terraformcloudstack/</link>
+      <pubDate>Mon, 31 May 2021 21:38:24 +0530</pubDate>
       
-      <guid>https://kiranchavala.in/blog/terraform-cloudstack/</guid>
-      <description></description>
+      <guid>https://kiranchavala.in/blog/terraformcloudstack/</guid>
+      <description>Terraform is a tool to deploy resources on cloud
+It is an infrastructure as code tool
+Generally the plugins are available at
+https://registry.terraform.io/
+To use the plugins which are archived and not available in the terraform registry
+Follow the steps a small tweak is necessary
+ Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
+Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/</description>
     </item>
     
     <item>

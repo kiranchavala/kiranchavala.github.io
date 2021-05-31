@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform on Kiran Chavala Tech Notes</title>
+    <link>https://kiranchavala.in/categories/terraform/</link>
+    <description>Recent content in Terraform on Kiran Chavala Tech Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 31 May 2021 20:32:49 +0530</lastBuildDate>
+    
+	<atom:link href="https://kiranchavala.in/categories/terraform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Terraform cloudstack</title>
+      <link>https://kiranchavala.in/blog/terraform-cloudstack/</link>
+      <pubDate>Mon, 31 May 2021 20:32:49 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/terraform-cloudstack/</guid>
+      <description>Terraform is a tool to deploy resources on cloud
+It is an infrastructure as code tool
+Generally the plugins are available at
+https://registry.terraform.io/
+To use the plugins which are archived and not available in the terraform registry
+Follow the steps a small tweak is necessary
+ Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
+Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/</description>
+    </item>
+    
+  </channel>
+</rss>
