@@ -38,7 +38,7 @@
     "title": "Enabling zsh history",
     "date": "",
     "description": "",
-    "body": "Add alias in your .zshrc file\nalias history=\u0026quot;history 0\u0026rdquo;\nsource ~/.zshrc\n",
+    "body": "Add alias in your .zshrc file\nalias history=\u0026ldquo;history 0\u0026rdquo;\nsource ~/.zshrc\n",
     "ref": "/blog/enabling-zsh-history/"
   },{
     "title": "Using Hugo",

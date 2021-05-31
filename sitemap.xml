@@ -8,18 +8,33 @@
   </url>
   
   <url>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/terraform/</loc>
+    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/categories/terraform/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://kiranchavala.in/blog/terraformcloudstack/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2020-12-03T13:22:32+05:30</lastmod>
   </url>
   
   <url>
@@ -34,11 +49,6 @@
   
   <url>
     <loc>https://kiranchavala.in/categories/raspberrypi/</loc>
-    <lastmod>2020-12-03T13:22:32+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2020-12-03T13:22:32+05:30</lastmod>
   </url>
   
