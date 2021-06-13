@@ -1,9 +1,15 @@
 [{
+    "title": "Logstash Cloudstack",
+    "date": "",
+    "description": "",
+    "body": "",
+    "ref": "/blog/logstash-cloudstack/"
+  },{
     "title": "Terraformcloudstack",
     "date": "",
     "description": "",
     "body": "Terraform is a tool to deploy resources on cloud\nIt is an infrastructure as code tool\nGenerally the plugins are available at\nhttps://registry.terraform.io/\nTo use the plugins which are archived and not available in the terraform registry\nFollow the steps a small tweak is necessary\n Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack\nhttps://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown\nDownload the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/\nOn linux and mac  Move it\n.terraform.d/plugins/localdomain/provider/cloudstack/0.3.0/linux_amd64\nor\n.terraform.d/plugins/localdomain/provider/cloudstack/0.3.0/darwin_amd64\nsample gist  https://gist.github.com/kiranchavala/ce250d57b49ab1e8112ee0abdc64ff1c\n  terraform init\n  terraform apply\n  useful links\nhttps://www.youtube.com/watch?v=0O5yqQqiQRQ\u0026amp;t=746s\n  https://www.terraform.io/docs/cli/config/config-file.html\nhttps://stackoverflow.com/questions/63365156/how-to-use-the-ibm-cloud-provider-plug-in-for-terraform-with-terraform-0-13\nhttps://www.ibm.com/cloud/blog/setting-terraform-ibm-cloud-provider-windows\nhttps://stackoverflow.com/questions/63531360/terraform-manually-installed-plugin-fails\n",
-    "ref": "/blog/terraformcloudstack/"
+    "ref": "/blog/terraform-cloudstack/"
   },{
     "title": "Raspberry pi",
     "date": "",
@@ -38,7 +44,7 @@
     "title": "Enabling zsh history",
     "date": "",
     "description": "",
-    "body": "Add alias in your .zshrc file\nalias history=\u0026ldquo;history 0\u0026rdquo;\nsource ~/.zshrc\n",
+    "body": "Add alias in your .zshrc file\nalias history=\u0026quot;history 0\u0026rdquo;\nsource ~/.zshrc\n",
     "ref": "/blog/enabling-zsh-history/"
   },{
     "title": "Using Hugo",

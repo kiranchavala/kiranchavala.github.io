@@ -4,16 +4,21 @@
   
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/blog/logstash-cloudstack/</loc>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/categories/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
   </url>
   
@@ -33,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://kiranchavala.in/blog/terraformcloudstack/</loc>
+    <loc>https://kiranchavala.in/blog/terraform-cloudstack/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
   </url>
   
