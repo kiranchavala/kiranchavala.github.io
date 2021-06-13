@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 May 2021 21:38:24 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 13 Jun 2021 13:35:59 +0530</lastBuildDate>
     
 	<atom:link href="https://kiranchavala.in/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloudstack</title>
+      <link>https://kiranchavala.in/categories/cloudstack/</link>
+      <pubDate>Sun, 13 Jun 2021 13:35:59 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/categories/cloudstack/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Terraform</title>

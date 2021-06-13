@@ -8,7 +8,27 @@
   </url>
   
   <url>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/categories/cloudstack/</loc>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/cloudstack/</loc>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiranchavala.in/tags/logstash/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
   </url>
   
@@ -18,13 +38,8 @@
   </url>
   
   <url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kiranchavala.in/tags/</loc>
-    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
+    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
   </url>
   
   <url>
