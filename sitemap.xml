@@ -1,175 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>https://kiranchavala.in/blog/accessing-xencenter-via-browser/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
     <loc>https://kiranchavala.in/categories/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/cloudstack/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/cloudstack/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiranchavala.in/</loc>
-    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/logstash/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/logstash-cloudstack/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/terraform/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/terraform/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/terraform-cloudstack/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/raspberrypi/</loc>
     <lastmod>2020-12-03T13:22:32+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/raspberrypi/</loc>
     <lastmod>2020-12-03T13:22:32+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/raspberrypi/</loc>
     <lastmod>2020-12-03T13:22:32+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/downloading-songs-from-spotify/</loc>
     <lastmod>2020-10-15T13:06:51+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/sw/</loc>
     <lastmod>2020-10-15T13:06:51+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/sw/</loc>
     <lastmod>2020-10-15T13:06:51+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/k9scli/</loc>
     <lastmod>2020-08-26T15:04:37+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/installing-k3s/</loc>
     <lastmod>2020-08-26T13:52:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/kubernetes/</loc>
     <lastmod>2020-08-25T21:20:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/kubernetes/</loc>
     <lastmod>2020-08-25T21:20:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/merging-kube-config-files/</loc>
     <lastmod>2020-08-25T21:20:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/enabling-zsh-history/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/mac/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/tags/os/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/using-hugo/</loc>
     <lastmod>2020-08-25T16:26:27+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/installing-rancher/</loc>
     <lastmod>2020-08-25T16:20:28+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/installing-kubernetes-via-kubeadm/</loc>
     <lastmod>2020-08-19T17:10:09+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/using-jekyll/</loc>
     <lastmod>2020-08-14T12:43:02+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/using-tmux/</loc>
     <lastmod>2020-08-14T12:35:09+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/categories/centos/</loc>
     <lastmod>2020-08-13T22:55:43+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/blog/disable-ipv6-in-centos-7/</loc>
     <lastmod>2020-08-13T22:55:43+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/about/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kiranchavala.in/contact/</loc>
     <priority>0</priority>
   </url>
-  
 </urlset>
