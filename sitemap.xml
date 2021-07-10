@@ -8,11 +8,23 @@
     <loc>https://kiranchavala.in/blog/</loc>
     <lastmod>2021-07-10T10:33:47+05:30</lastmod>
   </url><url>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
     <loc>https://kiranchavala.in/</loc>
     <lastmod>2021-07-10T10:33:47+05:30</lastmod>
   </url><url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
+    <loc>https://kiranchavala.in/tags/os/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/vmware/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/xenserver/</loc>
+    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/cloudstack/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
@@ -24,9 +36,6 @@
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/logstash-cloudstack/</loc>
-    <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/terraform/</loc>
@@ -75,9 +84,6 @@
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/mac/</loc>
-    <lastmod>2020-08-25T17:15:07+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/os/</loc>
     <lastmod>2020-08-25T17:15:07+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/using-hugo/</loc>
