@@ -18,9 +18,9 @@ This could be a limitation for the users of linux and mac
 Meanwhile you can access vmware exsi servers and also manage the clusters of vcenter via http
 To overcome this limitation you can use the XCP hypervisor
 XCP is open source hypervisor based on XenServer.
-Download the XCP-ng https://xcp-ng.org/#easy-to-install
+ Download the XCP-ng  https://xcp-ng.org/#easy-to-install
 https://xcp-ng.org/docs/install.html#iso-installation
-Install the xcp-center for windows systems to access the XCP hypervisors</description>
+Install the xcp-center for windows systems to access the XCP hypervisors  https://github.</description>
     </item>
     
     <item>
