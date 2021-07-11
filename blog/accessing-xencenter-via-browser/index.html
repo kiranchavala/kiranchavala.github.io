@@ -16,7 +16,7 @@ XCP is open source hypervisor based on XenServer.
 https://xcp-ng.org/docs/install.html#iso-installation
 Install the xcp-center for windows systems to access the XCP hypervisors  https://github."><meta itemprop="datePublished" content="2021-07-10T10:33:47+05:30" />
 <meta itemprop="dateModified" content="2021-07-10T10:33:47+05:30" />
-<meta itemprop="wordCount" content="499">
+<meta itemprop="wordCount" content="192">
 <meta itemprop="keywords" content="Os," /><meta property="og:title" content="Accessing xencenter via browser" />
 <meta property="og:description" content="Currently to access and manage xenserver cluster you need a xencenter installed in a windows system.
 This could be a limitation for the users of linux and mac
@@ -232,7 +232,7 @@ if (!doNotTrack) {
   <div class="meta">
     <time datetime="2021-07-10 10:33:47 &#43;0530 IST">July 10, 2021</time>
     
-    <p>3-Minute Read</p>
+    <p>1-Minute Read</p>
   </div>
 </header>
 
@@ -309,121 +309,9 @@ if (!doNotTrack) {
 <p><a href="https://xen-orchestra.com/docs/troubleshooting.html#set-or-recover-xoa-vm-password">https://xen-orchestra.com/docs/troubleshooting.html#set-or-recover-xoa-vm-password</a></p>
 <p>Now all this is fine but you still need a xcp-center and windows system to access it via http</p>
 <h5 id="convert-the-xva-image-into-ova-image">Convert the XVA image into OVA image.</h5>
-<ol>
-<li>First Convert the XVA image to RAW image in a ubuntu os</li>
-</ol>
-<p>git clone &ldquo;<a href="https://github.com/eriklax/xva-img%22">https://github.com/eriklax/xva-img&quot;</a>
-or</p>
-<p>apt install xva-img</p>
-<p>mkdir my-virtual-machine
-tar -xf my-virtual-machine.xva -C my-virtual-machine
-chmod -R 755 my-virtual-machine</p>
-<p>xva-img -p disk-export my-virtual-machine/Ref:1/ disk.raw</p>
-<ol start="2">
-<li>Install the qemu-img tools</li>
-</ol>
-<p>brew install qemu
-apt install qemu-utils</p>
-<ol start="3">
-<li>Now convert the raw image to vmdk or qcow2</li>
-</ol>
-<p>qemu-img convert -f raw image.raw -O vmdk image.vmdk</p>
-<p><a href="https://techpiezo.com/linux/convert-disk-images-to-various-formats-using-qemu-img/">https://techpiezo.com/linux/convert-disk-images-to-various-formats-using-qemu-img/</a></p>
-<ol start="4">
-<li>
-<p>Using virtual box import the vmdk as a vm</p>
-</li>
-<li>
-<p>Run the VboxManage to export the file as ova</p>
-</li>
-</ol>
-<p>VBoxManage export xcp -o xcp.ova</p>
-<ol start="6">
-<li>Follow this article to convert the ova into ovf</li>
-</ol>
-<p><a href="https://nixhive.com/how-to-migrate-a-kvm-virtualbox-vm-to-vmware/">https://nixhive.com/how-to-migrate-a-kvm-virtualbox-vm-to-vmware/</a></p>
-<p>sudo ./ovftool &ndash;lax  /Users/kiran_chavala/Desktop/xcp.ova /Users/kiran_chavala/Desktop/xcp.ovf</p>
-<ol start="7">
-<li>Prepare the OVF file for VMware import.</li>
-</ol>
-<p>Delete the .mf file which was created by the OVF tool.</p>
-<p>Modifications to the myvm.ovf file</p>
-<ol>
-<li>
-<p>Change the VirtualSystemType to vmx-07.</p>
-</li>
-<li>
-<p>Change the SATA controller to a SCSI controller.</p>
-</li>
-</ol>
-<Item>
-        <rasd:Address>0</rasd:Address>
-        <rasd:Caption>ideController0</rasd:Caption>
-        <rasd:Description>IDE Controller</rasd:Description>
-        <rasd:ElementName>ideController0</rasd:ElementName>
-        <rasd:InstanceID>3</rasd:InstanceID>
-        <rasd:ResourceSubType>PIIX4</rasd:ResourceSubType>
-        <rasd:ResourceType>5</rasd:ResourceType>
-      </Item>
-      <Item>
-        <rasd:Address>1</rasd:Address>
-        <rasd:Caption>ideController1</rasd:Caption>
-        <rasd:Description>IDE Controller</rasd:Description>
-        <rasd:ElementName>ideController1</rasd:ElementName>
-        <rasd:InstanceID>4</rasd:InstanceID>
-        <rasd:ResourceSubType>PIIX4</rasd:ResourceSubType>
-        <rasd:ResourceType>5</rasd:ResourceType>
-      </Item>
-<p>I had to change those two item with &quot; SCSIController &quot;</p>
-<Item>
-        <rasd:Address>0</rasd:Address>
-        <rasd:Caption>SCSIController</rasd:Caption>
-        <rasd:Description>SCSIController</rasd:Description>
-        <rasd:ElementName>SCSIController</rasd:ElementName>
-        <rasd:InstanceID>5</rasd:InstanceID>
-        <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
-        <rasd:ResourceType>6</rasd:ResourceType>
-      </Item>
-      <Item>
-        <rasd:Address>1</rasd:Address>
-        <rasd:Caption>SCSIController</rasd:Caption>
-        <rasd:Description>SCSIController</rasd:Description>
-        <rasd:ElementName>SCSIController</rasd:ElementName>
-        <rasd:InstanceID>5</rasd:InstanceID>
-        <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
-        <rasd:ResourceType>6</rasd:ResourceType>
-      </Item>
-<ol start="3">
-<li>Remove the “Sound Card” section to avoid getting the below error message later.</li>
-</ol>
-<p>Line 83: OVF hardware element ‘ResourceType’ with instance ID ‘7’: No support for the virtual hardware device type ’35’.</p>
-<ol start="8">
-<li>Upload the OVF to the ESXi</li>
-</ol>
-<p>We have used the below command to upload the OVF to the ESXi Server.
-192.168.10.25 is the IP of my ESXi Server</p>
-<p>ovftool &ndash;net:&ldquo;NAT=VM Network&rdquo; -ds=datastore1 myvm.ovf vi://root@192.168.10.25
-Opening OVF source: jenkins-hq.ovf
-Enter login information for target vi://192.168.10.25/
-Username: root
-Password: ********************
-Opening VI target: vi://root@192.168.10.25:443/
-Deploying to VI: vi://root@192.168.10.25:443/
-Disk progress: 13%</p>
-<ol start="5">
-<li>Launch a vm from vcenter, once the vm is up</li>
-</ol>
-<p>sudo ip link set dev ens35 up</p>
-<p>sudo dhclient -r</p>
-<ol start="6">
-<li>Download the ova</li>
-</ol>
-<p><a href="http://www.vmwarearena.com/export-vm-to-ova-or-ovf-using-ovf-tool/">http://www.vmwarearena.com/export-vm-to-ova-or-ovf-using-ovf-tool/</a></p>
-<p>ovftool vi://10.68.1.176/Bangalore\ Datacenter/vm/Discovered\ virtual\ machine/xcp /Users/kiran_chavala/Desktop/xcp.ova</p>
-<p>Importing</p>
-<p>sudo -s
-xoa network static
-xoa network dhcp</p>
+<p><a href="https://gist.github.com/kiranchavala/a289d26017f6f7526664b70a27e85440">https://gist.github.com/kiranchavala/a289d26017f6f7526664b70a27e85440</a></p>
+<script type="application/javascript" src="https://gist.github.com/kiranchavala/a289d26017f6f7526664b70a27e85440.js"></script>
+
 
     </div>
     <footer>
