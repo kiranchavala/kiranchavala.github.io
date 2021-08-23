@@ -6,7 +6,38 @@
     <description>Recent content in kubernetes on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2020 21:20:00 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 13:27:25 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usingcrictlandnerdctl</title>
+      <link>https://kiranchavala.in/blog/using-crictl-and-nerdctl/</link>
+      <pubDate>Mon, 23 Aug 2021 13:27:25 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/using-crictl-and-nerdctl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K9scli</title>
+      <link>https://kiranchavala.in/blog/k9scli/</link>
+      <pubDate>Wed, 26 Aug 2020 15:04:37 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/k9scli/</guid>
+      <description>k9s is an excellent cli tool to interact with the kubernetes clusters
+brew install derailed/k9s/k9s
+Ref: https://k9scli.io/topics/install/ https://k9scli.io/</description>
+    </item>
+    
+    <item>
+      <title>Installing k3s</title>
+      <link>https://kiranchavala.in/blog/installing-k3s/</link>
+      <pubDate>Wed, 26 Aug 2020 13:52:35 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/installing-k3s/</guid>
+      <description>K3s is light weight kubernetes distribution from Rancher
+https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744
+ Ref: https://k3s.io/ https://github.com/alexellis/k3sup</description>
+    </item>
+    
     <item>
       <title>Mergingkubeconfig</title>
       <link>https://kiranchavala.in/blog/merging-kube-config-files/</link>

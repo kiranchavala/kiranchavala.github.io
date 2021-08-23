@@ -6,7 +6,16 @@
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Jul 2021 10:33:47 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 13:27:25 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Usingcrictlandnerdctl</title>
+      <link>https://kiranchavala.in/blog/using-crictl-and-nerdctl/</link>
+      <pubDate>Mon, 23 Aug 2021 13:27:25 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/using-crictl-and-nerdctl/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Accessing xencenter via browser</title>
       <link>https://kiranchavala.in/blog/accessing-xencenter-via-browser/</link>

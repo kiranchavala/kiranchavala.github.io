@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Jul 2021 10:33:47 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Aug 2021 13:27:25 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://kiranchavala.in/categories/docker/</link>
+      <pubDate>Mon, 23 Aug 2021 13:27:25 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://kiranchavala.in/categories/kubernetes/</link>
+      <pubDate>Mon, 23 Aug 2021 13:27:25 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>VMware</title>
       <link>https://kiranchavala.in/categories/vmware/</link>
@@ -58,15 +76,6 @@
       <pubDate>Thu, 15 Oct 2020 13:06:51 +0530</pubDate>
       
       <guid>https://kiranchavala.in/categories/sw/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://kiranchavala.in/categories/kubernetes/</link>
-      <pubDate>Tue, 25 Aug 2020 21:20:00 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/categories/kubernetes/</guid>
       <description></description>
     </item>
     

@@ -2,22 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kiranchavala.in/blog/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/docker/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/docker/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/kubernetes/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/kubernetes/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/using-crictl-and-nerdctl/</loc>
+    <lastmod>2021-08-23T13:27:25+05:30</lastmod>
+  </url><url>
     <loc>https://kiranchavala.in/blog/accessing-xencenter-via-browser/</loc>
     <lastmod>2021-07-10T10:33:47+05:30</lastmod>
   </url><url>
-    <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/</loc>
-    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
-  </url><url>
     <loc>https://kiranchavala.in/tags/os/</loc>
-    <lastmod>2021-07-10T10:33:47+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2021-07-10T10:33:47+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/vmware/</loc>
@@ -70,12 +85,6 @@
   </url><url>
     <loc>https://kiranchavala.in/blog/installing-k3s/</loc>
     <lastmod>2020-08-26T13:52:35+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/kubernetes/</loc>
-    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/categories/kubernetes/</loc>
-    <lastmod>2020-08-25T21:20:00+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/merging-kube-config-files/</loc>
     <lastmod>2020-08-25T21:20:00+05:30</lastmod>
