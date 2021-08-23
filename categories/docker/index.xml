@@ -16,10 +16,8 @@
       <description>With the removal docker as the default container runtime in kubernetes.
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
- Install crictl  VERSION=&amp;ldquo;v1.22.0&amp;rdquo; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin rm -f crictl-$VERSION-linux-amd64.tar.gz
-Create a endpoint configuration file (crictl.yaml)  Example
-To interact with containerd runtime env
-cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.</description>
+ Install crictl  VERSION=&amp;quot;v1.22.0&amp;quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl.</description>
     </item>
     
   </channel>

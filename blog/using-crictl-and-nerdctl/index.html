@@ -10,20 +10,16 @@
 <meta itemprop="description" content="With the removal docker as the default container runtime in kubernetes.
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
- Install crictl  VERSION=&ldquo;v1.22.0&rdquo; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin rm -f crictl-$VERSION-linux-amd64.tar.gz
-Create a endpoint configuration file (crictl.yaml)  Example
-To interact with containerd runtime env
-cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd."><meta itemprop="datePublished" content="2021-08-23T13:27:25+05:30" />
+ Install crictl  VERSION=&quot;v1.22.0&quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl."><meta itemprop="datePublished" content="2021-08-23T13:27:25+05:30" />
 <meta itemprop="dateModified" content="2021-08-23T13:27:25+05:30" />
-<meta itemprop="wordCount" content="229">
+<meta itemprop="wordCount" content="226">
 <meta itemprop="keywords" content="kubernetes,Docker," /><meta property="og:title" content="Using crictl and nerdctl" />
 <meta property="og:description" content="With the removal docker as the default container runtime in kubernetes.
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
- Install crictl  VERSION=&ldquo;v1.22.0&rdquo; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin rm -f crictl-$VERSION-linux-amd64.tar.gz
-Create a endpoint configuration file (crictl.yaml)  Example
-To interact with containerd runtime env
-cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd." />
+ Install crictl  VERSION=&quot;v1.22.0&quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kiranchavala.in/blog/using-crictl-and-nerdctl/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-08-23T13:27:25+05:30" />
@@ -34,10 +30,8 @@ cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock im
 <meta name="twitter:description" content="With the removal docker as the default container runtime in kubernetes.
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
- Install crictl  VERSION=&ldquo;v1.22.0&rdquo; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin rm -f crictl-$VERSION-linux-amd64.tar.gz
-Create a endpoint configuration file (crictl.yaml)  Example
-To interact with containerd runtime env
-cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd."/>
+ Install crictl  VERSION=&quot;v1.22.0&quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl."/>
 <meta name="twitter:site" content="@kiranchavala"/>
 
 <script type="application/javascript">
@@ -280,69 +274,84 @@ if (!doNotTrack) {
 <ol>
 <li>Install crictl</li>
 </ol>
-<p>VERSION=&ldquo;v1.22.0&rdquo;
-wget <a href="https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz">https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz</a>
+<pre><code>VERSION=&quot;v1.22.0&quot;
+wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz
 sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
-rm -f crictl-$VERSION-linux-amd64.tar.gz</p>
-<ol start="2">
+
+</code></pre><ol start="2">
 <li>Create a endpoint configuration file (crictl.yaml)</li>
 </ol>
 <p>Example</p>
-<p>To interact with containerd runtime env</p>
-<p>cat /etc/crictl.yaml
+<pre><code>To interact with containerd runtime env
+
+cat /etc/crictl.yaml 
 runtime-endpoint: unix:///run/containerd/containerd.sock
 image-endpoint: unix:///run/containerd/containerd.sock
 timeout: 2
 debug: false
-pull-image-on-create: false</p>
-<p>To interact with docker runtime</p>
-<p>cat /etc/crictl.yaml
+pull-image-on-create: false
+
+To interact with docker runtime
+
+cat /etc/crictl.yaml
 runtime-endpoint: unix:///var/run/dockershim.sock
 image-endpoint: unix:///var/run/dockershim.sock
 timeout: 2
 debug: false
-pull-image-on-create: false</p>
-<p>To interact with Crio runtime</p>
-<p>cat /etc/crictl.yaml
+pull-image-on-create: false
+
+To interact with Crio runtime
+
+cat /etc/crictl.yaml
 runtime-endpoint: unix:///run/crio/crio.sock
 image-endpoint: unix:///run/crio/crio.sock
 timeout: 2
-debug: false</p>
-<ol start="3">
+debug: false
+
+</code></pre><ol start="3">
 <li>Execute the crictl commands</li>
 </ol>
 <p>Example:</p>
-<p>kiran@master1:~$ sudo crictl &ndash;help
+<pre><code>kiran@master1:~$ sudo crictl --help
 kiran@master1:~$ sudo crictl info
 kiran@master1:~$ sudo crictl info
 kiran@master1:~$ sudo crictl inspect &lt;&gt;
-kiran@master1:~$ sudo crictl pods</p>
-<p>Nerdctl</p>
+kiran@master1:~$ sudo crictl pods
+</code></pre><p>Nerdctl</p>
 <p>While critctl is great its not compatible with Docker CLI, not friendly to users, and does not support non-CRI features</p>
 <p>Currently nerdctl runs with containerd runtime</p>
 <p><a href="https://github.com/containerd/nerdctl">https://github.com/containerd/nerdctl</a></p>
 <ol>
 <li>Installing</li>
 </ol>
-<p>wget <a href="https://github.com/containerd/nerdctl/releases/download/v0.11.1/nerdctl-0.11.1-linux-amd64.tar.gz">https://github.com/containerd/nerdctl/releases/download/v0.11.1/nerdctl-0.11.1-linux-amd64.tar.gz</a></p>
-<p>sudo tar Cxzvvf /usr/local/bin nerdctl-0.11.1-linux-amd64.tar.gz</p>
-<ol start="2">
+<pre><code>wget https://github.com/containerd/nerdctl/releases/download/v0.11.1/nerdctl-0.11.1-linux-amd64.tar.gz
+
+sudo tar Cxzvvf /usr/local/bin nerdctl-0.11.1-linux-amd64.tar.gz 
+
+</code></pre><ol start="2">
 <li>Commands</li>
 </ol>
-<p>sudo nerdctl version</p>
-<p>sudo nerdctl system info</p>
-<p>sudo nerdctl help</p>
-<p>nerdctl &ndash;namespace k8s.io ps -a</p>
-<p>nerdctl run -d &ndash;name nginx -p 8080:80 nginx:alpine
-nerdclt ps
-nerdctl logs -f &lt;&gt;</p>
-<p>nerdctl compose up -d
+<pre><code>sudo nerdctl version
+
+sudo nerdctl system info 
+
+sudo nerdctl help 
+
+nerdctl --namespace k8s.io ps -a
+
+nerdctl run -d --name nginx -p 8080:80 nginx:alpine
+nerdclt ps 
+nerdctl logs -f &lt;&gt;
+
+nerdctl compose up -d
 nerdctl top &lt;&gt;
 nerdctl volume ls
 nerdctl volume inspect
-nerdctl network -h</p>
-<p>nerdctl port &lt;&gt;</p>
-<p>Ref:
+nerdctl network -h 
+
+nerdctl port &lt;&gt;
+
+</code></pre><p>Ref:
 <a href="https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md">https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md</a>
 <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/crictl/">https://kubernetes.io/docs/tasks/debug-application-cluster/crictl/</a></p>
 <p><a href="https://github.com/containerd/nerdctl">https://github.com/containerd/nerdctl</a></p>
