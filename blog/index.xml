@@ -6,7 +6,16 @@
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Sep 2021 18:11:27 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 12:14:02 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraforming</title>
+      <link>https://kiranchavala.in/blog/terraforming/</link>
+      <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/terraforming/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Kind</title>
       <link>https://kiranchavala.in/blog/kind/</link>

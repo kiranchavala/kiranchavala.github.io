@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2021-09-18T18:11:27+05:30</lastmod>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/terraforming/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/</loc>
     <lastmod>2021-09-18T18:11:27+05:30</lastmod>
@@ -15,9 +21,6 @@
     <lastmod>2021-09-18T18:11:27+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/kind/</loc>
-    <lastmod>2021-09-18T18:11:27+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/</loc>
     <lastmod>2021-09-18T18:11:27+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/kubernetes/</loc>
