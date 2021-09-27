@@ -3,16 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+    <lastmod>2021-09-27T12:31:52+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/creating-kubernetes-cluster-via-vagrant/</loc>
+    <lastmod>2021-09-27T12:31:52+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-09-27T12:31:52+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/aws/</loc>
     <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
-    <loc>https://kiranchavala.in/blog/terraforming/</loc>
+    <loc>https://kiranchavala.in/categories/aws/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/azure/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/azure/</loc>
     <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2021-09-18T18:11:27+05:30</lastmod>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/gcp/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/gcp/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/openstack/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/openstack/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/terraform/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/terraform/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/terraforming/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/terraforming/</loc>
+    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/docker/</loc>
     <lastmod>2021-09-18T18:11:27+05:30</lastmod>
@@ -27,9 +69,6 @@
     <lastmod>2021-09-18T18:11:27+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/kubernetes/</loc>
-    <lastmod>2021-09-18T18:11:27+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2021-09-18T18:11:27+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/using-crictl-and-nerdctl/</loc>
@@ -58,12 +97,6 @@
   </url><url>
     <loc>https://kiranchavala.in/blog/logstash-cloudstack/</loc>
     <lastmod>2021-06-13T13:35:59+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/terraform/</loc>
-    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/categories/terraform/</loc>
-    <lastmod>2021-05-31T21:38:24+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/terraform-cloudstack/</loc>
     <lastmod>2021-05-31T21:38:24+05:30</lastmod>

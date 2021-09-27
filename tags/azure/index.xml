@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AZURE on Kiran Chavala Tech Notes</title>
+    <link>https://kiranchavala.in/tags/azure/</link>
+    <description>Recent content in AZURE on Kiran Chavala Tech Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Sep 2021 12:14:02 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Import Existing Resources into Terrafrorm</title>
+      <link>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</link>
+      <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</guid>
+      <description>There could be scenarios where you want to import the already existing resources into terraform
+Google cloud https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba
+AWS https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea
+Azure https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7
+Openstack https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370
+Cloudstack https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48</description>
+    </item>
+    
+  </channel>
+</rss>

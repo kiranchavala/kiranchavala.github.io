@@ -1,9 +1,15 @@
 [{
-    "title": "Terraforming",
+    "title": "Creating Kubernetes Cluster via Vagrant",
     "date": "",
     "description": "",
-    "body": "",
-    "ref": "/blog/terraforming/"
+    "body": " Install virtual box  sudo apt install virtualbox\nInstall vagrant  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -\nsudo apt-add-repository \u0026ldquo;deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main\u0026rdquo;\nsudo apt-get update \u0026amp;\u0026amp; sudo apt-get install vagrant\nGit clone this repository  git clone https://github.com/justmeandopensource/kubernetes\ncd vagrant-provisioning\nvagrant up\nThis is going to create 1 master node with 2 worker nodes\n",
+    "ref": "/blog/creating-kubernetes-cluster-via-vagrant/"
+  },{
+    "title": "Import Existing Resources into Terrafrorm",
+    "date": "",
+    "description": "",
+    "body": "There could be scenarios where you want to import the already existing resources into terraform\nGoogle cloud https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba\nAWS https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea\nAzure https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7\nOpenstack https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370\nCloudstack https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48\n",
+    "ref": "/blog/import-existing-resources-into-terrafrorm/"
   },{
     "title": "Kind",
     "date": "",
