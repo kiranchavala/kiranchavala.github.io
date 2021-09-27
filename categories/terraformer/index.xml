@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AZURE on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/tags/azure/</link>
-    <description>Recent content in AZURE on Kiran Chavala Tech Notes</description>
+    <title>Terraformer on Kiran Chavala Tech Notes</title>
+    <link>https://kiranchavala.in/categories/terraformer/</link>
+    <description>Recent content in Terraformer on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Sep 2021 12:14:02 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 12:14:02 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/terraformer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Import Existing Resources into Terrafrorm</title>
       <link>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</link>

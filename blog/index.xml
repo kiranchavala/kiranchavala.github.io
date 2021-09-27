@@ -29,7 +29,11 @@ This is going to create 1 master node with 2 worker nodes</description>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
       
       <guid>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</guid>
-      <description>There could be scenarios where you want to import the already existing resources into terraform
+      <description>There could be scenarios where you want to import the already existing resources from cloud providers into terraform.
+Terraform has an import modude which does this job and using the module is a tedious process
+https://www.terraform.io/docs/cli/import/index.html
+There is tool called Terraformer which does the job of reverese terraforming
+https://github.com/GoogleCloudPlatform/terraformer
 Google cloud https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba
 AWS https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea
 Azure https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7

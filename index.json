@@ -8,7 +8,7 @@
     "title": "Import Existing Resources into Terrafrorm",
     "date": "",
     "description": "",
-    "body": "There could be scenarios where you want to import the already existing resources into terraform\nGoogle cloud https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba\nAWS https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea\nAzure https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7\nOpenstack https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370\nCloudstack https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48\n",
+    "body": "There could be scenarios where you want to import the already existing resources from cloud providers into terraform.\nTerraform has an import modude which does this job and using the module is a tedious process\nhttps://www.terraform.io/docs/cli/import/index.html\nThere is tool called Terraformer which does the job of reverese terraforming\nhttps://github.com/GoogleCloudPlatform/terraformer\nGoogle cloud https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba\nAWS https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea\nAzure https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7\nOpenstack https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370\nCloudstack https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48\n",
     "ref": "/blog/import-existing-resources-into-terrafrorm/"
   },{
     "title": "Kind",
