@@ -3,12 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2021-09-27T12:31:52+05:30</lastmod>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
   </url><url>
-    <loc>https://kiranchavala.in/blog/creating-kubernetes-cluster-via-vagrant/</loc>
-    <lastmod>2021-09-27T12:31:52+05:30</lastmod>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/google-cloud/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/google-cloud/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/packer/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/packer/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/tags/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</loc>
+    <lastmod>2021-12-01T15:05:48+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/creating-kubernetes-cluster-via-vagrant/</loc>
     <lastmod>2021-09-27T12:31:52+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/aws/</loc>
@@ -21,9 +42,6 @@
     <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/azure/</loc>
-    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/categories/</loc>
     <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/gcp/</loc>
@@ -39,9 +57,6 @@
     <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/categories/openstack/</loc>
-    <lastmod>2021-09-22T12:14:02+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/tags/</loc>
     <lastmod>2021-09-22T12:14:02+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/terraform/</loc>
