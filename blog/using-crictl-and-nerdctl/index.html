@@ -6,12 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.85.0" /><meta itemprop="name" content="Using crictl and nerdctl">
+<meta name="generator" content="Hugo 0.105.0"><meta itemprop="name" content="Using crictl and nerdctl">
 <meta itemprop="description" content="With the removal docker as the default container runtime in kubernetes.
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
 Crictl
- Install crictl  VERSION=&quot;v1.22.0&quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+Install crictl VERSION=&#34;v1.22.0&#34; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml) Example
 To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl."><meta itemprop="datePublished" content="2021-08-23T13:27:25+05:30" />
 <meta itemprop="dateModified" content="2021-08-23T13:27:25+05:30" />
 <meta itemprop="wordCount" content="227">
@@ -20,7 +20,7 @@ To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: u
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
 Crictl
- Install crictl  VERSION=&quot;v1.22.0&quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+Install crictl VERSION=&#34;v1.22.0&#34; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml) Example
 To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kiranchavala.in/blog/using-crictl-and-nerdctl/" /><meta property="article:section" content="blog" />
@@ -33,7 +33,7 @@ To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: u
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
 Crictl
- Install crictl  VERSION=&quot;v1.22.0&quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+Install crictl VERSION=&#34;v1.22.0&#34; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml) Example
 To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl."/>
 <meta name="twitter:site" content="@kiranchavala"/>
 
@@ -278,15 +278,14 @@ if (!doNotTrack) {
 <ol>
 <li>Install crictl</li>
 </ol>
-<pre><code>VERSION=&quot;v1.22.0&quot;
+<pre tabindex="0"><code>VERSION=&#34;v1.22.0&#34;
 wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz
 sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
-
 </code></pre><ol start="2">
 <li>Create a endpoint configuration file (crictl.yaml)</li>
 </ol>
 <p>Example</p>
-<pre><code>To interact with containerd runtime env
+<pre tabindex="0"><code>To interact with containerd runtime env
 
 cat /etc/crictl.yaml 
 runtime-endpoint: unix:///run/containerd/containerd.sock
@@ -311,12 +310,11 @@ runtime-endpoint: unix:///run/crio/crio.sock
 image-endpoint: unix:///run/crio/crio.sock
 timeout: 2
 debug: false
-
 </code></pre><ol start="3">
 <li>Execute the crictl commands</li>
 </ol>
 <p>Example:</p>
-<pre><code>kiran@master1:~$ sudo crictl --help
+<pre tabindex="0"><code>kiran@master1:~$ sudo crictl --help
 kiran@master1:~$ sudo crictl info
 kiran@master1:~$ sudo crictl info
 kiran@master1:~$ sudo crictl inspect &lt;&gt;
@@ -328,14 +326,13 @@ kiran@master1:~$ sudo crictl pods
 <ol>
 <li>Installing</li>
 </ol>
-<pre><code>wget https://github.com/containerd/nerdctl/releases/download/v0.11.1/nerdctl-0.11.1-linux-amd64.tar.gz
+<pre tabindex="0"><code>wget https://github.com/containerd/nerdctl/releases/download/v0.11.1/nerdctl-0.11.1-linux-amd64.tar.gz
 
 sudo tar Cxzvvf /usr/local/bin nerdctl-0.11.1-linux-amd64.tar.gz 
-
 </code></pre><ol start="2">
 <li>Commands</li>
 </ol>
-<pre><code>sudo nerdctl version
+<pre tabindex="0"><code>sudo nerdctl version
 
 sudo nerdctl system info 
 
@@ -354,7 +351,6 @@ nerdctl volume inspect
 nerdctl network -h 
 
 nerdctl port &lt;&gt;
-
 </code></pre><p>Ref:
 <a href="https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md">https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md</a>
 <a href="https://kubernetes.io/docs/tasks/debug-application-cluster/crictl/">https://kubernetes.io/docs/tasks/debug-application-cluster/crictl/</a></p>
@@ -401,7 +397,7 @@ nerdctl port &lt;&gt;
   <article class="post">
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -445,6 +441,14 @@ nerdctl port &lt;&gt;
       <article class="mini-post">
           
         <header>
+          <h2><a href="/blog/using-cloud-init-in-cloudstack/">Creating a Openstack setup and also launching a k8s cluster</a></h2>
+          <time class="published" datetime="2022-11-10 11:48:50 &#43;0530 IST">November 10, 2022</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
           <h2><a href="/blog/using-packer-to-deploy-a-image-on-google-cloud/">Using Packer to deploy a image on Google Cloud</a></h2>
           <time class="published" datetime="2021-12-01 15:05:48 &#43;0530 IST">December 1, 2021</time>
         </header>
@@ -474,14 +478,6 @@ nerdctl port &lt;&gt;
         </header>
       </article>
       
-      <article class="mini-post">
-          
-        <header>
-          <h2><a href="/blog/using-crictl-and-nerdctl/">Using crictl and nerdctl</a></h2>
-          <time class="published" datetime="2021-08-23 13:27:25 &#43;0530 IST">August 23, 2021</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/blog/" class="button">See More</a>
@@ -503,10 +499,10 @@ nerdctl port &lt;&gt;
               <a href="/categories/kubernetes/">kubernetes<span class="count">7</span></a>
           
           <li>
-              <a href="/categories/sw/">sw<span class="count">3</span></a>
+              <a href="/categories/cloudstack/">cloudstack<span class="count">3</span></a>
           
           <li>
-              <a href="/categories/cloudstack/">cloudstack<span class="count">2</span></a>
+              <a href="/categories/sw/">sw<span class="count">3</span></a>
           
           <li>
               <a href="/categories/docker/">docker<span class="count">2</span></a>
@@ -619,16 +615,16 @@ nerdctl port &lt;&gt;
       </ul>
   
   <p class="copyright">
-    © 2021 Kiran Chavala Tech Notes
+    © 2022 Kiran Chavala Tech Notes
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.85.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.105.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b30f9a6b5048f7027c9de57d83d56309595affa6f8bdea8b4173aa1a0ab6be48.js" integrity="sha256-sw&#43;aa1BI9wJ8neV9g9VjCVla/6b4veqLQXOqGgq2vkg="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.beccc0b0a264507fba1f44b76ea0acc58d95d2b17bfde9661b4f4806a69b6b99.js" integrity="sha256-vszAsKJkUH&#43;6H0S3bqCsxY2V0rF7/elmG09IBqaba5k="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

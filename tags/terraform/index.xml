@@ -37,9 +37,10 @@ Generally the plugins are available at
 https://registry.terraform.io/
 To use the plugins which are archived and not available in the terraform registry
 Follow the steps a small tweak is necessary
- Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+Currently the cloudstack plugin is archived https://github.com/hashicorp/terraform-provider-cloudstack
 https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
-Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/</description>
+Download the terrform provider for cloudstack based on the os you are running https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/
+On linux and mac Move it</description>
     </item>
     
   </channel>

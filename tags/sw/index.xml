@@ -15,7 +15,7 @@
       <guid>https://kiranchavala.in/blog/downloading-songs-from-spotify/</guid>
       <description>To download the songs from spotify
 https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4
- References
+References
 https://github.com/SathyaBhat/spotify-dl
 https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/
 https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124</description>
@@ -35,7 +35,7 @@ Install a theme and copy exampleSite/config.toml to the root folder
 mkdir themes // Creates a &amp;ldquo;themes&amp;rdquo; Folder cd themes // Points to the &amp;ldquo;themes&amp;rdquo; Folder git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git
 Youtube references
 Mike Dane&amp;rsquo;s Playlist
-  Ref
+Ref
 Installation
 https://gohugo.io/getting-started/installing/
 Theme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite</description>
@@ -50,10 +50,9 @@ Theme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite</descr
       <description>Jekyll is popular static site generator
 The steps are here
 https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d
- Youtube references
+Youtube references
 Mike Dane&amp;rsquo;s Playlist
-  Bill Raymond
-  </description>
+Bill Raymond</description>
     </item>
     
   </channel>

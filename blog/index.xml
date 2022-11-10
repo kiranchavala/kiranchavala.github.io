@@ -6,7 +6,25 @@
     <description>Recent content in Blog on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Dec 2021 15:05:48 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2022 11:48:50 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Openstack setup and also launching a k8s cluster</title>
+      <link>https://kiranchavala.in/blog/using-cloud-init-in-cloudstack/</link>
+      <pubDate>Thu, 10 Nov 2022 11:48:50 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/blog/using-cloud-init-in-cloudstack/</guid>
+      <description>Launch any linux vm (Centos, Ubuntu etc) from a iso
+Install the cloud init package
+RHEL: yum install cloud-init
+Ubuntu : apt-get install cloud-init
+Configure the cloud init by adding the cloudstack datasource package vi /etc/cloud/cloud.cfg.d/99_cloudstack.cfg
+datasource_list: [ CloudStack, None ]
+Create a template of the disk
+Launch a vm based on the template created and pass the userdata parameter
+deploy virtualmachine serviceofferingid=720d1320-06d7-4918-9f2a-ef5ba7e07bf3 templateid=0d9bf1f4-288d-4510-b2c5-8e980c51c98d zoneid=10a26e0d-2085-4b09-bd0f-c726a6bd9443 networkids=cf8fcdb8-741c-4f98-b856-adc4fd99c157 userdata=I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=
+Note: Make sure the userdata is encoded in base64 format if calling from Api , if you are passing the userdata from UI , there is no need to encode it</description>
+    </item>
+    
     <item>
       <title>Using Packer to deploy a image on Google Cloud</title>
       <link>https://kiranchavala.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</link>
@@ -15,7 +33,7 @@
       <guid>https://kiranchavala.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</guid>
       <description>Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &amp;ldquo;golden images&amp;rdquo; that teams across an organization can use in cloud infrastructure.
 There 2 ways to write the packer code to build the image
- Using JSON formatted code Using HCL2 formatted code   In order to interact with Google cloud we have to create a service account in GCP</description>
+Using JSON formatted code Using HCL2 formatted code In order to interact with Google cloud we have to create a service account in GCP</description>
     </item>
     
     <item>
@@ -24,11 +42,11 @@ There 2 ways to write the packer code to build the image
       <pubDate>Mon, 27 Sep 2021 12:31:52 +0530</pubDate>
       
       <guid>https://kiranchavala.in/blog/creating-kubernetes-cluster-via-vagrant/</guid>
-      <description>Install virtual box  sudo apt install virtualbox
-Install vagrant  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+      <description>Install virtual box sudo apt install virtualbox
+Install vagrant curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository &amp;ldquo;deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main&amp;rdquo;
 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install vagrant
-Git clone this repository  git clone https://github.com/justmeandopensource/kubernetes
+Git clone this repository git clone https://github.com/justmeandopensource/kubernetes
 cd vagrant-provisioning
 vagrant up
 This is going to create 1 master node with 2 worker nodes</description>
@@ -63,7 +81,7 @@ Kind ( Kubernetes in Docker)
 Kind basically creates the nodes as a containers and create a kubernetes cluster
 https://kind.sigs.k8s.io/
 https://github.com/kubernetes-sigs/kind
-brew install kind Deploying a Single node cluster kind create cluster docker images kindest/node &amp;lt;none&amp;gt; d372b674475a 3 months ago 1.1GB docker ps -a 3047fe4988f4 kindest/node:v1.21.1 &amp;quot;/usr/local/bin/entr…&amp;quot; 8 days ago Up 8 days 127.</description>
+brew install kind Deploying a Single node cluster kind create cluster docker images kindest/node &amp;lt;none&amp;gt; d372b674475a 3 months ago 1.1GB docker ps -a 3047fe4988f4 kindest/node:v1.21.1 &amp;#34;/usr/local/bin/entr…&amp;#34; 8 days ago Up 8 days 127.</description>
     </item>
     
     <item>
@@ -76,7 +94,7 @@ brew install kind Deploying a Single node cluster kind create cluster docker ima
 When a situation arises where you need to debug the container application container
 You can use Crictl and Nerdctl and debug the issue quickly
 Crictl
- Install crictl  VERSION=&amp;quot;v1.22.0&amp;quot; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml)  Example
+Install crictl VERSION=&amp;#34;v1.22.0&amp;#34; wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin Create a endpoint configuration file (crictl.yaml) Example
 To interact with containerd runtime env cat /etc/crictl.yaml runtime-endpoint: unix:///run/containerd/containerd.sock image-endpoint: unix:///run/containerd/containerd.sock timeout: 2 debug: false pull-image-on-create: false To interact with docker runtime cat /etc/crictl.</description>
     </item>
     
@@ -91,9 +109,9 @@ This could be a limitation for the users of linux and mac
 Meanwhile you can access vmware exsi servers and also manage the clusters of vcenter via http
 To overcome this limitation you can use the XCP hypervisor
 XCP is open source hypervisor based on XenServer.
- Download the XCP-ng  https://xcp-ng.org/#easy-to-install
+Download the XCP-ng https://xcp-ng.org/#easy-to-install
 https://xcp-ng.org/docs/install.html#iso-installation
-Install the xcp-center for windows systems to access the XCP hypervisors  https://github.</description>
+Install the xcp-center for windows systems to access the XCP hypervisors https://github.</description>
     </item>
     
     <item>
@@ -104,8 +122,9 @@ Install the xcp-center for windows systems to access the XCP hypervisors  https:
       <guid>https://kiranchavala.in/blog/logstash-cloudstack/</guid>
       <description>Using Elastic search is a great tool to analysze logs generated by your application
 Elastic search is made up of 3 parts
- Elastic search &amp;ndash;&amp;gt; the core search engine Logstah &amp;ndash;&amp;gt; to parse the logs Kibana &amp;ndash;&amp;gt; visualization  Here i have imported the cloudstack management server logs to the ELK and I can perform various analytics
- Follow the below link to set up your elk infrstructure  https://www.</description>
+Elastic search &amp;ndash;&amp;gt; the core search engine Logstah &amp;ndash;&amp;gt; to parse the logs Kibana &amp;ndash;&amp;gt; visualization Here i have imported the cloudstack management server logs to the ELK and I can perform various analytics
+Follow the below link to set up your elk infrstructure https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04
+Once done make sure your elastic, logstash, and kibana process are able to communicate with each other</description>
     </item>
     
     <item>
@@ -120,9 +139,10 @@ Generally the plugins are available at
 https://registry.terraform.io/
 To use the plugins which are archived and not available in the terraform registry
 Follow the steps a small tweak is necessary
- Currently the cloudstack plugin is archived  https://github.com/hashicorp/terraform-provider-cloudstack
+Currently the cloudstack plugin is archived https://github.com/hashicorp/terraform-provider-cloudstack
 https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
-Download the terrform provider for cloudstack based on the os you are running  https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/</description>
+Download the terrform provider for cloudstack based on the os you are running https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/
+On linux and mac Move it</description>
     </item>
     
     <item>
@@ -133,7 +153,7 @@ Download the terrform provider for cloudstack based on the os you are running  h
       <guid>https://kiranchavala.in/blog/raspberrypi/</guid>
       <description>After hearing frequent mentions of Raspberry pi use cases, I had decided to buy Raspberry pi 4 model.
 The site https://www.thingbits.in was giving best discounts on pi and it&amp;rsquo;s accessories.
- The best use case of pi was the implementation of PI-HOLE which blocks all the ads on websites.
+The best use case of pi was the implementation of PI-HOLE which blocks all the ads on websites.
 Here are links i used for the complete installation of pi and implementation of PI-HOLE
 https://docs.pi-hole.net/
 https://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed
@@ -148,7 +168,7 @@ https://filterlists.com/lists/pl-host-file</description>
       <guid>https://kiranchavala.in/blog/downloading-songs-from-spotify/</guid>
       <description>To download the songs from spotify
 https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4
- References
+References
 https://github.com/SathyaBhat/spotify-dl
 https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/
 https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124</description>
@@ -173,7 +193,7 @@ Ref: https://k9scli.io/topics/install/ https://k9scli.io/</description>
       <guid>https://kiranchavala.in/blog/installing-k3s/</guid>
       <description>K3s is light weight kubernetes distribution from Rancher
 https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744
- Ref: https://k3s.io/ https://github.com/alexellis/k3sup</description>
+Ref: https://k3s.io/ https://github.com/alexellis/k3sup</description>
     </item>
     
     <item>
@@ -219,7 +239,7 @@ Install a theme and copy exampleSite/config.toml to the root folder
 mkdir themes // Creates a &amp;ldquo;themes&amp;rdquo; Folder cd themes // Points to the &amp;ldquo;themes&amp;rdquo; Folder git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git
 Youtube references
 Mike Dane&amp;rsquo;s Playlist
-  Ref
+Ref
 Installation
 https://gohugo.io/getting-started/installing/
 Theme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite</description>
@@ -233,8 +253,7 @@ Theme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite</descr
       <guid>https://kiranchavala.in/blog/installing-rancher/</guid>
       <description>Rancher is a tool to manage your kubernetes cluster
 The installation steps are here
-https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc
- </description>
+https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc</description>
     </item>
     
     <item>
@@ -244,8 +263,7 @@ https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc
       
       <guid>https://kiranchavala.in/blog/installing-kubernetes-via-kubeadm/</guid>
       <description>The steps are here
-https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051
- </description>
+https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051</description>
     </item>
     
     <item>
@@ -257,10 +275,9 @@ https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051
       <description>Jekyll is popular static site generator
 The steps are here
 https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d
- Youtube references
+Youtube references
 Mike Dane&amp;rsquo;s Playlist
-  Bill Raymond
-  </description>
+Bill Raymond</description>
     </item>
     
     <item>
@@ -270,8 +287,7 @@ Mike Dane&amp;rsquo;s Playlist
       
       <guid>https://kiranchavala.in/blog/using-tmux/</guid>
       <description>If you want to execute the same command across different server
-https://github.com/tmux/tmux/wiki
- </description>
+https://github.com/tmux/tmux/wiki</description>
     </item>
     
     <item>
@@ -284,11 +300,12 @@ https://github.com/tmux/tmux/wiki
 ifconfig -a | grep inet6
 inet6 fe80::211:aff:fe6a:9de4 prefixlen 64 scopeid 0x20
 inet6 ::1 prefixlen 128 scopeid 0x10[host]
-  Disable Ipv6 in kernel module (requires reboot)
-  Edit /etc/default/grub
+Disable Ipv6 in kernel module (requires reboot)
+Edit /etc/default/grub
 add ipv6.disable=1 in line GRUB_CMDLINE_LINUX, e.g
-cat /etc/default/grub GRUB_TIMEOUT=5 GRUB_DEFAULT=saved GRUB_DISABLE_SUBMENU=true GRUB_TERMINAL_OUTPUT=&amp;quot;console&amp;quot; GRUB_CMDLINE_LINUX=&amp;quot;ipv6.disable=1 crashkernel=auto rhgb quiet&amp;quot; GRUB_DISABLE_RECOVERY=&amp;quot;true&amp;quot;   Regenerate a GRUB configuration file and overwrite existing one
-grub2-mkconfig -o /boot/grub2/grub.</description>
+cat /etc/default/grub GRUB_TIMEOUT=5 GRUB_DEFAULT=saved GRUB_DISABLE_SUBMENU=true GRUB_TERMINAL_OUTPUT=&amp;quot;console&amp;quot; GRUB_CMDLINE_LINUX=&amp;quot;ipv6.disable=1 crashkernel=auto rhgb quiet&amp;quot; GRUB_DISABLE_RECOVERY=&amp;quot;true&amp;quot; Regenerate a GRUB configuration file and overwrite existing one
+grub2-mkconfig -o /boot/grub2/grub.cfg
+Restart system and verify no line “inet6” in “ip addr show” command output</description>
     </item>
     
   </channel>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Kiran Chavala Tech Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Dec 2021 15:05:48 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2022 11:48:50 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudstack</title>
+      <link>https://kiranchavala.in/categories/cloudstack/</link>
+      <pubDate>Thu, 10 Nov 2022 11:48:50 +0530</pubDate>
+      
+      <guid>https://kiranchavala.in/categories/cloudstack/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Google cloud</title>
       <link>https://kiranchavala.in/categories/google-cloud/</link>
@@ -112,15 +121,6 @@
       <pubDate>Sat, 10 Jul 2021 10:33:47 +0530</pubDate>
       
       <guid>https://kiranchavala.in/categories/xenserver/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cloudstack</title>
-      <link>https://kiranchavala.in/categories/cloudstack/</link>
-      <pubDate>Sun, 13 Jun 2021 13:35:59 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/categories/cloudstack/</guid>
       <description></description>
     </item>
     

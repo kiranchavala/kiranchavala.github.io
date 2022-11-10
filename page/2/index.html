@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.85.0" /><meta itemprop="name" content="Kiran Chavala Tech Notes">
+<meta name="generator" content="Hugo 0.105.0"><meta itemprop="name" content="Kiran Chavala Tech Notes">
 <meta itemprop="description" content=""><meta property="og:title" content="Kiran Chavala Tech Notes" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -44,9 +44,9 @@ if (!doNotTrack) {
 <ol>
 <li>Users that have front matter that utilize <code>images</code> (backwards compatibility for <code>featured</code> and associated parameters still remains) <em>will</em> need to adjust from <code>[images]=&quot;SRC&quot;</code> to the new format.</li>
 </ol>
-<pre><code>[[images]]
-    src = &quot;&quot; // Link to image
-    alt = &quot;&quot; // Alt text for image
+<pre tabindex="0"><code>[[images]]
+    src = &#34;&#34; // Link to image
+    alt = &#34;&#34; // Alt text for image
     stretch = // Optional: See screenshots for referenced values and outcomes
 </code></pre><p>If you utilize any of the following, there <em>might</em> be a breaking:</p>
 <ol>
@@ -237,6 +237,73 @@ if (!doNotTrack) {
   <header>
   <div class="title">
     
+      <h2><a href="/blog/import-existing-resources-into-terrafrorm/">Import Existing Resources into Terrafrorm</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-09-22 12:14:02 &#43;0530 IST">September 22, 2021</time>
+    
+    <p>1-Minute Read</p>
+  </div>
+</header>
+
+  <div class="content">
+    
+    
+    <p>There could be scenarios where you want to import the already existing resources from cloud providers into terraform.</p>
+  </div>
+  <footer>
+    <a href="/blog/import-existing-resources-into-terrafrorm/" class="button big">Read More</a>
+    <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/terraform/">Terraform</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/terraformer/">Terraformer</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/aws/">AWS</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/gcp/">GCP</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/azure/">AZURE</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/openstack/">OpenStack</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/terraform/">Terraform</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/terraformer/">Terraformer</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/aws/">AWS</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/gcp/">GCP</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/azure/">AZURE</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/openstack/">OpenStack</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+  </footer>
+</article>
+
+  
+    <article class="post">
+  <header>
+  <div class="title">
+    
       <h2><a href="/blog/kind/">Kind</a></h2>
     
     
@@ -335,55 +402,6 @@ if (!doNotTrack) {
 </article>
 
   
-    <article class="post">
-  <header>
-  <div class="title">
-    
-      <h2><a href="/blog/accessing-xencenter-via-browser/">Accessing xencenter via browser</a></h2>
-    
-    
-  </div>
-  <div class="meta">
-    <time datetime="2021-07-10 10:33:47 &#43;0530 IST">July 10, 2021</time>
-    
-    <p>1-Minute Read</p>
-  </div>
-</header>
-
-  <div class="content">
-    
-    
-    <p>Currently to access and manage xenserver cluster you need a xencenter installed in a windows system.</p>
-  </div>
-  <footer>
-    <a href="/blog/accessing-xencenter-via-browser/" class="button big">Read More</a>
-    <div class="stats">
-  
-    <ul class="categories">
-      
-        
-          <li><a class="article-terms-link" href="/categories/xenserver/">Xenserver</a></li>
-        
-          <li><a class="article-terms-link" href="/categories/vmware/">VMware</a></li>
-        
-      
-    </ul>
-  
-  
-    <ul class="tags">
-      
-        
-          <li><a class="article-terms-link" href="/tags/os/">Os</a></li>
-        
-      
-    </ul>
-  
-</div>
-
-  </footer>
-</article>
-
-  
   <div class="pagination">
     
       <a href="/" class="button left"><span>Previous Page</span></a>
@@ -400,6 +418,14 @@ if (!doNotTrack) {
       <header>
         <h1>Recent Posts</h1>
       </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/using-cloud-init-in-cloudstack/">Creating a Openstack setup and also launching a k8s cluster</a></h2>
+          <time class="published" datetime="2022-11-10 11:48:50 &#43;0530 IST">November 10, 2022</time>
+        </header>
+      </article>
       
       <article class="mini-post">
           
@@ -433,14 +459,6 @@ if (!doNotTrack) {
         </header>
       </article>
       
-      <article class="mini-post">
-          
-        <header>
-          <h2><a href="/blog/using-crictl-and-nerdctl/">Using crictl and nerdctl</a></h2>
-          <time class="published" datetime="2021-08-23 13:27:25 &#43;0530 IST">August 23, 2021</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/blog/" class="button">See More</a>
@@ -462,10 +480,10 @@ if (!doNotTrack) {
               <a href="/categories/kubernetes/">kubernetes<span class="count">7</span></a>
           
           <li>
-              <a href="/categories/sw/">sw<span class="count">3</span></a>
+              <a href="/categories/cloudstack/">cloudstack<span class="count">3</span></a>
           
           <li>
-              <a href="/categories/cloudstack/">cloudstack<span class="count">2</span></a>
+              <a href="/categories/sw/">sw<span class="count">3</span></a>
           
           <li>
               <a href="/categories/docker/">docker<span class="count">2</span></a>
@@ -578,16 +596,16 @@ if (!doNotTrack) {
       </ul>
   
   <p class="copyright">
-    © 2021 Kiran Chavala Tech Notes
+    © 2022 Kiran Chavala Tech Notes
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.85.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.105.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b30f9a6b5048f7027c9de57d83d56309595affa6f8bdea8b4173aa1a0ab6be48.js" integrity="sha256-sw&#43;aa1BI9wJ8neV9g9VjCVla/6b4veqLQXOqGgq2vkg="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.beccc0b0a264507fba1f44b76ea0acc58d95d2b17bfde9661b4f4806a69b6b99.js" integrity="sha256-vszAsKJkUH&#43;6H0S3bqCsxY2V0rF7/elmG09IBqaba5k="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

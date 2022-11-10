@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.85.0" /><meta itemprop="name" content="Using Packer to deploy a image on Google Cloud">
+<meta name="generator" content="Hugo 0.105.0"><meta itemprop="name" content="Using Packer to deploy a image on Google Cloud">
 <meta itemprop="description" content="Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &ldquo;golden images&rdquo; that teams across an organization can use in cloud infrastructure.
 There 2 ways to write the packer code to build the image
- Using JSON formatted code Using HCL2 formatted code   In order to interact with Google cloud we have to create a service account in GCP"><meta itemprop="datePublished" content="2021-12-01T15:05:48+05:30" />
+Using JSON formatted code Using HCL2 formatted code In order to interact with Google cloud we have to create a service account in GCP"><meta itemprop="datePublished" content="2021-12-01T15:05:48+05:30" />
 <meta itemprop="dateModified" content="2021-12-01T15:05:48+05:30" />
 <meta itemprop="wordCount" content="1396">
 <meta itemprop="keywords" content="packer,Google cloud," /><meta property="og:title" content="Using Packer to deploy a image on Google Cloud" />
 <meta property="og:description" content="Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &ldquo;golden images&rdquo; that teams across an organization can use in cloud infrastructure.
 There 2 ways to write the packer code to build the image
- Using JSON formatted code Using HCL2 formatted code   In order to interact with Google cloud we have to create a service account in GCP" />
+Using JSON formatted code Using HCL2 formatted code In order to interact with Google cloud we have to create a service account in GCP" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kiranchavala.in/blog/using-packer-to-deploy-a-image-on-google-cloud/" /><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2021-12-01T15:05:48+05:30" />
@@ -25,7 +25,7 @@ There 2 ways to write the packer code to build the image
 <meta name="twitter:title" content="Using Packer to deploy a image on Google Cloud"/>
 <meta name="twitter:description" content="Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &ldquo;golden images&rdquo; that teams across an organization can use in cloud infrastructure.
 There 2 ways to write the packer code to build the image
- Using JSON formatted code Using HCL2 formatted code   In order to interact with Google cloud we have to create a service account in GCP"/>
+Using JSON formatted code Using HCL2 formatted code In order to interact with Google cloud we have to create a service account in GCP"/>
 <meta name="twitter:site" content="@kiranchavala"/>
 
 <script type="application/javascript">
@@ -273,15 +273,14 @@ if (!doNotTrack) {
 <li>Create a service account in google cloud, we will use the service account to deploy the images in Google cloud</li>
 </ol>
 <p>Identify the project associated with your google cloud account</p>
-<pre><code>
+<pre tabindex="0"><code>
 ~❯ gcloud config get-value project                                                                                                                                                           
 terraform-325207
-
 </code></pre><ol start="2">
 <li>Replace the project id in the below commands</li>
 </ol>
-<pre><code>
-1 .gcloud iam service-accounts create packer   --project terraform-325207  --description=&quot;Packer Service Account&quot;   --display-name=&quot;Packer Service Account&quot;
+<pre tabindex="0"><code>
+1 .gcloud iam service-accounts create packer   --project terraform-325207  --description=&#34;Packer Service Account&#34;   --display-name=&#34;Packer Service Account&#34;
 
 Created service account [packer]
 
@@ -357,13 +356,12 @@ bindings:
   role: roles/owner
 etag: BwXQ5jBDseY=
 version: 1
-
 </code></pre><ol start="3">
 <li>Create an API key for the service account</li>
 </ol>
 <p>Home&gt;IAM &gt;Service account&gt; click on the service account &gt; ADD key &gt; Save the json file in the folder</p>
 <p>Using json format to create an image in Google cloud</p>
-<pre><code>
+<pre tabindex="0"><code>
 ~❯ mkdir -p  packer_templates
 ~❯ cd packer_templates
 ~❯ mkdir -p gcp
@@ -371,33 +369,33 @@ version: 1
 ~❯ vi gcp-webserver.json
 
 {
-    &quot;builders&quot;: [{
-      &quot;type&quot;: &quot;googlecompute&quot;,
-      &quot;account_file&quot;: &quot;terraform-325207-39ea61c5c3ce.json&quot;,
-      &quot;project_id&quot;: &quot;terraform-325207&quot;,
-      &quot;source_image&quot;: &quot;ubuntu-1804-bionic-v20211021&quot;,
-      &quot;ssh_username&quot;: &quot;packer&quot;,    
-      &quot;zone&quot;: &quot;us-central1-a&quot;,
-      &quot;region&quot;: &quot;us-central1&quot;,
-      &quot;machine_type&quot;: &quot;n1-standard-1&quot;,
-      &quot;image_description&quot;: &quot;custom machine image&quot;,
-      &quot;image_name&quot;: &quot;mypackerimage&quot;,
-      &quot;disk_size&quot;: 10,
-      &quot;network&quot;: &quot;kiran-vpc2&quot;,
-      &quot;subnetwork&quot;: &quot;kiran-vpc2&quot;
+    &#34;builders&#34;: [{
+      &#34;type&#34;: &#34;googlecompute&#34;,
+      &#34;account_file&#34;: &#34;terraform-325207-39ea61c5c3ce.json&#34;,
+      &#34;project_id&#34;: &#34;terraform-325207&#34;,
+      &#34;source_image&#34;: &#34;ubuntu-1804-bionic-v20211021&#34;,
+      &#34;ssh_username&#34;: &#34;packer&#34;,    
+      &#34;zone&#34;: &#34;us-central1-a&#34;,
+      &#34;region&#34;: &#34;us-central1&#34;,
+      &#34;machine_type&#34;: &#34;n1-standard-1&#34;,
+      &#34;image_description&#34;: &#34;custom machine image&#34;,
+      &#34;image_name&#34;: &#34;mypackerimage&#34;,
+      &#34;disk_size&#34;: 10,
+      &#34;network&#34;: &#34;kiran-vpc2&#34;,
+      &#34;subnetwork&#34;: &#34;kiran-vpc2&#34;
       
     }],
-    &quot;provisioners&quot;: [
+    &#34;provisioners&#34;: [
         {
-          &quot;type&quot;: &quot;file&quot;,
-          &quot;source&quot;: &quot;index.html&quot;,
-          &quot;destination&quot;: &quot;/tmp/index.html&quot;
+          &#34;type&#34;: &#34;file&#34;,
+          &#34;source&#34;: &#34;index.html&#34;,
+          &#34;destination&#34;: &#34;/tmp/index.html&#34;
         },
         {
-         &quot;type&quot;: &quot;shell&quot;,
-         &quot;scripts&quot;: [
-           &quot;install.sh&quot;,
-           &quot;post-install.sh&quot;
+         &#34;type&#34;: &#34;shell&#34;,
+         &#34;scripts&#34;: [
+           &#34;install.sh&#34;,
+           &#34;post-install.sh&#34;
          ]
        }
      ]
@@ -451,42 +449,40 @@ sudo systemctl enable nginx
 
  &lt;/body&gt;
 &lt;/html
-
 </code></pre><p>Validate the code</p>
-<pre><code>
+<pre tabindex="0"><code>
 ~/packer_templates/gcp ❯ packer validate gcp-webserver.json                                                                                                                                                                 
  
 The configuration is valid.
-
 </code></pre><p>Build The image</p>
 <p>~/packer_templates/gcp ❯ packer build gcp-webserver.json</p>
 <hr>
 <p>Using HCL 2 format to create an image in Google cloud</p>
-<pre><code>~❯vi gcp-webserver.pkr.hcl
+<pre tabindex="0"><code>~❯vi gcp-webserver.pkr.hcl
 
 packer {
   required_plugins {
     googlecompute = {
-      version = &quot;&gt;= 0.0.1&quot;
-      source = &quot;github.com/hashicorp/googlecompute&quot;
+      version = &#34;&gt;= 0.0.1&#34;
+      source = &#34;github.com/hashicorp/googlecompute&#34;
     }
   }
 }
 
 
-source &quot;googlecompute&quot; &quot;ubuntu&quot; {
- account_file = &quot;terraform-325207-39ea61c5c3ce.json&quot;
- project_id  = &quot;terraform-325207&quot;
- source_image = &quot;ubuntu-1804-bionic-v20211021&quot;
- ssh_username = &quot;packer&quot;    
- zone =&quot;us-central1-a&quot;
- region = &quot;us-central1&quot;
- machine_type = &quot;n1-standard-1&quot;
- image_description = &quot;custom machine image&quot;
- image_name = &quot;mypackerimage&quot;
+source &#34;googlecompute&#34; &#34;ubuntu&#34; {
+ account_file = &#34;terraform-325207-39ea61c5c3ce.json&#34;
+ project_id  = &#34;terraform-325207&#34;
+ source_image = &#34;ubuntu-1804-bionic-v20211021&#34;
+ ssh_username = &#34;packer&#34;    
+ zone =&#34;us-central1-a&#34;
+ region = &#34;us-central1&#34;
+ machine_type = &#34;n1-standard-1&#34;
+ image_description = &#34;custom machine image&#34;
+ image_name = &#34;mypackerimage&#34;
  disk_size = 10
- network = &quot;kiran-vpc2&quot;
- subnetwork = &quot;kiran-vpc2&quot; 
+ network = &#34;kiran-vpc2&#34;
+ subnetwork = &#34;kiran-vpc2&#34; 
 
 
 
@@ -495,32 +491,30 @@ source &quot;googlecompute&quot; &quot;ubuntu&quot; {
 }
 
 build {
-  sources = [&quot;sources.googlecompute.ubuntu&quot;]
+  sources = [&#34;sources.googlecompute.ubuntu&#34;]
 
 
-provisioner &quot;file&quot; {
-    destination = &quot;/tmp/index.html&quot;
-    source      = &quot;index.html&quot;
+provisioner &#34;file&#34; {
+    destination = &#34;/tmp/index.html&#34;
+    source      = &#34;index.html&#34;
   }
 
-  provisioner &quot;shell&quot; {
-    scripts = [&quot;install.sh&quot;, &quot;post-install.sh&quot;]
+  provisioner &#34;shell&#34; {
+    scripts = [&#34;install.sh&#34;, &#34;post-install.sh&#34;]
   }
 
     }
-
 </code></pre><p>Validate the code</p>
-<pre><code>
+<pre tabindex="0"><code>
 ~/packer_templates/gcp ❯ packer validate gcp-webserver.pkr.hcl                                                                                                                                                               
 The configuration is valid.
 </code></pre><p>Initialize Packer configuration</p>
-<pre><code>~/packer_templates/gcp ❯ packer init 
+<pre tabindex="0"><code>~/packer_templates/gcp ❯ packer init 
 .                                                                                                                                                                               
  
-Installed plugin github.com/hashicorp/googlecompute v1.0.6 in &quot;/opt/homebrew/bin/github.com/hashicorp/googlecompute/packer-plugin-googlecompute_v1.0.6_x5.0_darwin_arm64&quot;
-
+Installed plugin github.com/hashicorp/googlecompute v1.0.6 in &#34;/opt/homebrew/bin/github.com/hashicorp/googlecompute/packer-plugin-googlecompute_v1.0.6_x5.0_darwin_arm64&#34;
 </code></pre><p>Build the Image</p>
-<pre><code>~/packer_templates/gcp ❯ packer build gcp-webserver.pkr.hcl                                                                                                                                                                     
+<pre tabindex="0"><code>~/packer_templates/gcp ❯ packer build gcp-webserver.pkr.hcl                                                                                                                                                                     
 googlecompute.ubuntu: output will be in this color.
 
 ==&gt; googlecompute.ubuntu: Checking image does not exist...
@@ -641,13 +635,12 @@ googlecompute.ubuntu: output will be in this color.
 ==&gt; googlecompute.ubuntu: Creating image...
 ==&gt; googlecompute.ubuntu: Deleting disk...
     googlecompute.ubuntu: Disk has been deleted!
-Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
+Build &#39;googlecompute.ubuntu&#39; finished after 2 minutes 43 seconds.
 
 ==&gt; Wait completed after 2 minutes 43 seconds
 
 ==&gt; Builds finished. The artifacts of successful builds are:
 --&gt; googlecompute.ubuntu: A disk image was created: mypackerimage
-
 </code></pre><p>Ref:
 <a href="https://blog.searce.com/build-machine-images-with-packer-on-google-cloud-platform-b43f77f1acd">https://blog.searce.com/build-machine-images-with-packer-on-google-cloud-platform-b43f77f1acd</a>
 <a href="https://www.packer.io/docs/builders/googlecompute">https://www.packer.io/docs/builders/googlecompute</a></p>
@@ -687,7 +680,7 @@ Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
   <article class="post">
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -713,6 +706,8 @@ Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
   
   <div class="pagination">
     
+      <a href="/blog/using-cloud-init-in-cloudstack/" class="button left"><span>Creating a Openstack setup and also launching a k8s cluster</span></a>
+    
     
       <a href="/blog/creating-kubernetes-cluster-via-vagrant/" class="button right"><span>Creating Kubernetes Cluster via Vagrant</span></a>
     
@@ -725,6 +720,14 @@ Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
       <header>
         <h1>Recent Posts</h1>
       </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/using-cloud-init-in-cloudstack/">Creating a Openstack setup and also launching a k8s cluster</a></h2>
+          <time class="published" datetime="2022-11-10 11:48:50 &#43;0530 IST">November 10, 2022</time>
+        </header>
+      </article>
       
       <article class="mini-post">
           
@@ -758,14 +761,6 @@ Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
         </header>
       </article>
       
-      <article class="mini-post">
-          
-        <header>
-          <h2><a href="/blog/using-crictl-and-nerdctl/">Using crictl and nerdctl</a></h2>
-          <time class="published" datetime="2021-08-23 13:27:25 &#43;0530 IST">August 23, 2021</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/blog/" class="button">See More</a>
@@ -787,10 +782,10 @@ Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
               <a href="/categories/kubernetes/">kubernetes<span class="count">7</span></a>
           
           <li>
-              <a href="/categories/sw/">sw<span class="count">3</span></a>
+              <a href="/categories/cloudstack/">cloudstack<span class="count">3</span></a>
           
           <li>
-              <a href="/categories/cloudstack/">cloudstack<span class="count">2</span></a>
+              <a href="/categories/sw/">sw<span class="count">3</span></a>
           
           <li>
               <a href="/categories/docker/">docker<span class="count">2</span></a>
@@ -903,16 +898,16 @@ Build 'googlecompute.ubuntu' finished after 2 minutes 43 seconds.
       </ul>
   
   <p class="copyright">
-    © 2021 Kiran Chavala Tech Notes
+    © 2022 Kiran Chavala Tech Notes
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.85.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.105.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.b30f9a6b5048f7027c9de57d83d56309595affa6f8bdea8b4173aa1a0ab6be48.js" integrity="sha256-sw&#43;aa1BI9wJ8neV9g9VjCVla/6b4veqLQXOqGgq2vkg="></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.beccc0b0a264507fba1f44b76ea0acc58d95d2b17bfde9661b4f4806a69b6b99.js" integrity="sha256-vszAsKJkUH&#43;6H0S3bqCsxY2V0rF7/elmG09IBqaba5k="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

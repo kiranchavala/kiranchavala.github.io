@@ -2,19 +2,51 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Terraform - Kiran Chavala Tech Notes</title>
+<title>Creating a Openstack setup and also launching a k8s cluster - Kiran Chavala Tech Notes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="generator" content="Hugo 0.105.0"><meta itemprop="name" content="Terraform">
-<meta itemprop="description" content=""><meta property="og:title" content="Terraform" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kiranchavala.in/tags/terraform/" />
+<meta name="generator" content="Hugo 0.105.0"><meta itemprop="name" content="Creating a Openstack setup and also launching a k8s cluster">
+<meta itemprop="description" content="Launch any linux vm (Centos, Ubuntu etc) from a iso
+Install the cloud init package
+RHEL: yum install cloud-init
+Ubuntu : apt-get install cloud-init
+Configure the cloud init by adding the cloudstack datasource package vi /etc/cloud/cloud.cfg.d/99_cloudstack.cfg
+datasource_list: [ CloudStack, None ]
+Create a template of the disk
+Launch a vm based on the template created and pass the userdata parameter
+deploy virtualmachine serviceofferingid=720d1320-06d7-4918-9f2a-ef5ba7e07bf3 templateid=0d9bf1f4-288d-4510-b2c5-8e980c51c98d zoneid=10a26e0d-2085-4b09-bd0f-c726a6bd9443 networkids=cf8fcdb8-741c-4f98-b856-adc4fd99c157 userdata=I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=
+Note: Make sure the userdata is encoded in base64 format if calling from Api , if you are passing the userdata from UI , there is no need to encode it"><meta itemprop="datePublished" content="2022-11-10T11:48:50+05:30" />
+<meta itemprop="dateModified" content="2022-11-10T11:48:50+05:30" />
+<meta itemprop="wordCount" content="165">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Creating a Openstack setup and also launching a k8s cluster" />
+<meta property="og:description" content="Launch any linux vm (Centos, Ubuntu etc) from a iso
+Install the cloud init package
+RHEL: yum install cloud-init
+Ubuntu : apt-get install cloud-init
+Configure the cloud init by adding the cloudstack datasource package vi /etc/cloud/cloud.cfg.d/99_cloudstack.cfg
+datasource_list: [ CloudStack, None ]
+Create a template of the disk
+Launch a vm based on the template created and pass the userdata parameter
+deploy virtualmachine serviceofferingid=720d1320-06d7-4918-9f2a-ef5ba7e07bf3 templateid=0d9bf1f4-288d-4510-b2c5-8e980c51c98d zoneid=10a26e0d-2085-4b09-bd0f-c726a6bd9443 networkids=cf8fcdb8-741c-4f98-b856-adc4fd99c157 userdata=I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=
+Note: Make sure the userdata is encoded in base64 format if calling from Api , if you are passing the userdata from UI , there is no need to encode it" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kiranchavala.in/blog/using-cloud-init-in-cloudstack/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-11-10T11:48:50+05:30" />
+<meta property="article:modified_time" content="2022-11-10T11:48:50+05:30" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Terraform"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Creating a Openstack setup and also launching a k8s cluster"/>
+<meta name="twitter:description" content="Launch any linux vm (Centos, Ubuntu etc) from a iso
+Install the cloud init package
+RHEL: yum install cloud-init
+Ubuntu : apt-get install cloud-init
+Configure the cloud init by adding the cloudstack datasource package vi /etc/cloud/cloud.cfg.d/99_cloudstack.cfg
+datasource_list: [ CloudStack, None ]
+Create a template of the disk
+Launch a vm based on the template created and pass the userdata parameter
+deploy virtualmachine serviceofferingid=720d1320-06d7-4918-9f2a-ef5ba7e07bf3 templateid=0d9bf1f4-288d-4510-b2c5-8e980c51c98d zoneid=10a26e0d-2085-4b09-bd0f-c726a6bd9443 networkids=cf8fcdb8-741c-4f98-b856-adc4fd99c157 userdata=I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=
+Note: Make sure the userdata is encoded in base64 format if calling from Api , if you are passing the userdata from UI , there is no need to encode it"/>
 <meta name="twitter:site" content="@kiranchavala"/>
 
 <script type="application/javascript">
@@ -39,7 +71,7 @@ if (!doNotTrack) {
     <h1 class="nav-title">
       <a href="/" class="nav">
         
-          Tags
+          Blog
         
       </a>
     </h1>
@@ -98,31 +130,31 @@ if (!doNotTrack) {
 
   
     
-    <a href="//twitter.com/share?text=Terraform&amp;url=https%3a%2f%2fkiranchavala.in%2ftags%2fterraform%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Creating%20a%20Openstack%20setup%20and%20also%20launching%20a%20k8s%20cluster&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2ftags%2fterraform%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2ftags%2fterraform%2f&amp;title=Terraform" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f&amp;title=Creating%20a%20Openstack%20setup%20and%20also%20launching%20a%20k8s%20cluster" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2ftags%2fterraform%2f&amp;title=Terraform" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f&amp;title=Creating%20a%20Openstack%20setup%20and%20also%20launching%20a%20k8s%20cluster" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2ftags%2fterraform%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -145,8 +177,6 @@ if (!doNotTrack) {
     <footer>
       <ul class="socnet-icons">
         
-    <li><a href="/tags/terraform/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/kiranchavala" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 <li><a href="//gitlab.com/kiranchavala" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
@@ -197,103 +227,121 @@ if (!doNotTrack) {
 
       <main id="site-main">
         
-  
-  
-    <article class="post">
-  <header>
+  <article class="post">
+    <header>
   <div class="title">
     
-      <h2><a href="/blog/import-existing-resources-into-terrafrorm/">Import Existing Resources into Terrafrorm</a></h2>
+      <h2><a href="/blog/using-cloud-init-in-cloudstack/">Creating a Openstack setup and also launching a k8s cluster</a></h2>
     
     
   </div>
   <div class="meta">
-    <time datetime="2021-09-22 12:14:02 &#43;0530 IST">September 22, 2021</time>
+    <time datetime="2022-11-10 11:48:50 &#43;0530 IST">November 10, 2022</time>
     
     <p>1-Minute Read</p>
   </div>
 </header>
 
-  <div class="content">
+    <div id="socnet-share">
+      
+
+
+
+
+  
     
-    
-    <p>There could be scenarios where you want to import the already existing resources from cloud providers into terraform.</p>
-  </div>
-  <footer>
-    <a href="/blog/import-existing-resources-into-terrafrorm/" class="button big">Read More</a>
-    <div class="stats">
+    <a href="//twitter.com/share?text=Creating%20a%20Openstack%20setup%20and%20also%20launching%20a%20k8s%20cluster&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f&amp;title=Creating%20a%20Openstack%20setup%20and%20also%20launching%20a%20k8s%20cluster" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f&amp;title=Creating%20a%20Openstack%20setup%20and%20also%20launching%20a%20k8s%20cluster" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fusing-cloud-init-in-cloudstack%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <ol>
+<li>
+<p>Launch any linux vm (Centos, Ubuntu etc) from a iso</p>
+</li>
+<li>
+<p>Install the cloud init package</p>
+</li>
+</ol>
+<p>RHEL: yum install cloud-init</p>
+<p>Ubuntu : apt-get install cloud-init</p>
+<ol start="3">
+<li>Configure the cloud init by adding the cloudstack datasource package</li>
+</ol>
+<p>vi /etc/cloud/cloud.cfg.d/99_cloudstack.cfg</p>
+<p>datasource_list: [ CloudStack, None ]</p>
+<ol start="4">
+<li>
+<p>Create a template of the disk</p>
+</li>
+<li>
+<p>Launch a vm based on the template created and  pass the userdata parameter</p>
+</li>
+</ol>
+<p>deploy virtualmachine serviceofferingid=720d1320-06d7-4918-9f2a-ef5ba7e07bf3  templateid=0d9bf1f4-288d-4510-b2c5-8e980c51c98d zoneid=10a26e0d-2085-4b09-bd0f-c726a6bd9443 networkids=cf8fcdb8-741c-4f98-b856-adc4fd99c157 userdata=I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=</p>
+<p>Note: Make sure the userdata is encoded in base64 format if calling from Api , if you are passing the userdata from UI , there is no need to encode it</p>
+<p><a href="https://www.base64encode.org/">https://www.base64encode.org/</a></p>
+<p>For example the following data is encoded</p>
+<p>#cloud-config
+runcmd:</p>
+<ul>
+<li>mkdir /run/kiran</li>
+<li>echo kiran says hi &raquo; /run/kiran/sample.txt</li>
+<li>[ /root/sureedge_server_utility_installer.sh &ndash;token 1466CB157777BB72 ]</li>
+</ul>
+<p>I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=</p>
+<ol start="6">
+<li>To trouble shoot the logs</li>
+</ol>
+<p>tailf /var/log/cloud-init.log</p>
+<p>cat /var/run/cloud-init/result.json</p>
+<p>The runcmd is stored at</p>
+<p>cat /var/lib/cloud/instance/scripts/runcmd</p>
+<p>In summary, CloudInit takes the user data passed to the vm and executes the instructions at boot time</p>
+<p>Ref:</p>
+<p><a href="https://www.ibm.com/docs/en/cic/1.1.2?topic=zvm-installation-configuration-cloud-init-linux-server">https://www.ibm.com/docs/en/cic/1.1.2?topic=zvm-installation-configuration-cloud-init-linux-server</a></p>
+<p><a href="https://cloudinit.readthedocs.io/en/latest/topics/examples.html">https://cloudinit.readthedocs.io/en/latest/topics/examples.html</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-cloud-config-scripting">https://www.digitalocean.com/community/tutorials/an-introduction-to-cloud-config-scripting</a>
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup">https://www.digitalocean.com/community/tutorials/how-to-use-cloud-config-for-your-initial-server-setup</a></p>
+<p><a href="https://ibm.github.io/cloud-enterprise-examples/iac-conf-mgmt/user-data/">https://ibm.github.io/cloud-enterprise-examples/iac-conf-mgmt/user-data/</a>
+<a href="https://www.ibm.com/docs/en/cic/1.1.0?topic=solutions-failed-ssh-deployed-vm-correct-usernamepassword">https://www.ibm.com/docs/en/cic/1.1.0?topic=solutions-failed-ssh-deployed-vm-correct-usernamepassword</a></p>
+<p><a href="https://cloudinit.readthedocs.io/en/latest/topics/datasources/cloudstack.html">https://cloudinit.readthedocs.io/en/latest/topics/datasources/cloudstack.html</a></p>
+<p><a href="https://docs.cloudstack.apache.org/en/latest/adminguide/virtual_machines.html#using-cloud-init">https://docs.cloudstack.apache.org/en/latest/adminguide/virtual_machines.html#using-cloud-init</a></p>
+
+    </div>
+    <footer>
+      <div class="stats">
   
     <ul class="categories">
       
-        
-          <li><a class="article-terms-link" href="/categories/terraform/">Terraform</a></li>
-        
-          <li><a class="article-terms-link" href="/categories/terraformer/">Terraformer</a></li>
-        
-          <li><a class="article-terms-link" href="/categories/aws/">AWS</a></li>
-        
-          <li><a class="article-terms-link" href="/categories/gcp/">GCP</a></li>
-        
-          <li><a class="article-terms-link" href="/categories/azure/">AZURE</a></li>
-        
-          <li><a class="article-terms-link" href="/categories/openstack/">OpenStack</a></li>
-        
-      
-    </ul>
-  
-  
-    <ul class="tags">
-      
-        
-          <li><a class="article-terms-link" href="/tags/terraform/">Terraform</a></li>
-        
-          <li><a class="article-terms-link" href="/tags/terraformer/">Terraformer</a></li>
-        
-          <li><a class="article-terms-link" href="/tags/aws/">AWS</a></li>
-        
-          <li><a class="article-terms-link" href="/tags/gcp/">GCP</a></li>
-        
-          <li><a class="article-terms-link" href="/tags/azure/">AZURE</a></li>
-        
-          <li><a class="article-terms-link" href="/tags/openstack/">OpenStack</a></li>
-        
-      
-    </ul>
-  
-</div>
-
-  </footer>
-</article>
-
-  
-    <article class="post">
-  <header>
-  <div class="title">
-    
-      <h2><a href="/blog/terraform-cloudstack/">Terraformcloudstack</a></h2>
-    
-    
-  </div>
-  <div class="meta">
-    <time datetime="2021-05-31 21:38:24 &#43;0530 IST">May 31, 2021</time>
-    
-    <p>1-Minute Read</p>
-  </div>
-</header>
-
-  <div class="content">
-    
-    
-    <p>Terraform is a tool to deploy resources on cloud</p>
-  </div>
-  <footer>
-    <a href="/blog/terraform-cloudstack/" class="button big">Read More</a>
-    <div class="stats">
-  
-    <ul class="categories">
-      
-        
-          <li><a class="article-terms-link" href="/categories/terraform/">Terraform</a></li>
         
           <li><a class="article-terms-link" href="/categories/cloudstack/">Cloudstack</a></li>
         
@@ -302,23 +350,46 @@ if (!doNotTrack) {
   
   
     <ul class="tags">
-      
-        
-          <li><a class="article-terms-link" href="/tags/terraform/">Terraform</a></li>
-        
-          <li><a class="article-terms-link" href="/tags/cloudstack/">Cloudstack</a></li>
-        
-      
+      <li>None</li>
     </ul>
   
 </div>
 
-  </footer>
-</article>
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kiranchavala-in" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+
+
+
 
   
   <div class="pagination">
     
+    
+      <a href="/blog/using-packer-to-deploy-a-image-on-google-cloud/" class="button right"><span>Using Packer to deploy a image on Google Cloud</span></a>
     
   </div>
 
@@ -461,8 +532,6 @@ if (!doNotTrack) {
   
       <ul class="socnet-icons">
         
-    <li><a href="/tags/terraform/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/kiranchavala" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 <li><a href="//gitlab.com/kiranchavala" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
