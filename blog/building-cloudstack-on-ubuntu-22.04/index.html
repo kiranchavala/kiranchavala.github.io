@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Building Cloudstack on Ubuntu 22.04 - Kiran Chavala Tech Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.111.3"><meta itemprop="name" content="Building Cloudstack on Ubuntu 22.04">
+<meta itemprop="description" content="Building cloudstack on Ubuntu 22.0.4
+Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
+https://cloudstack.apache.org/ http://docs.cloudstack.apache.org/en/latest/"><meta itemprop="datePublished" content="2023-05-01T13:39:22+05:30" />
+<meta itemprop="dateModified" content="2023-05-01T13:39:22+05:30" />
+<meta itemprop="wordCount" content="498">
+<meta itemprop="keywords" content="Cloudstack,Ubuntu," /><meta property="og:title" content="Building Cloudstack on Ubuntu 22.04" />
+<meta property="og:description" content="Building cloudstack on Ubuntu 22.0.4
+Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
+https://cloudstack.apache.org/ http://docs.cloudstack.apache.org/en/latest/" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kiranchavala.in/blog/building-cloudstack-on-ubuntu-22.04/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-05-01T13:39:22+05:30" />
+<meta property="article:modified_time" content="2023-05-01T13:39:22+05:30" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building Cloudstack on Ubuntu 22.04"/>
+<meta name="twitter:description" content="Building cloudstack on Ubuntu 22.0.4
+Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
+https://cloudstack.apache.org/ http://docs.cloudstack.apache.org/en/latest/"/>
+<meta name="twitter:site" content="@kiranchavala"/>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-175465249-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><link rel="stylesheet" href="/css/bundle.min.93154d9a3b6e04b361239f2577c384010365596244e960fdbb5d3816d20ad2d7.css" integrity="sha256-kxVNmjtuBLNhI58ld8OEAQNlWWJE6WD9u104FtIK0tc="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Building%20Cloudstack%20on%20Ubuntu%2022.04&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f&amp;title=Building%20Cloudstack%20on%20Ubuntu%2022.04" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f&amp;title=Building%20Cloudstack%20on%20Ubuntu%2022.04" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://avatars2.githubusercontent.com/u/1401014?s=400&amp;v=4" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Tech Notes</h1>
+  </header>
+  <main>
+    <p>Linux,MAC,Docker,Kubernetes,<br>CloudStack,AWS,GCP,AZURE,<br> Raspberrypi,VMWARE,GO,BOOKS,<br>NETFLIX,Movies,Seasons</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/kiranchavala" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//gitlab.com/kiranchavala" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
+<li><a href="//stackoverflow.com/users/1806354" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+<li><a href="//bitbucket.com/kiranchavala" target="_blank" rel="noopener" title="Bitbucket" class="fab fa-bitbucket"></a></li>
+
+
+
+<li><a href="//flickr.com/photos/67247990@N06" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+<li><a href="//kiranchavala.wordpress.com" target="_blank" rel="noopener" title="WordPress" class="fab fa-wordpress"></a></li>
+<li><a href="//medium.com/@kiranchavala" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/kiran-manohar-chavala-1bb6a97" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//foursquare.com/kiranchavala" target="_blank" rel="noopener" title="Foursquare" class="fab fa-foursquare"></a></li>
+
+<li><a href="//slideshare.com/kiranchavala" target="_blank" rel="noopener" title="SlideShare" class="fab fa-slideshare"></a></li>
+<li><a href="//facebook.com/kiranchavala" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/neoiron" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+<li><a href="//quora.com/profile/Kiran-Chavala-1" target="_blank" rel="noopener" title="Quora" class="fab fa-quora"></a></li>
+<li><a href="//youtube.com/kiranchavala" target="_blank" rel="noopener" title="YouTube" class="fab fa-youtube"></a></li>
+<li><a href="//vimeo.com/user21972749" target="_blank" rel="noopener" title="Vimeo" class="fab fa-vimeo"></a></li>
+<li><a href="//api.whatsapp.com/send?phone=9902141683" target="_blank" rel="noopener" title="WhatsApp" class="fab fa-whatsapp"></a></li>
+
+
+
+<li><a href="//instagram.com/kiranchavala" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//kiranchavala-blog.tumblr.com" target="_blank" rel="noopener" title="Tumblr" class="fab fa-tumblr"></a></li>
+<li><a href="//twitter.com/kiranchavala" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//strava.com/athletes/3822003" target="_blank" rel="noopener" title="Strava" class="fab fa-strava"></a></li>
+<li><a href="skype:kiranchavala?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+<li><a href="//pinterest.com/kiranchavala" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/neoiron" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+
+<li><a href="//keybase.io/kiranchavala" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//mastodon.social/@kiranchavala" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:kiranchavala@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/building-cloudstack-on-ubuntu-22.04/">Building Cloudstack on Ubuntu 22.04</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2023-05-01 13:39:22 &#43;0530 IST">May 1, 2023</time>
+    
+    <p>3-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Building%20Cloudstack%20on%20Ubuntu%2022.04&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f&amp;title=Building%20Cloudstack%20on%20Ubuntu%2022.04" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f&amp;title=Building%20Cloudstack%20on%20Ubuntu%2022.04" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fbuilding-cloudstack-on-ubuntu-22.04%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <p>Building cloudstack on Ubuntu 22.0.4</p>
+<p>Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.</p>
+<p><a href="https://cloudstack.apache.org/">https://cloudstack.apache.org/</a>
+<a href="http://docs.cloudstack.apache.org/en/latest/">http://docs.cloudstack.apache.org/en/latest/</a></p>
+<ol>
+<li>Install the following packages</li>
+</ol>
+<pre tabindex="0"><code>sudo add-apt-repository universe
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install cpu-checker build-essential zlib1g-dev libffi-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev vim git subversion mercurial patch rsync curl wget sed openssh-client gpg gnupg2 gzip bzip2 zip unzip p7zip-full p7zip-rar python-is-python3 openjdk-11-jdk maven mysql-server mysql-client bzip2 nfs-common uuid uuid-runtime python-setuptools python3-setuptools ipmitool genisoimage nfs-kernel-server quota python3-dev python3-openssl jq
+</code></pre><ol start="2">
+<li>Install git</li>
+</ol>
+<pre tabindex="0"><code>apt install git 
+</code></pre><ol start="3">
+<li>Install Python and pyenv ( in order to manage multiple python versions)</li>
+</ol>
+<pre tabindex="0"><code>brew install python
+brew install pyenv
+</code></pre><p>Pouplate the .zshrc to</p>
+<pre tabindex="0"><code>if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then
+    eval &#34;$(pyenv init -)&#34;
+fi
+</code></pre><pre tabindex="0"><code>
+Make sure to install python version 3.8.10 in order to run some sample tests
+
+pyenv versions
+
+pyenv install 3.8.10
+
+pyenv global 3.8.10
+</code></pre><p>check the version of python and python3</p>
+<pre tabindex="0"><code>python --version
+python3 --version
+</code></pre><ol start="4">
+<li>Verify if java is installed</li>
+</ol>
+<pre tabindex="0"><code>java --version 
+
+❯ java --version
+openjdk 11.0.19 2023-04-18
+OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+</code></pre><ol start="5">
+<li>Verify if  Maven is installed</li>
+</ol>
+<p>Download the maven from</p>
+<p><a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a></p>
+<pre tabindex="0"><code>
+tar -xvf apache-maven-3.9.1-bin.tar.gz
+mv apache-maven-3.9.1 /usr/local/bin/
+</code></pre><p>In .zshrc file add the following line</p>
+<pre tabindex="0"><code>export PATH=&#34;/usr/local/bin/apache-maven-3.9.1/bin:${PATH}&#34;
+</code></pre><pre tabindex="0"><code>mvn --version
+
+Apache Maven 3.9.1 (2e178502fcdbffc201671fb2537d0cb4b4cc58f8)
+Maven home: /usr/local/bin/apache-maven-3.9.1
+Java version: 11.0.19, vendor: Eclipse Adoptium, runtime: /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
+Default locale: en_IN, platform encoding: UTF-8
+OS name: &#34;mac os x&#34;, version: &#34;13.2.1&#34;, arch: &#34;aarch64&#34;, family: &#34;mac&#34;
+</code></pre><ol start="6">
+<li>Configure mysql</li>
+</ol>
+<pre tabindex="0"><code>vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+[mysqld]
+sql-mode=&#34;STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION,ERROR_FOR_DIVISION_BY_ZERO,NO_ZERO_DATE,NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION&#34;
+server_id = 1
+innodb_rollback_on_timeout=1
+innodb_lock_wait_timeout=600
+max_connections=1000
+log-bin=mysql-bin
+binlog-format = &#39;ROW&#39;
+# add the following for MySQL 8.x
+default-authentication-plugin=mysql_native_password
+
+Change the password of mysql user
+
+sudo mysql -u root -e &#34;ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;&#39;&#34;
+</code></pre><ol start="6">
+<li>Install the Noredist CloudStack builds requires additional jars</li>
+</ol>
+<pre tabindex="0"><code>
+git clone &#34;https://github.com/shapeblue/cloudstack-nonoss
+cd cloudstack-nonoss
+bash -x install-non-oss.sh
+</code></pre><ol start="7">
+<li>Building Cloudstack and running the maangement server</li>
+</ol>
+<pre tabindex="0"><code>git clone &#34;https://github.com/apache/cloudstack&#34;
+
+To build specific version of cloudstack 
+
+git checkout 4.17.2 
+
+cd  cloudstack 
+
+To build specific version of cloudstack 
+git checkout 4.17.2 
+
+vi .python-version 
+3.8.10
+
+mvn clean install -Dnoredist -P developer,systemvm
+
+mvn -Pdeveloper -pl developer -Ddeploydb
+
+Run the management server 
+
+mvn -pl :cloud-client-ui jetty:run -Dnoredist -Djava.net.preferIPv4Stack=true or
+
+
+mvn -pl :cloud-client-ui jetty:run -Dnoredist -Djava.net.preferIPv4Stack=true-Djdk.net.URLClassPath.disableClassPathURLCheck=true
+</code></pre><ol start="8">
+<li>Building Cloudstack simulator and running it</li>
+</ol>
+<pre tabindex="0"><code>mvn clean install -Dsimulator -P developer,systemvm
+mvn -Pdeveloper -pl developer -Ddeploydb
+mvn -Pdeveloper -pl developer -Ddeploydb-simulator
+mvn -pl :cloud-client-ui jetty:run -Djava.net.preferIPv4Stack=true -Dsimulator
+</code></pre><ol start="9">
+<li>Running Cloudstack UI</li>
+</ol>
+<pre tabindex="0"><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+nvm install v14
+
+node -v
+v14.21.3
+
+npm -v
+6.14.18
+
+cd cloudstack/ui
+
+npm install
+npm run serve
+</code></pre><ol start="10">
+<li>Deploying resources and running Test</li>
+</ol>
+<pre tabindex="0"><code>$ pip3 install --upgrade tools/marvin/dist/Marvin-*.tar.gz
+
+$ python3 tools/marvin/marvin/deployDataCenter.py -i setup/dev/advanced.cfg
+
+$nosetests -v --with-marvin   --marvin-config=setup/dev/advanced.cfg   --with-xunit   --xunit-file=xunit.xml   -a tags=advanced,required_hardware=false   --zone=Sandbox-simulator   --hypervisor=simulator    test/integration/smoke/test_vm_life_cycle.py
+</code></pre><p>Ref Links</p>
+<p><a href="https://collabnix.com/how-to-setup-java-on-apple-mac-m1-pro-in-2-minutes/">https://collabnix.com/how-to-setup-java-on-apple-mac-m1-pro-in-2-minutes/</a>
+<a href="https://www.digitalocean.com/community/tutorials/install-maven-mac-os">https://www.digitalocean.com/community/tutorials/install-maven-mac-os</a>
+<a href="https://www.jenv.be/">https://www.jenv.be/</a>
+<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a>
+<a href="https://www.digitalocean.com/community/tutorials/install-maven-mac-os">https://www.digitalocean.com/community/tutorials/install-maven-mac-os</a>
+<a href="https://www.novicedev.com/blog/how-install-mysql-macos-homebrew">https://www.novicedev.com/blog/how-install-mysql-macos-homebrew</a>
+<a href="https://justinwride.medium.com/install-node-and-npm-natively-on-apple-silicon-mac-m1-7432c826389b">https://justinwride.medium.com/install-node-and-npm-natively-on-apple-silicon-mac-m1-7432c826389b</a>
+<a href="https://github.com/nvm-sh/nvm#install--update-script">https://github.com/nvm-sh/nvm#install--update-script</a></p>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/cloudstack/">Cloudstack</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/ubuntu/">Ubuntu</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/cloudstack/">Cloudstack</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/ubuntu/">Ubuntu</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kiranchavala-in" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+
+
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/building-cloudstack-on-mac-os/" class="button right"><span>Building Cloudstack on Mac Os</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/building-cloudstack-on-ubuntu-22.04/">Building Cloudstack on Ubuntu 22.04</a></h2>
+          <time class="published" datetime="2023-05-01 13:39:22 &#43;0530 IST">May 1, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/building-cloudstack-on-mac-os/">Building Cloudstack on Mac Os</a></h2>
+          <time class="published" datetime="2023-05-01 11:50:51 &#43;0530 IST">May 1, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/using-cloud-init-in-cloudstack/">Using Cloudinit in Cloudstack</a></h2>
+          <time class="published" datetime="2022-11-10 11:48:50 &#43;0530 IST">November 10, 2022</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/using-packer-to-deploy-a-image-on-google-cloud/">Using Packer to deploy a image on Google Cloud</a></h2>
+          <time class="published" datetime="2021-12-01 15:05:48 &#43;0530 IST">December 1, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/creating-kubernetes-cluster-via-vagrant/">Creating Kubernetes Cluster via Vagrant</a></h2>
+          <time class="published" datetime="2021-09-27 12:31:52 &#43;0530 IST">September 27, 2021</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/kubernetes/">kubernetes<span class="count">7</span></a>
+          
+          <li>
+              <a href="/categories/cloudstack/">cloudstack<span class="count">5</span></a>
+          
+          <li>
+              <a href="/categories/sw/">sw<span class="count">3</span></a>
+          
+          <li>
+              <a href="/categories/docker/">docker<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/mac/">mac<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/terraform/">terraform<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/aws/">aws<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/azure/">azure<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/centos/">centos<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/gcp/">gcp<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/google-cloud/">google-cloud<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/openstack/">openstack<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/packer/">packer<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/raspberrypi/">raspberrypi<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/terraformer/">terraformer<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/ubuntu/">ubuntu<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/vmware/">vmware<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/xenserver/">xenserver<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>I am a Software Engineer at Persistent Systems, working on Cloud Stack Orchestration and various tech related to Cloud Infra, container technology like Docker, Kubernetes</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/kiranchavala" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//gitlab.com/kiranchavala" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
+<li><a href="//stackoverflow.com/users/1806354" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+<li><a href="//bitbucket.com/kiranchavala" target="_blank" rel="noopener" title="Bitbucket" class="fab fa-bitbucket"></a></li>
+
+
+
+<li><a href="//flickr.com/photos/67247990@N06" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+<li><a href="//kiranchavala.wordpress.com" target="_blank" rel="noopener" title="WordPress" class="fab fa-wordpress"></a></li>
+<li><a href="//medium.com/@kiranchavala" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/kiran-manohar-chavala-1bb6a97" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//foursquare.com/kiranchavala" target="_blank" rel="noopener" title="Foursquare" class="fab fa-foursquare"></a></li>
+
+<li><a href="//slideshare.com/kiranchavala" target="_blank" rel="noopener" title="SlideShare" class="fab fa-slideshare"></a></li>
+<li><a href="//facebook.com/kiranchavala" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/neoiron" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+<li><a href="//quora.com/profile/Kiran-Chavala-1" target="_blank" rel="noopener" title="Quora" class="fab fa-quora"></a></li>
+<li><a href="//youtube.com/kiranchavala" target="_blank" rel="noopener" title="YouTube" class="fab fa-youtube"></a></li>
+<li><a href="//vimeo.com/user21972749" target="_blank" rel="noopener" title="Vimeo" class="fab fa-vimeo"></a></li>
+<li><a href="//api.whatsapp.com/send?phone=9902141683" target="_blank" rel="noopener" title="WhatsApp" class="fab fa-whatsapp"></a></li>
+
+
+
+<li><a href="//instagram.com/kiranchavala" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//kiranchavala-blog.tumblr.com" target="_blank" rel="noopener" title="Tumblr" class="fab fa-tumblr"></a></li>
+<li><a href="//twitter.com/kiranchavala" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//strava.com/athletes/3822003" target="_blank" rel="noopener" title="Strava" class="fab fa-strava"></a></li>
+<li><a href="skype:kiranchavala?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+<li><a href="//pinterest.com/kiranchavala" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/neoiron" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+
+<li><a href="//keybase.io/kiranchavala" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//mastodon.social/@kiranchavala" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:kiranchavala@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2023 Kiran Chavala Tech Notes
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.111.3' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.beccc0b0a264507fba1f44b76ea0acc58d95d2b17bfde9661b4f4806a69b6b99.js" integrity="sha256-vszAsKJkUH&#43;6H0S3bqCsxY2V0rF7/elmG09IBqaba5k="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-175465249-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
