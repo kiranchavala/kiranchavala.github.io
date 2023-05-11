@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Monitoring Apache Cloudstack with Prometheus and Grafana - Kiran Chavala Tech Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.111.3"><meta itemprop="name" content="Monitoring Apache Cloudstack with Prometheus and Grafana">
+<meta itemprop="description" content="Monitoring Cloudstack with Prometheus and Grafana
+Cloudstack supports prometheus integration and it exports various metrics for the prometheus server to Scrape
+Enable prometheus integragration on Cloudstack Management server Enable prometheus plugin in Cloudstack Management server Login to the database or enable the following global setting parameters
+prometheus.exporter.enable : Enable the prometheus exporter plugin, management server restart needed. prometheus.exporter.allowed.ips: List of comma separated prometheus server ips (with no spaces) that should be allowed to access the metrics endpoint."><meta itemprop="datePublished" content="2023-05-11T15:28:40+05:30" />
+<meta itemprop="dateModified" content="2023-05-11T15:28:40+05:30" />
+<meta itemprop="wordCount" content="523">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="Monitoring Apache Cloudstack with Prometheus and Grafana" />
+<meta property="og:description" content="Monitoring Cloudstack with Prometheus and Grafana
+Cloudstack supports prometheus integration and it exports various metrics for the prometheus server to Scrape
+Enable prometheus integragration on Cloudstack Management server Enable prometheus plugin in Cloudstack Management server Login to the database or enable the following global setting parameters
+prometheus.exporter.enable : Enable the prometheus exporter plugin, management server restart needed. prometheus.exporter.allowed.ips: List of comma separated prometheus server ips (with no spaces) that should be allowed to access the metrics endpoint." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kiranchavala.in/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-05-11T15:28:40+05:30" />
+<meta property="article:modified_time" content="2023-05-11T15:28:40+05:30" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Monitoring Apache Cloudstack with Prometheus and Grafana"/>
+<meta name="twitter:description" content="Monitoring Cloudstack with Prometheus and Grafana
+Cloudstack supports prometheus integration and it exports various metrics for the prometheus server to Scrape
+Enable prometheus integragration on Cloudstack Management server Enable prometheus plugin in Cloudstack Management server Login to the database or enable the following global setting parameters
+prometheus.exporter.enable : Enable the prometheus exporter plugin, management server restart needed. prometheus.exporter.allowed.ips: List of comma separated prometheus server ips (with no spaces) that should be allowed to access the metrics endpoint."/>
+<meta name="twitter:site" content="@kiranchavala"/>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-175465249-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><link rel="stylesheet" href="/css/bundle.min.93154d9a3b6e04b361239f2577c384010365596244e960fdbb5d3816d20ad2d7.css" integrity="sha256-kxVNmjtuBLNhI58ld8OEAQNlWWJE6WD9u104FtIK0tc="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Monitoring%20Apache%20Cloudstack%20with%20Prometheus%20and%20Grafana&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f&amp;title=Monitoring%20Apache%20Cloudstack%20with%20Prometheus%20and%20Grafana" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f&amp;title=Monitoring%20Apache%20Cloudstack%20with%20Prometheus%20and%20Grafana" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="https://avatars2.githubusercontent.com/u/1401014?s=400&amp;v=4" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Tech Notes</h1>
+  </header>
+  <main>
+    <p>Linux,MAC,Docker,Kubernetes,<br>CloudStack,AWS,GCP,AZURE,<br> Raspberrypi,VMWARE,GO,BOOKS,<br>NETFLIX,Movies,Seasons</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/kiranchavala" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//gitlab.com/kiranchavala" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
+<li><a href="//stackoverflow.com/users/1806354" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+<li><a href="//bitbucket.com/kiranchavala" target="_blank" rel="noopener" title="Bitbucket" class="fab fa-bitbucket"></a></li>
+
+
+
+<li><a href="//flickr.com/photos/67247990@N06" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+<li><a href="//kiranchavala.wordpress.com" target="_blank" rel="noopener" title="WordPress" class="fab fa-wordpress"></a></li>
+<li><a href="//medium.com/@kiranchavala" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/kiran-manohar-chavala-1bb6a97" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//foursquare.com/kiranchavala" target="_blank" rel="noopener" title="Foursquare" class="fab fa-foursquare"></a></li>
+
+<li><a href="//slideshare.com/kiranchavala" target="_blank" rel="noopener" title="SlideShare" class="fab fa-slideshare"></a></li>
+<li><a href="//facebook.com/kiranchavala" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/neoiron" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+<li><a href="//quora.com/profile/Kiran-Chavala-1" target="_blank" rel="noopener" title="Quora" class="fab fa-quora"></a></li>
+<li><a href="//youtube.com/kiranchavala" target="_blank" rel="noopener" title="YouTube" class="fab fa-youtube"></a></li>
+<li><a href="//vimeo.com/user21972749" target="_blank" rel="noopener" title="Vimeo" class="fab fa-vimeo"></a></li>
+<li><a href="//api.whatsapp.com/send?phone=9902141683" target="_blank" rel="noopener" title="WhatsApp" class="fab fa-whatsapp"></a></li>
+
+
+
+<li><a href="//instagram.com/kiranchavala" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//kiranchavala-blog.tumblr.com" target="_blank" rel="noopener" title="Tumblr" class="fab fa-tumblr"></a></li>
+<li><a href="//twitter.com/kiranchavala" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//strava.com/athletes/3822003" target="_blank" rel="noopener" title="Strava" class="fab fa-strava"></a></li>
+<li><a href="skype:kiranchavala?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+<li><a href="//pinterest.com/kiranchavala" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/neoiron" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+
+<li><a href="//keybase.io/kiranchavala" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//mastodon.social/@kiranchavala" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:kiranchavala@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/">Monitoring Apache Cloudstack with Prometheus and Grafana</a></h2>
+    
+    
+  </div>
+  <div class="meta">
+    <time datetime="2023-05-11 15:28:40 &#43;0530 IST">May 11, 2023</time>
+    
+    <p>3-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Monitoring%20Apache%20Cloudstack%20with%20Prometheus%20and%20Grafana&amp;url=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f&amp;title=Monitoring%20Apache%20Cloudstack%20with%20Prometheus%20and%20Grafana" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f&amp;title=Monitoring%20Apache%20Cloudstack%20with%20Prometheus%20and%20Grafana" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkiranchavala.in%2fblog%2fmonitoring-apache-cloudstsack-with-prometheus-and-grafana%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <p>Monitoring Cloudstack with Prometheus and Grafana</p>
+<figure><img src="/img/Prometheus.png"/>
+</figure>
+
+<p>Cloudstack supports prometheus integration and it exports various metrics for the prometheus server to Scrape</p>
+<h2 id="enable-prometheus-integragration-on-cloudstack-management-server">Enable prometheus integragration on Cloudstack Management server</h2>
+<ol>
+<li>Enable prometheus plugin in Cloudstack Management server</li>
+</ol>
+<p>Login to the database or enable the following global setting parameters</p>
+<p>prometheus.exporter.enable : Enable the prometheus exporter plugin, management server restart needed.
+prometheus.exporter.allowed.ips: List of comma separated prometheus server ips (with no spaces) that should be allowed to access the metrics endpoint.</p>
+<pre tabindex="0"><code>mysql&gt;update configuration set value=&#34;true&#34; where name=&#34;prometheus.exporter.enable&#34;;
+
+mysql&gt;update configuration set value=&#34;127.0.0.1,10.0.33.227&#34; where name=&#34;prometheus.exporter.allowed.ips&#34;;
+</code></pre><ol start="2">
+<li>Restart the cloudstack mangement server</li>
+</ol>
+<pre tabindex="0"><code>systemctl restart cloudstack-managment 
+</code></pre><ol start="3">
+<li>Check if the management server is exporting the metrics on port 9595</li>
+</ol>
+<p>curl -vv 127.0.0.1:9595/metrics</p>
+<pre tabindex="0"><code>cloudstack_host_is_dedicated{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;} 0
+cloudstack_host_cpu_usage_mhz_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;,overprovisioningfactor=&#34;2.0&#34;,filter=&#34;used&#34;,tags=&#34;kiran&#34;} 2500.00
+cloudstack_host_cpu_usage_mhz_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;,overprovisioningfactor=&#34;2.0&#34;,filter=&#34;total&#34;,tags=&#34;kiran&#34;} 6300.00
+cloudstack_host_memory_usage_mibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;,overprovisioningfactor=&#34;1.0&#34;,filter=&#34;used&#34;,dedicated=&#34;0&#34;,tags=&#34;kiran&#34;} 2816.00
+cloudstack_host_memory_usage_mibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;,overprovisioningfactor=&#34;1.0&#34;,filter=&#34;total&#34;,dedicated=&#34;0&#34;,tags=&#34;kiran&#34;} 6940.01
+cloudstack_host_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,address=&#34;10.0.33.130&#34;} 5
+cloudstack_host_vms_cores_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;,filter=&#34;used&#34;,dedicated=&#34;0&#34;,tags=&#34;kiran&#34;} 5
+cloudstack_host_vms_cores_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,hostname=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm1&#34;,ip=&#34;10.0.33.130&#34;,filter=&#34;total&#34;,dedicated=&#34;0&#34;,tags=&#34;kiran&#34;} 3
+cloudstack_host_cpu_usage_mhz_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 2500.00
+cloudstack_host_memory_usage_mibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 2816.00
+cloudstack_host_vms_cores_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 5
+cloudstack_hosts_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;online&#34;} 1
+cloudstack_hosts_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;offline&#34;} 0
+cloudstack_hosts_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;} 1
+cloudstack_hosts_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;,tags=&#34;kiran&#34;} 1
+cloudstack_hosts_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;online&#34;,tags=&#34;kiran&#34;} 1
+cloudstack_hosts_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;offline&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_host_vms_cores_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_host_cpu_usage_mhz_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;,tags=&#34;kiran&#34;} 0.00
+cloudstack_host_memory_usage_mibs_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;,tags=&#34;kiran&#34;} 0.00
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;starting&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;running&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;stopping&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;stopped&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;destroyed&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;expunging&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;migrating&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;error&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;unknown&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total_by_tag{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;shutdown&#34;,tags=&#34;kiran&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;starting&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;running&#34;} 5
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;stopping&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;stopped&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;destroyed&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;expunging&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;migrating&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;error&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;unknown&#34;} 0
+cloudstack_vms_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;shutdown&#34;} 0
+cloudstack_volumes_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;ready&#34;} 5
+cloudstack_volumes_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;destroy&#34;} 0
+cloudstack_volumes_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;} 5
+cloudstack_storage_pool_gibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,name=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,address=&#34;10.0.32.4:/acs/primary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,type=&#34;primary&#34;,overprovisioningfactor=&#34;2.0&#34;,filter=&#34;used&#34;} 1252.33
+cloudstack_storage_pool_gibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,name=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,address=&#34;10.0.32.4:/acs/primary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,type=&#34;primary&#34;,overprovisioningfactor=&#34;2.0&#34;,filter=&#34;allocated&#34;} 20.88
+cloudstack_storage_pool_gibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,name=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,address=&#34;10.0.32.4:/acs/primary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,type=&#34;primary&#34;,overprovisioningfactor=&#34;2.0&#34;,filter=&#34;unallocated&#34;} 4073.12
+cloudstack_storage_pool_gibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,name=&#34;ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,address=&#34;10.0.32.4:/acs/primary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-kvm-pri1&#34;,type=&#34;primary&#34;,overprovisioningfactor=&#34;2.0&#34;,filter=&#34;total&#34;} 2047.00
+cloudstack_storage_pool_gibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,name=&#34;NFS://10.0.32.4/acs/secondary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-sec1&#34;,address=&#34;NFS://10.0.32.4/acs/secondary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-sec1&#34;,type=&#34;secondary&#34;,filter=&#34;used&#34;} 1252.33
+cloudstack_storage_pool_gibs_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,name=&#34;NFS://10.0.32.4/acs/secondary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-sec1&#34;,address=&#34;NFS://10.0.32.4/acs/secondary/ref-trl-4857-k-M7-kiran-chavala/ref-trl-4857-k-M7-kiran-chavala-sec1&#34;,type=&#34;secondary&#34;,filter=&#34;total&#34;} 2047.00
+cloudstack_private_ips_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 2
+cloudstack_private_ips_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;} 20
+cloudstack_public_ips_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 3
+cloudstack_public_ips_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;} 20
+cloudstack_shared_network_ips_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 0
+cloudstack_shared_network_ips_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;} 0
+cloudstack_vlans_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;allocated&#34;} 1
+cloudstack_vlans_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,filter=&#34;total&#34;} 20
+cloudstack_active_domains_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;} 1
+cloudstack_active_accounts_total{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;} 1
+cloudstack_vms_total_by_size{zone=&#34;ref-trl-4857-k-M7-kiran-chavala&#34;,cpu=&#34;1&#34;,memory=&#34;512&#34;} 2
+cloudstack_domain_limit_cpu_cores_total 0
+cloudstack_domain_limit_memory_mibs_total 0
+cloudstack_domain_resource_count{domain=&#34;/&#34;, type=&#34;memory&#34;} 1024
+cloudstack_domain_resource_count{domain=&#34;/&#34;, type=&#34;cpu&#34;} 2
+cloudstack_domain_resource_count{domain=&#34;/&#34;, type=&#34;primary_storage&#34;} 17179869184
+cloudstack_domain_resource_count{domain=&#34;/&#34;, type=&#34;secondary_storage&#34;} 13832814592
+* Connection #0 to host 127.0.0.1 left intact
+</code></pre><h2 id="steps-to-install-prometheus-server">Steps to install Prometheus server</h2>
+<p>The steps include to start the prometheus as a systemd service</p>
+<ol>
+<li>Download the latest binary of Prometheus from</li>
+</ol>
+<pre tabindex="0"><code>https://prometheus.io/
+
+https://prometheus.io/download/
+
+
+wget &#34;https://github.com/prometheus/prometheus/releases/download/v2.43.1/prometheus-2.43.1.linux-amd64.tar.gz&#34;
+</code></pre><ol start="2">
+<li>Untar the package</li>
+</ol>
+<pre tabindex="0"><code>tar -xvf prometheus-2.43.1.linux-amd64.tar.gz
+cd prometheus-2.43.1.linux-amd64
+</code></pre><ol start="3">
+<li>Create a prometheus user and change the directory permissions and also copy the necessary permissions</li>
+</ol>
+<pre tabindex="0"><code>sudo useradd --no-create-home --shell /bin/false prometheus
+sudo mkdir /etc/prometheus
+sudo mkdir /var/lib/prometheus
+sudo chown prometheus:prometheus /etc/prometheus
+sudo chown prometheus:prometheus /var/lib/prometheus
+
+sudo cp prometheus /usr/local/bin
+sudo cp promtool /usr/local/bin
+
+sudo chown prometheus:prometheus /usr/local/bin/prometheus
+sudo chown prometheus:prometheus /usr/local/bin/promtool
+
+sudo cp -r consoles /etc/prometheus/
+sudo cp -r console_libraries/ /etc/prometheus/
+
+sudo chown -R prometheus:prometheus /etc/prometheus/consoles
+sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries/
+
+sudo cp prometheus.yml /etc/prometheus/
+
+sudo chown  prometheus:prometheus /etc/prometheus/prometheus.yml
+</code></pre><ol start="4">
+<li>Create the systemd file</li>
+</ol>
+<pre tabindex="0"><code>sudo vi /etc/systemd/system/prometheus.service
+
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/usr/local/bin/prometheus \
+--config.file /etc/prometheus/prometheus.yml \
+--storage.tsdb.path /var/lib/prometheus/ \
+--web.console.templates=/etc/prometheus/consoles \
+--web.console.libraries=/etc/prometheus/console_libraries
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl daemon-reload
+
+sudo systemctl start prometheus
+sudo systemctl status prometheus
+sudo systemctl enable prometheus
+</code></pre><ol start="5">
+<li>Check if prometheus is listening on port 9090</li>
+</ol>
+<p>Go to the browser</p>
+<p>http://<ip address>:9090/graph</p>
+<p>curl -vv <ip address>:9090/metrics</p>
+<ol start="6">
+<li>Edit the prometheus.yaml to scrape the metrics from</li>
+</ol>
+<pre tabindex="0"><code>  - job_name: &#34;Cloudstack-metrics&#34;
+    static_configs:
+      - targets: [&#34;&lt;ip of cloudstack managment server&gt;:9595&#34;]
+</code></pre><p>You should be able to get the metrics in the prometheus dashboard</p>
+<figure><img src="/img/Prometheus2.png"/>
+</figure>
+
+<h2 id="steps-to-install-grafana">Steps to install Grafana</h2>
+<ol>
+<li>Add the grafana repo</li>
+</ol>
+<pre tabindex="0"><code>vi /etc/yum.repos.d/grafana.repo
+
+[grafana]
+name=grafana
+baseurl=https://rpm.grafana.com
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://rpm.grafana.com/gpg.key
+sslverify=1
+sslcacert=/etc/pki/tls/certs/ca-bundle.cr
+</code></pre><ol start="2">
+<li>Install Grafana</li>
+</ol>
+<pre tabindex="0"><code>yum install grafana
+systemctl start grafana-server
+systemctl status grafana-server
+</code></pre><ol start="3">
+<li>Check is Grafana is working on Port 3000</li>
+</ol>
+<p>http://<ipaddress>:3000</p>
+<ol start="4">
+<li>Home &gt; Administration &gt; Add data sources&gt; select Prometheus</li>
+</ol>
+<figure><img src="/img/Prometheus3.png"/>
+</figure>
+
+<ol start="5">
+<li>Now you can explore the metrics via Grafana and create nice dashboard</li>
+</ol>
+<figure><img src="/img/Prometheus4.png"/>
+</figure>
+
+<p>Ref:</p>
+<pre tabindex="0"><code>https://www.youtube.com/watch?v=m8mYdWHoxLY&amp;t=2033s
+https://cwiki.apache.org/confluence/display/CLOUDSTACK/CloudStack+Metrics+Exporter+for+Prometheus
+</code></pre>
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/cloudstack/">Cloudstack</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/prometheus/">Prometheus</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/grafana/">Grafana</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      <li>None</li>
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "kiranchavala-in" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+
+
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/building-cloudstack-on-ubuntu-22.04/" class="button right"><span>Building Cloudstack on Ubuntu 22.04</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/">Monitoring Apache Cloudstack with Prometheus and Grafana</a></h2>
+          <time class="published" datetime="2023-05-11 15:28:40 &#43;0530 IST">May 11, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/building-cloudstack-on-ubuntu-22.04/">Building Cloudstack on Ubuntu 22.04</a></h2>
+          <time class="published" datetime="2023-05-01 13:39:22 &#43;0530 IST">May 1, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/building-cloudstack-on-mac-os/">Building Cloudstack on Mac Os</a></h2>
+          <time class="published" datetime="2023-05-01 11:50:51 &#43;0530 IST">May 1, 2023</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/using-cloud-init-in-cloudstack/">Using Cloudinit in Cloudstack</a></h2>
+          <time class="published" datetime="2022-11-10 11:48:50 &#43;0530 IST">November 10, 2022</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/using-packer-to-deploy-a-image-on-google-cloud/">Using Packer to deploy a image on Google Cloud</a></h2>
+          <time class="published" datetime="2021-12-01 15:05:48 &#43;0530 IST">December 1, 2021</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/kubernetes/">kubernetes<span class="count">7</span></a>
+          
+          <li>
+              <a href="/categories/cloudstack/">cloudstack<span class="count">6</span></a>
+          
+          <li>
+              <a href="/categories/sw/">sw<span class="count">3</span></a>
+          
+          <li>
+              <a href="/categories/docker/">docker<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/mac/">mac<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/terraform/">terraform<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/aws/">aws<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/azure/">azure<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/centos/">centos<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/gcp/">gcp<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/google-cloud/">google-cloud<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/grafana/">grafana<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/openstack/">openstack<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/packer/">packer<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/prometheus/">prometheus<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/raspberrypi/">raspberrypi<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/terraformer/">terraformer<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/ubuntu/">ubuntu<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/vmware/">vmware<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/xenserver/">xenserver<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>I am a Software Engineer at Persistent Systems, working on Cloud Stack Orchestration and various tech related to Cloud Infra, container technology like Docker, Kubernetes</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/kiranchavala" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//gitlab.com/kiranchavala" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
+<li><a href="//stackoverflow.com/users/1806354" target="_blank" rel="noopener" title="Stack Overflow" class="fab fa-stack-overflow"></a></li>
+<li><a href="//bitbucket.com/kiranchavala" target="_blank" rel="noopener" title="Bitbucket" class="fab fa-bitbucket"></a></li>
+
+
+
+<li><a href="//flickr.com/photos/67247990@N06" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+<li><a href="//kiranchavala.wordpress.com" target="_blank" rel="noopener" title="WordPress" class="fab fa-wordpress"></a></li>
+<li><a href="//medium.com/@kiranchavala" target="_blank" rel="noopener" title="Medium" class="fab fa-medium"></a></li>
+<li><a href="//linkedin.com/in/kiran-manohar-chavala-1bb6a97" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+<li><a href="//foursquare.com/kiranchavala" target="_blank" rel="noopener" title="Foursquare" class="fab fa-foursquare"></a></li>
+
+<li><a href="//slideshare.com/kiranchavala" target="_blank" rel="noopener" title="SlideShare" class="fab fa-slideshare"></a></li>
+<li><a href="//facebook.com/kiranchavala" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/neoiron" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+<li><a href="//quora.com/profile/Kiran-Chavala-1" target="_blank" rel="noopener" title="Quora" class="fab fa-quora"></a></li>
+<li><a href="//youtube.com/kiranchavala" target="_blank" rel="noopener" title="YouTube" class="fab fa-youtube"></a></li>
+<li><a href="//vimeo.com/user21972749" target="_blank" rel="noopener" title="Vimeo" class="fab fa-vimeo"></a></li>
+<li><a href="//api.whatsapp.com/send?phone=9902141683" target="_blank" rel="noopener" title="WhatsApp" class="fab fa-whatsapp"></a></li>
+
+
+
+<li><a href="//instagram.com/kiranchavala" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//kiranchavala-blog.tumblr.com" target="_blank" rel="noopener" title="Tumblr" class="fab fa-tumblr"></a></li>
+<li><a href="//twitter.com/kiranchavala" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//strava.com/athletes/3822003" target="_blank" rel="noopener" title="Strava" class="fab fa-strava"></a></li>
+<li><a href="skype:kiranchavala?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+<li><a href="//pinterest.com/kiranchavala" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/neoiron" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+
+<li><a href="//keybase.io/kiranchavala" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//mastodon.social/@kiranchavala" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:kiranchavala@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2023 Kiran Chavala Tech Notes
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.111.3' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.beccc0b0a264507fba1f44b76ea0acc58d95d2b17bfde9661b4f4806a69b6b99.js" integrity="sha256-vszAsKJkUH&#43;6H0S3bqCsxY2V0rF7/elmG09IBqaba5k="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-175465249-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
