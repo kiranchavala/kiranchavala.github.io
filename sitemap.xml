@@ -3,21 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kiranchavala.in/blog/</loc>
-    <lastmod>2023-05-01T13:39:22+05:30</lastmod>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/</loc>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/cloudstack/</loc>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/grafana/</loc>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/</loc>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/blog/monitoring-cloudstsack-with-prometheus-and-grafana/</loc>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
+  </url><url>
+    <loc>https://kiranchavala.in/categories/prometheus/</loc>
+    <lastmod>2023-05-11T15:28:40+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/blog/building-cloudstack-on-ubuntu-22.04/</loc>
     <lastmod>2023-05-01T13:39:22+05:30</lastmod>
   </url><url>
-    <loc>https://kiranchavala.in/categories/</loc>
-    <lastmod>2023-05-01T13:39:22+05:30</lastmod>
-  </url><url>
     <loc>https://kiranchavala.in/tags/cloudstack/</loc>
-    <lastmod>2023-05-01T13:39:22+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/categories/cloudstack/</loc>
-    <lastmod>2023-05-01T13:39:22+05:30</lastmod>
-  </url><url>
-    <loc>https://kiranchavala.in/</loc>
     <lastmod>2023-05-01T13:39:22+05:30</lastmod>
   </url><url>
     <loc>https://kiranchavala.in/tags/</loc>
