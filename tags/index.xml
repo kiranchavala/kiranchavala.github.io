@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Kiran Chavala</title>
-    <link>https://kiranchavala2.in/tags/</link>
+    <link>https://kiranchavala.github.io/tags/</link>
     <description>Recent content in Tags on Kiran Chavala</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Aug 2025 16:36:56 +0530</lastBuildDate>
-    <atom:link href="https://kiranchavala2.in/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kiranchavala.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AZURE</title>
-      <link>https://kiranchavala2.in/tags/azure/</link>
+      <link>https://kiranchavala.github.io/tags/azure/</link>
       <pubDate>Mon, 18 Aug 2025 16:36:56 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/azure/</guid>
+      <guid>https://kiranchavala.github.io/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloudstack</title>
-      <link>https://kiranchavala2.in/tags/cloudstack/</link>
+      <link>https://kiranchavala.github.io/tags/cloudstack/</link>
       <pubDate>Mon, 18 Aug 2025 16:36:56 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/cloudstack/</guid>
+      <guid>https://kiranchavala.github.io/tags/cloudstack/</guid>
       <description></description>
     </item>
     <item>
       <title>SAML</title>
-      <link>https://kiranchavala2.in/tags/saml/</link>
+      <link>https://kiranchavala.github.io/tags/saml/</link>
       <pubDate>Mon, 18 Aug 2025 16:36:56 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/saml/</guid>
+      <guid>https://kiranchavala.github.io/tags/saml/</guid>
       <description></description>
     </item>
     <item>
       <title>Ubuntu</title>
-      <link>https://kiranchavala2.in/tags/ubuntu/</link>
+      <link>https://kiranchavala.github.io/tags/ubuntu/</link>
       <pubDate>Mon, 01 May 2023 13:39:22 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/ubuntu/</guid>
+      <guid>https://kiranchavala.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     <item>
       <title>Google Cloud</title>
-      <link>https://kiranchavala2.in/tags/google-cloud/</link>
+      <link>https://kiranchavala.github.io/tags/google-cloud/</link>
       <pubDate>Wed, 01 Dec 2021 15:05:48 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/google-cloud/</guid>
+      <guid>https://kiranchavala.github.io/tags/google-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Packer</title>
-      <link>https://kiranchavala2.in/tags/packer/</link>
+      <link>https://kiranchavala.github.io/tags/packer/</link>
       <pubDate>Wed, 01 Dec 2021 15:05:48 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/packer/</guid>
+      <guid>https://kiranchavala.github.io/tags/packer/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>https://kiranchavala2.in/tags/aws/</link>
+      <link>https://kiranchavala.github.io/tags/aws/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/aws/</guid>
+      <guid>https://kiranchavala.github.io/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>GCP</title>
-      <link>https://kiranchavala2.in/tags/gcp/</link>
+      <link>https://kiranchavala.github.io/tags/gcp/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/gcp/</guid>
+      <guid>https://kiranchavala.github.io/tags/gcp/</guid>
       <description></description>
     </item>
     <item>
       <title>OpenStack</title>
-      <link>https://kiranchavala2.in/tags/openstack/</link>
+      <link>https://kiranchavala.github.io/tags/openstack/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/openstack/</guid>
+      <guid>https://kiranchavala.github.io/tags/openstack/</guid>
       <description></description>
     </item>
     <item>
       <title>Terraform</title>
-      <link>https://kiranchavala2.in/tags/terraform/</link>
+      <link>https://kiranchavala.github.io/tags/terraform/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/terraform/</guid>
+      <guid>https://kiranchavala.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     <item>
       <title>Terraformer</title>
-      <link>https://kiranchavala2.in/tags/terraformer/</link>
+      <link>https://kiranchavala.github.io/tags/terraformer/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/terraformer/</guid>
+      <guid>https://kiranchavala.github.io/tags/terraformer/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://kiranchavala2.in/tags/docker/</link>
+      <link>https://kiranchavala.github.io/tags/docker/</link>
       <pubDate>Sat, 18 Sep 2021 18:11:27 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/docker/</guid>
+      <guid>https://kiranchavala.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>https://kiranchavala2.in/tags/kubernetes/</link>
+      <link>https://kiranchavala.github.io/tags/kubernetes/</link>
       <pubDate>Sat, 18 Sep 2021 18:11:27 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/kubernetes/</guid>
+      <guid>https://kiranchavala.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Os</title>
-      <link>https://kiranchavala2.in/tags/os/</link>
+      <link>https://kiranchavala.github.io/tags/os/</link>
       <pubDate>Sat, 10 Jul 2021 10:33:47 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/os/</guid>
+      <guid>https://kiranchavala.github.io/tags/os/</guid>
       <description></description>
     </item>
     <item>
       <title>Logstash</title>
-      <link>https://kiranchavala2.in/tags/logstash/</link>
+      <link>https://kiranchavala.github.io/tags/logstash/</link>
       <pubDate>Sun, 13 Jun 2021 13:35:59 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/logstash/</guid>
+      <guid>https://kiranchavala.github.io/tags/logstash/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberrypi</title>
-      <link>https://kiranchavala2.in/tags/raspberrypi/</link>
+      <link>https://kiranchavala.github.io/tags/raspberrypi/</link>
       <pubDate>Thu, 03 Dec 2020 13:22:32 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/raspberrypi/</guid>
+      <guid>https://kiranchavala.github.io/tags/raspberrypi/</guid>
       <description></description>
     </item>
     <item>
       <title>SW</title>
-      <link>https://kiranchavala2.in/tags/sw/</link>
+      <link>https://kiranchavala.github.io/tags/sw/</link>
       <pubDate>Thu, 15 Oct 2020 13:06:51 +0530</pubDate>
-      <guid>https://kiranchavala2.in/tags/sw/</guid>
+      <guid>https://kiranchavala.github.io/tags/sw/</guid>
       <description></description>
     </item>
   </channel>

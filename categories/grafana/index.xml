@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Grafana on Kiran Chavala</title>
-    <link>https://kiranchavala2.in/categories/grafana/</link>
+    <link>https://kiranchavala.github.io/categories/grafana/</link>
     <description>Recent content in Grafana on Kiran Chavala</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 May 2023 15:28:40 +0530</lastBuildDate>
-    <atom:link href="https://kiranchavala2.in/categories/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kiranchavala.github.io/categories/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Monitoring Apache Cloudstack with Prometheus and Grafana</title>
-      <link>https://kiranchavala2.in/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/</link>
+      <link>https://kiranchavala.github.io/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/</link>
       <pubDate>Thu, 11 May 2023 15:28:40 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/</guid>
+      <guid>https://kiranchavala.github.io/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/</guid>
       <description>&lt;p&gt;Monitoring Cloudstack with Prometheus and Grafana&lt;/p&gt;
 &lt;figure&gt;
-    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/Prometheus.png&#34;/&gt; 
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/Prometheus.png&#34;/&gt; 
 &lt;/figure&gt;
 
 &lt;p&gt;Cloudstack supports prometheus integration and it exports various metrics for the prometheus server to Scrape&lt;/p&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kubernetes on Kiran Chavala</title>
-    <link>https://kiranchavala2.in/tags/kubernetes/</link>
+    <link>https://kiranchavala.github.io/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Kiran Chavala</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Sep 2021 18:11:27 +0530</lastBuildDate>
-    <atom:link href="https://kiranchavala2.in/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kiranchavala.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kind</title>
-      <link>https://kiranchavala2.in/blog/kind/</link>
+      <link>https://kiranchavala.github.io/blog/kind/</link>
       <pubDate>Sat, 18 Sep 2021 18:11:27 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/kind/</guid>
+      <guid>https://kiranchavala.github.io/blog/kind/</guid>
       <description>&lt;p&gt;In order to quicly bring up a new kubernetes cluster in your local laptop, then you can use kind.&lt;/p&gt;
 &lt;p&gt;Kind ( Kubernetes in Docker)&lt;/p&gt;
 &lt;p&gt;Kind basically creates the nodes as a containers and create a kubernetes cluster&lt;/p&gt;
@@ -43,9 +43,9 @@ ccd3b21c436ec       8c783dd252088       8 days ago          Running             
     </item>
     <item>
       <title>Using crictl and nerdctl</title>
-      <link>https://kiranchavala2.in/blog/using-crictl-and-nerdctl/</link>
+      <link>https://kiranchavala.github.io/blog/using-crictl-and-nerdctl/</link>
       <pubDate>Mon, 23 Aug 2021 13:27:25 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/using-crictl-and-nerdctl/</guid>
+      <guid>https://kiranchavala.github.io/blog/using-crictl-and-nerdctl/</guid>
       <description>&lt;p&gt;With the removal docker as the default container runtime in kubernetes.&lt;/p&gt;
 &lt;p&gt;When a situation arises where you need to debug the container application container&lt;/p&gt;
 &lt;p&gt;You can use Crictl and Nerdctl and debug the issue quickly&lt;/p&gt;
@@ -92,9 +92,9 @@ debug: false
     </item>
     <item>
       <title>K9scli</title>
-      <link>https://kiranchavala2.in/blog/k9scli/</link>
+      <link>https://kiranchavala.github.io/blog/k9scli/</link>
       <pubDate>Wed, 26 Aug 2020 15:04:37 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/k9scli/</guid>
+      <guid>https://kiranchavala.github.io/blog/k9scli/</guid>
       <description>&lt;p&gt;k9s is an excellent cli tool to interact with the kubernetes clusters&lt;/p&gt;
 &lt;p&gt;brew install derailed/k9s/k9s&lt;/p&gt;
 &lt;p&gt;Ref:
@@ -103,9 +103,9 @@ debug: false
     </item>
     <item>
       <title>Installing k3s</title>
-      <link>https://kiranchavala2.in/blog/installing-k3s/</link>
+      <link>https://kiranchavala.github.io/blog/installing-k3s/</link>
       <pubDate>Wed, 26 Aug 2020 13:52:35 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/installing-k3s/</guid>
+      <guid>https://kiranchavala.github.io/blog/installing-k3s/</guid>
       <description>&lt;p&gt;K3s is light weight kubernetes distribution  from Rancher&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744&#34;&gt;https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744&lt;/a&gt;&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744.js&#34;&gt;&lt;/script&gt;
@@ -115,9 +115,9 @@ debug: false
     </item>
     <item>
       <title>Mergingkubeconfig</title>
-      <link>https://kiranchavala2.in/blog/merging-kube-config-files/</link>
+      <link>https://kiranchavala.github.io/blog/merging-kube-config-files/</link>
       <pubDate>Tue, 25 Aug 2020 21:20:00 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/merging-kube-config-files/</guid>
+      <guid>https://kiranchavala.github.io/blog/merging-kube-config-files/</guid>
       <description>&lt;p&gt;Merging kubeconfig files&lt;/p&gt;
 &lt;p&gt;When you have multiple kubernetes clusters, manually entering to the kubectl config is time consuming and error prone&lt;/p&gt;
 &lt;p&gt;Add the two config files to the env var
@@ -132,9 +132,9 @@ export KUBECONFIG=&lt;del&gt;/.kube/config:&lt;/del&gt;/Desktop/configFile2.yaml
     </item>
     <item>
       <title>Installing Rancher</title>
-      <link>https://kiranchavala2.in/blog/installing-rancher/</link>
+      <link>https://kiranchavala.github.io/blog/installing-rancher/</link>
       <pubDate>Tue, 25 Aug 2020 16:20:28 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/installing-rancher/</guid>
+      <guid>https://kiranchavala.github.io/blog/installing-rancher/</guid>
       <description>&lt;p&gt;Rancher is a tool to manage your kubernetes cluster&lt;/p&gt;
 &lt;p&gt;The installation steps are here&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc&#34;&gt;https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc&lt;/a&gt;&lt;/p&gt;
@@ -142,9 +142,9 @@ export KUBECONFIG=&lt;del&gt;/.kube/config:&lt;/del&gt;/Desktop/configFile2.yaml
     </item>
     <item>
       <title>Installing kubernetes via kubeadm</title>
-      <link>https://kiranchavala2.in/blog/installing-kubernetes-via-kubeadm/</link>
+      <link>https://kiranchavala.github.io/blog/installing-kubernetes-via-kubeadm/</link>
       <pubDate>Wed, 19 Aug 2020 17:10:09 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/installing-kubernetes-via-kubeadm/</guid>
+      <guid>https://kiranchavala.github.io/blog/installing-kubernetes-via-kubeadm/</guid>
       <description>&lt;p&gt;The steps are here&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051&#34;&gt;https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051&lt;/a&gt;&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051.js&#34;&gt;&lt;/script&gt;</description>

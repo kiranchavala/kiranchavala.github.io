@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SW on Kiran Chavala</title>
-    <link>https://kiranchavala2.in/tags/sw/</link>
+    <link>https://kiranchavala.github.io/tags/sw/</link>
     <description>Recent content in SW on Kiran Chavala</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Oct 2020 13:06:51 +0530</lastBuildDate>
-    <atom:link href="https://kiranchavala2.in/tags/sw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kiranchavala.github.io/tags/sw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Downloading songs from Spotify</title>
-      <link>https://kiranchavala2.in/blog/downloading-songs-from-spotify/</link>
+      <link>https://kiranchavala.github.io/blog/downloading-songs-from-spotify/</link>
       <pubDate>Thu, 15 Oct 2020 13:06:51 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/downloading-songs-from-spotify/</guid>
+      <guid>https://kiranchavala.github.io/blog/downloading-songs-from-spotify/</guid>
       <description>&lt;p&gt;To download the songs from spotify&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4&#34;&gt;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4&lt;/a&gt;&lt;/p&gt;
 &lt;script src=&#34;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4.js&#34;&gt;&lt;/script&gt;
@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>Using Hugo</title>
-      <link>https://kiranchavala2.in/blog/using-hugo/</link>
+      <link>https://kiranchavala.github.io/blog/using-hugo/</link>
       <pubDate>Tue, 25 Aug 2020 16:26:27 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/using-hugo/</guid>
+      <guid>https://kiranchavala.github.io/blog/using-hugo/</guid>
       <description>&lt;p&gt;Hugo Requires Go&lt;/p&gt;
 &lt;p&gt;brew install hugo&lt;/p&gt;
 &lt;p&gt;create a folder for your website files&lt;/p&gt;
@@ -45,9 +45,9 @@ git submodule add &lt;a href=&#34;https://github.com/pacollins/hugo-future-imper
     </item>
     <item>
       <title>Using Jekyll</title>
-      <link>https://kiranchavala2.in/blog/using-jekyll/</link>
+      <link>https://kiranchavala.github.io/blog/using-jekyll/</link>
       <pubDate>Fri, 14 Aug 2020 12:43:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/using-jekyll/</guid>
+      <guid>https://kiranchavala.github.io/blog/using-jekyll/</guid>
       <description>&lt;p&gt;Jekyll is popular static site generator&lt;/p&gt;
 &lt;p&gt;The steps are here&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d&#34;&gt;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d&lt;/a&gt;&lt;/p&gt;

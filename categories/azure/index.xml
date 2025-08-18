@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AZURE on Kiran Chavala</title>
-    <link>https://kiranchavala2.in/categories/azure/</link>
+    <link>https://kiranchavala.github.io/categories/azure/</link>
     <description>Recent content in AZURE on Kiran Chavala</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Aug 2025 16:36:56 +0530</lastBuildDate>
-    <atom:link href="https://kiranchavala2.in/categories/azure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kiranchavala.github.io/categories/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloudstack integration with AzureAD</title>
-      <link>https://kiranchavala2.in/blog/cloudstack-integration-with-azuread/</link>
+      <link>https://kiranchavala.github.io/blog/cloudstack-integration-with-azuread/</link>
       <pubDate>Mon, 18 Aug 2025 16:36:56 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/cloudstack-integration-with-azuread/</guid>
+      <guid>https://kiranchavala.github.io/blog/cloudstack-integration-with-azuread/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;Navigate to &lt;strong&gt;Azure portal &amp;gt; Services &amp;gt; Azure Entra ID&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image1.png&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Click on &lt;strong&gt;Enterprise Applications &amp;gt; Create a New Application&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image2.png&#34;&gt;&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image2.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image3.png&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;Click on &lt;strong&gt;Create your own Application&lt;/strong&gt; and provide a name.&lt;br&gt;
 Select &lt;em&gt;Integrate any other application you don&amp;rsquo;t find in the gallery (Non-gallery)&lt;/em&gt; &amp;gt; &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image4.png&#34;&gt;&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image5.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image4.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image5.png&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;Once in the Application, click on &lt;strong&gt;Set up Single Sign-on&lt;/strong&gt; and choose &lt;strong&gt;SAML&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image6.png&#34;&gt;&lt;br&gt;
-&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image7.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image6.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image7.png&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;Make sure SSL is enabled on the Cloudstack management server.&lt;br&gt;
 Login to Cloudstack UI &amp;gt; &lt;strong&gt;Global settings &amp;gt; Access &amp;gt; Saml&lt;/strong&gt; and set the following:&lt;/li&gt;
@@ -53,13 +53,13 @@ the SP Metadata for Cloudstack&lt;br&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;7&#34;&gt;
 &lt;li&gt;Upload the generated metadata XML into Azure Entra&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img alt=&#34;Upload Metadata&#34; loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image8.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Upload Metadata&#34; loading=&#34;lazy&#34; src=&#34;https://kiranchavala.github.io/img/image8.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Import Existing Resources into Terrafrorm</title>
-      <link>https://kiranchavala2.in/blog/import-existing-resources-into-terrafrorm/</link>
+      <link>https://kiranchavala.github.io/blog/import-existing-resources-into-terrafrorm/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      <guid>https://kiranchavala2.in/blog/import-existing-resources-into-terrafrorm/</guid>
+      <guid>https://kiranchavala.github.io/blog/import-existing-resources-into-terrafrorm/</guid>
       <description>&lt;p&gt;There could be scenarios where you want to import the already existing resources from cloud providers into terraform.&lt;/p&gt;
 &lt;p&gt;Terraform has an import modude which does this job and using the module is a tedious process&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.terraform.io/docs/cli/import/index.html&#34;&gt;https://www.terraform.io/docs/cli/import/index.html&lt;/a&gt;&lt;/p&gt;
