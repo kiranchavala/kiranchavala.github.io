@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Google cloud on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/categories/google-cloud/</link>
-    <description>Recent content in Google cloud on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Dec 2021 15:05:48 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/google-cloud/index.xml" rel="self" type="application/rss+xml" />
+    <title>Google Cloud on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/categories/google-cloud/</link>
+    <description>Recent content in Google Cloud on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2021 15:05:48 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/categories/google-cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Packer to deploy a image on Google Cloud</title>
-      <link>https://kiranchavala.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</link>
+      <link>https://kiranchavala2.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</link>
       <pubDate>Wed, 01 Dec 2021 15:05:48 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</guid>
-      <description>Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &amp;ldquo;golden images&amp;rdquo; that teams across an organization can use in cloud infrastructure.
-There 2 ways to write the packer code to build the image
-Using JSON formatted code Using HCL2 formatted code In order to interact with Google cloud we have to create a service account in GCP</description>
+      <guid>https://kiranchavala2.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</guid>
+      <description>&lt;p&gt;Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &amp;ldquo;golden images&amp;rdquo; that teams across an organization can use in cloud infrastructure.&lt;/p&gt;
+&lt;p&gt;There 2 ways to write the packer code to build the image&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; Using JSON formatted code
+ Using HCL2 formatted code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;In order to interact with Google cloud we have to create a service account in GCP&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

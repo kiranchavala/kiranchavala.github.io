@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kiran Chavala</title>
+    <link>https://kiranchavala2.in/</link>
+    <description>Recent content on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 16:36:56 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudstack integration with AzureAD</title>
+      <link>https://kiranchavala2.in/blog/cloudstack-integration-with-azuread/</link>
+      <pubDate>Mon, 18 Aug 2025 16:36:56 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/cloudstack-integration-with-azuread/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;Azure portal &amp;gt; Services &amp;gt; Azure Entra ID&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image1.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Click on &lt;strong&gt;Enterprise Applications &amp;gt; Create a New Application&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image2.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image3.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Click on &lt;strong&gt;Create your own Application&lt;/strong&gt; and provide a name.&lt;br&gt;
+Select &lt;em&gt;Integrate any other application you don&amp;rsquo;t find in the gallery (Non-gallery)&lt;/em&gt; &amp;gt; &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image4.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image5.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Once in the Application, click on &lt;strong&gt;Set up Single Sign-on&lt;/strong&gt; and choose &lt;strong&gt;SAML&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image6.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image7.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Make sure SSL is enabled on the Cloudstack management server.&lt;br&gt;
+Login to Cloudstack UI &amp;gt; &lt;strong&gt;Global settings &amp;gt; Access &amp;gt; Saml&lt;/strong&gt; and set the following:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;saml2.enabled=true
+saml2.redirect.url=http://&amp;lt;mgmtip&amp;gt;:8080/client
+saml2.sp.slo.url=http://&amp;lt;mgmtip&amp;gt;:8080/client
+saml2.sp.sso.url=http://&amp;lt;mgmtip&amp;gt;:8080/client/api?command=samlSso
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Restart the Cloudstack Management service and execute the API to get
+the SP Metadata for Cloudstack&lt;br&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://cloudstack.apache.org/api/apidocs-4.19/apis/getSPMetadata.html&#34;&gt;https://cloudstack.apache.org/api/apidocs-4.19/apis/getSPMetadata.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; curl
+&amp;gt; [http://\&amp;lt;mgmt\&amp;gt;:8080/client/api?command=getSpMetadata](http://10.0.32.234:8080/client/api?command=getSpMetadata) \&amp;gt;
+&amp;gt; metadata.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Upload the generated metadata XML into Azure Entra&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;Upload Metadata&#34; loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image8.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Importaws</title>
+      <link>https://kiranchavala2.in/blog/import-aws/</link>
+      <pubDate>Tue, 08 Oct 2024 14:15:33 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/import-aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring Apache Cloudstack with Prometheus and Grafana</title>
+      <link>https://kiranchavala2.in/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/</link>
+      <pubDate>Thu, 11 May 2023 15:28:40 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/monitoring-apache-cloudstsack-with-prometheus-and-grafana/</guid>
+      <description>&lt;p&gt;Monitoring Cloudstack with Prometheus and Grafana&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/Prometheus.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;Cloudstack supports prometheus integration and it exports various metrics for the prometheus server to Scrape&lt;/p&gt;
+&lt;h2 id=&#34;enable-prometheus-integragration-on-cloudstack-management-server&#34;&gt;Enable prometheus integragration on Cloudstack Management server&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Enable prometheus plugin in Cloudstack Management server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Login to the database or enable the following global setting parameters&lt;/p&gt;
+&lt;p&gt;prometheus.exporter.enable : Enable the prometheus exporter plugin, management server restart needed.
+prometheus.exporter.allowed.ips: List of comma separated prometheus server ips (with no spaces) that should be allowed to access the metrics endpoint.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building Cloudstack on Ubuntu 22.04</title>
+      <link>https://kiranchavala2.in/blog/building-cloudstack-on-ubuntu-22.04/</link>
+      <pubDate>Mon, 01 May 2023 13:39:22 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/building-cloudstack-on-ubuntu-22.04/</guid>
+      <description>&lt;p&gt;Building cloudstack on Ubuntu 22.0.4&lt;/p&gt;
+&lt;p&gt;Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudstack.apache.org/&#34;&gt;https://cloudstack.apache.org/&lt;/a&gt;
+&lt;a href=&#34;http://docs.cloudstack.apache.org/en/latest/&#34;&gt;http://docs.cloudstack.apache.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the following packages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo add-apt-repository universe
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install cpu-checker build-essential zlib1g-dev libffi-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev vim git subversion mercurial patch rsync curl wget sed openssh-client gpg gnupg2 gzip bzip2 zip unzip p7zip-full p7zip-rar python-is-python3 openjdk-11-jdk maven mysql-server mysql-client bzip2 nfs-common uuid uuid-runtime python-setuptools python3-setuptools ipmitool genisoimage nfs-kernel-server quota python3-dev python3-openssl jq
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install git&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install git 
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Install Python and pyenv ( in order to manage multiple python versions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install python
+brew install pyenv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pouplate the .zshrc to&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building Cloudstack on Mac Os</title>
+      <link>https://kiranchavala2.in/blog/building-cloudstack-on-mac-os/</link>
+      <pubDate>Mon, 01 May 2023 11:50:51 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/building-cloudstack-on-mac-os/</guid>
+      <description>&lt;p&gt;Building cloudstack on Mac os&lt;/p&gt;
+&lt;p&gt;Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudstack.apache.org/&#34;&gt;https://cloudstack.apache.org/&lt;/a&gt;
+&lt;a href=&#34;http://docs.cloudstack.apache.org/en/latest/&#34;&gt;http://docs.cloudstack.apache.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Brew ( package manager)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install git&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install git 
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Install Python and pyenv ( in order to manage multiple python versions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install python
+brew install pyenv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pouplate the .zshrc to&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Cloudinit in Cloudstack</title>
+      <link>https://kiranchavala2.in/blog/using-cloud-init-in-cloudstack/</link>
+      <pubDate>Thu, 10 Nov 2022 11:48:50 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/using-cloud-init-in-cloudstack/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Launch any linux vm (Centos, Ubuntu etc) from a iso&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install the cloud init package&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;RHEL: yum install cloud-init&lt;/p&gt;
+&lt;p&gt;Ubuntu : apt-get install cloud-init&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Configure the cloud init by adding the cloudstack datasource package&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;vi /etc/cloud/cloud.cfg.d/99_cloudstack.cfg&lt;/p&gt;
+&lt;p&gt;datasource_list: [ CloudStack, None ]&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Create a template of the disk&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch a vm based on the template created and  pass the userdata parameter&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;deploy virtualmachine serviceofferingid=720d1320-06d7-4918-9f2a-ef5ba7e07bf3  templateid=0d9bf1f4-288d-4510-b2c5-8e980c51c98d zoneid=10a26e0d-2085-4b09-bd0f-c726a6bd9443 networkids=cf8fcdb8-741c-4f98-b856-adc4fd99c157 userdata=I2Nsb3VkLWNvbmZpZwpydW5jbWQ6CiAgLSBta2RpciAvcnVuL2tpcmFuCiAgLSBlY2hvIGtpcmFuIHNheXMgaGkgPj4gL3J1bi9raXJhbi9zYW1wbGUudHh0CiAgLSBbIHNoLCAteGMsICAvcm9vdC9zdXJlZWRnZV9zZXJ2ZXJfdXRpbGl0eV9pbnN0YWxsZXIuc2ggLS10b2tlbiAxNDY2Q0IxNTc3NzdCQjcyIF0=&lt;/p&gt;
+&lt;p&gt;Note: Make sure the userdata is encoded in base64 format if calling from Api , if you are passing the userdata from UI , there is no need to encode it&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Packer to deploy a image on Google Cloud</title>
+      <link>https://kiranchavala2.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</link>
+      <pubDate>Wed, 01 Dec 2021 15:05:48 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/using-packer-to-deploy-a-image-on-google-cloud/</guid>
+      <description>&lt;p&gt;Packer is an open source tool that enables you to create identical machine images for multiple platforms from a single source template. A common use case is creating &amp;ldquo;golden images&amp;rdquo; that teams across an organization can use in cloud infrastructure.&lt;/p&gt;
+&lt;p&gt;There 2 ways to write the packer code to build the image&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; Using JSON formatted code
+ Using HCL2 formatted code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;In order to interact with Google cloud we have to create a service account in GCP&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating Kubernetes Cluster via Vagrant</title>
+      <link>https://kiranchavala2.in/blog/creating-kubernetes-cluster-via-vagrant/</link>
+      <pubDate>Mon, 27 Sep 2021 12:31:52 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/creating-kubernetes-cluster-via-vagrant/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Install virtual box&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;sudo apt install virtualbox&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install vagrant&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;curl -fsSL &lt;a href=&#34;https://apt.releases.hashicorp.com/gpg&#34;&gt;https://apt.releases.hashicorp.com/gpg&lt;/a&gt; | sudo apt-key add -&lt;/p&gt;
+&lt;p&gt;sudo apt-add-repository &amp;ldquo;deb [arch=amd64] &lt;a href=&#34;https://apt.releases.hashicorp.com&#34;&gt;https://apt.releases.hashicorp.com&lt;/a&gt; $(lsb_release -cs) main&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install vagrant&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Git clone this repository&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;git clone &lt;a href=&#34;https://github.com/justmeandopensource/kubernetes&#34;&gt;https://github.com/justmeandopensource/kubernetes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;cd vagrant-provisioning&lt;/p&gt;
+&lt;p&gt;vagrant up&lt;/p&gt;
+&lt;p&gt;This is going to create 1 master node with 2 worker nodes&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Import Existing Resources into Terrafrorm</title>
+      <link>https://kiranchavala2.in/blog/import-existing-resources-into-terrafrorm/</link>
+      <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/import-existing-resources-into-terrafrorm/</guid>
+      <description>&lt;p&gt;There could be scenarios where you want to import the already existing resources from cloud providers into terraform.&lt;/p&gt;
+&lt;p&gt;Terraform has an import modude which does this job and using the module is a tedious process&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.terraform.io/docs/cli/import/index.html&#34;&gt;https://www.terraform.io/docs/cli/import/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is tool called Terraformer which does the job of reverese terraforming&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/GoogleCloudPlatform/terraformer&#34;&gt;https://github.com/GoogleCloudPlatform/terraformer&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;google-cloud&#34;&gt;Google cloud&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba&#34;&gt;https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;aws&#34;&gt;AWS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea&#34;&gt;https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;azure&#34;&gt;Azure&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7&#34;&gt;https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;openstack&#34;&gt;Openstack&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370&#34;&gt;https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cloudstack&#34;&gt;Cloudstack&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48&#34;&gt;https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kind</title>
+      <link>https://kiranchavala2.in/blog/kind/</link>
+      <pubDate>Sat, 18 Sep 2021 18:11:27 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/kind/</guid>
+      <description>&lt;p&gt;In order to quicly bring up a new kubernetes cluster in your local laptop, then you can use kind.&lt;/p&gt;
+&lt;p&gt;Kind ( Kubernetes in Docker)&lt;/p&gt;
+&lt;p&gt;Kind basically creates the nodes as a containers and create a kubernetes cluster&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://kind.sigs.k8s.io/&#34;&gt;https://kind.sigs.k8s.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/kubernetes-sigs/kind&#34;&gt;https://github.com/kubernetes-sigs/kind&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install kind
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;deploying-a-single-node--cluster&#34;&gt;Deploying a Single node  cluster&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kind create cluster 
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker images
+kindest/node                            &amp;lt;none&amp;gt;                                                  d372b674475a   3 months ago    1.1GB
+
+docker ps -a
+3047fe4988f4   kindest/node:v1.21.1   &amp;#34;/usr/local/bin/entr…&amp;#34;   8 days ago       Up 8 days       127.0.0.1:50941-&amp;gt;6443/tcp   kind-control-plane
+
+docker exec -it kind-control-plane sh
+# crictl ps -a
+CONTAINER           IMAGE               CREATED             STATE               NAME                      ATTEMPT             POD ID
+be7d88399e276       1a1f05a2cd7c2       8 days ago          Running             coredns                   0                   bb3eb2d8b0138
+dc91af853f8d4       1a1f05a2cd7c2       8 days ago          Running             coredns                   0                   72e459f147b24
+2bcbac91131f1       2b703ea309660       8 days ago          Running             local-path-provisioner    0                   1b9b5b3329128
+3787410dc6121       f37b7c809e5dc       8 days ago          Running             kindnet-cni               0                   66b72ef1c9758
+af1073c036c7b       4bbef4ca108cd       8 days ago          Running             kube-proxy                0                   e254cfacdfb75
+b29d7fa01b9ea       05b738aa1bc63       8 days ago          Running             etcd                      0                   4109caeae008c
+cb638fbd4988d       18e61c783b417       8 days ago          Running             kube-apiserver            0                   f87bb12d4816e
+181e0b63e3db1       0c6dccae49de8       8 days ago          Running             kube-controller-manager   0                   0d00a01acb283
+ccd3b21c436ec       8c783dd252088       8 days ago          Running             kube-scheduler            0                   72a8570b0c0b2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;kubectl  get cluster-info&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using crictl and nerdctl</title>
+      <link>https://kiranchavala2.in/blog/using-crictl-and-nerdctl/</link>
+      <pubDate>Mon, 23 Aug 2021 13:27:25 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/using-crictl-and-nerdctl/</guid>
+      <description>&lt;p&gt;With the removal docker as the default container runtime in kubernetes.&lt;/p&gt;
+&lt;p&gt;When a situation arises where you need to debug the container application container&lt;/p&gt;
+&lt;p&gt;You can use Crictl and Nerdctl and debug the issue quickly&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Crictl&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install crictl&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;VERSION=&amp;#34;v1.22.0&amp;#34;
+wget https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-$VERSION-linux-amd64.tar.gz
+sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Create a endpoint configuration file (crictl.yaml)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Example&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;To interact with containerd runtime env
+
+cat /etc/crictl.yaml 
+runtime-endpoint: unix:///run/containerd/containerd.sock
+image-endpoint: unix:///run/containerd/containerd.sock
+timeout: 2
+debug: false
+pull-image-on-create: false
+
+To interact with docker runtime
+
+cat /etc/crictl.yaml
+runtime-endpoint: unix:///var/run/dockershim.sock
+image-endpoint: unix:///var/run/dockershim.sock
+timeout: 2
+debug: false
+pull-image-on-create: false
+
+To interact with Crio runtime
+
+cat /etc/crictl.yaml
+runtime-endpoint: unix:///run/crio/crio.sock
+image-endpoint: unix:///run/crio/crio.sock
+timeout: 2
+debug: false
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Execute the crictl commands&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Example:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Accessing xencenter via browser</title>
+      <link>https://kiranchavala2.in/blog/accessing-xencenter-via-browser/</link>
+      <pubDate>Sat, 10 Jul 2021 10:33:47 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/accessing-xencenter-via-browser/</guid>
+      <description>&lt;p&gt;Currently to access and manage xenserver cluster you need a xencenter installed in a windows system.&lt;/p&gt;
+&lt;p&gt;This could be a limitation for the users of linux and mac&lt;/p&gt;
+&lt;p&gt;Meanwhile you can access vmware exsi servers and also manage the clusters of vcenter via http&lt;/p&gt;
+&lt;p&gt;To overcome this limitation you can use the XCP hypervisor&lt;/p&gt;
+&lt;p&gt;XCP is open source hypervisor based on XenServer.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the XCP-ng&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://xcp-ng.org/#easy-to-install&#34;&gt;https://xcp-ng.org/#easy-to-install&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://xcp-ng.org/docs/install.html#iso-installation&#34;&gt;https://xcp-ng.org/docs/install.html#iso-installation&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install the xcp-center for windows systems to access the XCP hypervisors&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/xcp-ng/xenadmin/releases/&#34;&gt;https://github.com/xcp-ng/xenadmin/releases/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Logstash Cloudstack</title>
+      <link>https://kiranchavala2.in/blog/logstash-cloudstack/</link>
+      <pubDate>Sun, 13 Jun 2021 13:35:59 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/logstash-cloudstack/</guid>
+      <description>&lt;p&gt;Using Elastic search is a great tool to analysze logs generated by your application&lt;/p&gt;
+&lt;p&gt;Elastic search is made up of 3 parts&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Elastic search &amp;ndash;&amp;gt; the core search engine&lt;/li&gt;
+&lt;li&gt;Logstah &amp;ndash;&amp;gt; to parse the logs&lt;/li&gt;
+&lt;li&gt;Kibana &amp;ndash;&amp;gt; visualization&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here i have  imported the cloudstack management server logs to the ELK and I can perform various analytics&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Follow the below link to set up your elk infrstructure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Once done make sure your elastic, logstash, and kibana process are able to communicate with each other&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Terraformcloudstack</title>
+      <link>https://kiranchavala2.in/blog/terraform-cloudstack/</link>
+      <pubDate>Mon, 31 May 2021 21:38:24 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/terraform-cloudstack/</guid>
+      <description>&lt;p&gt;Terraform is a tool to deploy resources on cloud&lt;/p&gt;
+&lt;p&gt;It is an infrastructure as code tool&lt;/p&gt;
+&lt;p&gt;Generally the plugins are available at&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://registry.terraform.io/&#34;&gt;https://registry.terraform.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To use the plugins which are archived and not available in the terraform registry&lt;/p&gt;
+&lt;p&gt;Follow the steps  a small tweak is necessary&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Currently the cloudstack plugin is archived&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hashicorp/terraform-provider-cloudstack&#34;&gt;https://github.com/hashicorp/terraform-provider-cloudstack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown&#34;&gt;https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Download the terrform provider for cloudstack based on the os you are running&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/&#34;&gt;https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;On linux and mac&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Move it&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Raspberry pi</title>
+      <link>https://kiranchavala2.in/blog/raspberrypi/</link>
+      <pubDate>Thu, 03 Dec 2020 13:22:32 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/raspberrypi/</guid>
+      <description>&lt;p&gt;After hearing frequent mentions of Raspberry pi use cases, I had decided to buy Raspberry pi 4 model.&lt;/p&gt;
+&lt;p&gt;The site &lt;a href=&#34;https://www.thingbits.in&#34;&gt;https://www.thingbits.in&lt;/a&gt;  was giving best discounts on pi and it&amp;rsquo;s accessories.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/pi.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;The best use case of pi was the implementation of PI-HOLE which blocks all the ads on websites.&lt;/p&gt;
+&lt;p&gt;Here are links i used for the complete installation of pi and implementation of PI-HOLE&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.pi-hole.net/&#34;&gt;https://docs.pi-hole.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed&#34;&gt;https://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://filterlists.com/lists/pl-host-file&#34;&gt;https://filterlists.com/lists/pl-host-file&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Downloading songs from Spotify</title>
+      <link>https://kiranchavala2.in/blog/downloading-songs-from-spotify/</link>
+      <pubDate>Thu, 15 Oct 2020 13:06:51 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/downloading-songs-from-spotify/</guid>
+      <description>&lt;p&gt;To download the songs from spotify&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4&#34;&gt;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;References&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/SathyaBhat/spotify-dl&#34;&gt;https://github.com/SathyaBhat/spotify-dl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/&#34;&gt;https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124&#34;&gt;https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>K9scli</title>
+      <link>https://kiranchavala2.in/blog/k9scli/</link>
+      <pubDate>Wed, 26 Aug 2020 15:04:37 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/k9scli/</guid>
+      <description>&lt;p&gt;k9s is an excellent cli tool to interact with the kubernetes clusters&lt;/p&gt;
+&lt;p&gt;brew install derailed/k9s/k9s&lt;/p&gt;
+&lt;p&gt;Ref:
+&lt;a href=&#34;https://k9scli.io/topics/install/&#34;&gt;https://k9scli.io/topics/install/&lt;/a&gt;
+&lt;a href=&#34;https://k9scli.io/&#34;&gt;https://k9scli.io/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing k3s</title>
+      <link>https://kiranchavala2.in/blog/installing-k3s/</link>
+      <pubDate>Wed, 26 Aug 2020 13:52:35 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/installing-k3s/</guid>
+      <description>&lt;p&gt;K3s is light weight kubernetes distribution  from Rancher&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744&#34;&gt;https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/71835ec52a2c5020a5e439345b57d744.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Ref: &lt;a href=&#34;https://k3s.io/&#34;&gt;https://k3s.io/&lt;/a&gt;
+&lt;a href=&#34;https://github.com/alexellis/k3sup&#34;&gt;https://github.com/alexellis/k3sup&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mergingkubeconfig</title>
+      <link>https://kiranchavala2.in/blog/merging-kube-config-files/</link>
+      <pubDate>Tue, 25 Aug 2020 21:20:00 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/merging-kube-config-files/</guid>
+      <description>&lt;p&gt;Merging kubeconfig files&lt;/p&gt;
+&lt;p&gt;When you have multiple kubernetes clusters, manually entering to the kubectl config is time consuming and error prone&lt;/p&gt;
+&lt;p&gt;Add the two config files to the env var
+export KUBECONFIG=&lt;del&gt;/.kube/config:&lt;/del&gt;/Desktop/configFile2.yaml&lt;/p&gt;
+&lt;p&gt;Review that you have two configurations in one view&lt;/p&gt;
+&lt;p&gt;kubectl config view&lt;/p&gt;
+&lt;p&gt;View the raw config and output to a new file&lt;/p&gt;
+&lt;p&gt;kubectl config view &amp;ndash;raw &amp;gt; test.yaml&lt;/p&gt;
+&lt;p&gt;cp test.yaml .kube/config&lt;/p&gt;
+&lt;p&gt;env&lt;/p&gt;
+&lt;p&gt;you can unset the KUBECONFIG later on&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Enabling zsh history</title>
+      <link>https://kiranchavala2.in/blog/enabling-zsh-history/</link>
+      <pubDate>Tue, 25 Aug 2020 17:15:07 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/enabling-zsh-history/</guid>
+      <description>&lt;p&gt;Add  alias in your .zshrc file&lt;/p&gt;
+&lt;p&gt;alias history=&amp;ldquo;history 0&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;source ~/.zshrc&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Hugo</title>
+      <link>https://kiranchavala2.in/blog/using-hugo/</link>
+      <pubDate>Tue, 25 Aug 2020 16:26:27 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/using-hugo/</guid>
+      <description>&lt;p&gt;Hugo Requires Go&lt;/p&gt;
+&lt;p&gt;brew install hugo&lt;/p&gt;
+&lt;p&gt;create a folder for your website files&lt;/p&gt;
+&lt;p&gt;hugo server up  #It will generate a site locally on port 1313&lt;/p&gt;
+&lt;p&gt;Install a theme and copy exampleSite/config.toml to the root folder&lt;/p&gt;
+&lt;p&gt;mkdir themes     // Creates a &amp;ldquo;themes&amp;rdquo; Folder
+cd themes        // Points to the &amp;ldquo;themes&amp;rdquo; Folder
+git submodule add &lt;a href=&#34;https://github.com/pacollins/hugo-future-imperfect-slim.git&#34;&gt;https://github.com/pacollins/hugo-future-imperfect-slim.git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Youtube references&lt;/p&gt;
+&lt;p&gt;Mike Dane&amp;rsquo;s Playlist&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/qtIqKaDlqXo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Ref&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Rancher</title>
+      <link>https://kiranchavala2.in/blog/installing-rancher/</link>
+      <pubDate>Tue, 25 Aug 2020 16:20:28 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/installing-rancher/</guid>
+      <description>&lt;p&gt;Rancher is a tool to manage your kubernetes cluster&lt;/p&gt;
+&lt;p&gt;The installation steps are here&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc&#34;&gt;https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/893ec350dd55f9fb4747b602208bb4fc.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Installing kubernetes via kubeadm</title>
+      <link>https://kiranchavala2.in/blog/installing-kubernetes-via-kubeadm/</link>
+      <pubDate>Wed, 19 Aug 2020 17:10:09 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/installing-kubernetes-via-kubeadm/</guid>
+      <description>&lt;p&gt;The steps are here&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051&#34;&gt;https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/7e4cda9bff5e141bd7601c870191e051.js&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    <item>
+      <title>Using Jekyll</title>
+      <link>https://kiranchavala2.in/blog/using-jekyll/</link>
+      <pubDate>Fri, 14 Aug 2020 12:43:02 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/using-jekyll/</guid>
+      <description>&lt;p&gt;Jekyll is popular static site generator&lt;/p&gt;
+&lt;p&gt;The steps are here&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d&#34;&gt;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Youtube references&lt;/p&gt;
+&lt;p&gt;Mike Dane&amp;rsquo;s Playlist&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/T1itpPvFWHI?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Bill Raymond&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/EvYs1idcGnM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Using tmux</title>
+      <link>https://kiranchavala2.in/blog/using-tmux/</link>
+      <pubDate>Fri, 14 Aug 2020 12:35:09 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/using-tmux/</guid>
+      <description>&lt;p&gt;If you want to execute the same command across different server&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/tmux/tmux/wiki&#34;&gt;https://github.com/tmux/tmux/wiki&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/tmux.png&#34;/&gt; 
+&lt;/figure&gt;</description>
+    </item>
+    <item>
+      <title>Disable ipv6 in centos 7</title>
+      <link>https://kiranchavala2.in/blog/disable-ipv6-in-centos-7/</link>
+      <pubDate>Thu, 13 Aug 2020 22:55:43 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/disable-ipv6-in-centos-7/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;To verify if IPv6 is enabled or not, execute&lt;/p&gt;
+&lt;p&gt;ifconfig -a | grep inet6&lt;/p&gt;
+&lt;p&gt;inet6 fe80::211:aff:fe6a:9de4  prefixlen 64  scopeid 0x20&lt;/p&gt;
+&lt;p&gt;inet6 ::1  prefixlen 128  scopeid 0x10[host]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Disable Ipv6 in kernel module (requires reboot)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Edit /etc/default/grub&lt;/p&gt;
+&lt;p&gt;add ipv6.disable=1 in line GRUB_CMDLINE_LINUX, e.g&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cat /etc/default/grub
+GRUB_TIMEOUT=5
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT=&amp;quot;console&amp;quot;
+GRUB_CMDLINE_LINUX=&amp;quot;ipv6.disable=1 crashkernel=auto rhgb quiet&amp;quot;
+GRUB_DISABLE_RECOVERY=&amp;quot;true&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Regenerate a GRUB configuration file and overwrite existing one&lt;/p&gt;
+&lt;p&gt;grub2-mkconfig -o /boot/grub2/grub.cfg&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Restart system and verify no line “inet6” in “ip addr show” command output&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://kiranchavala2.in/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kiranchavala2.in/about/</guid>
+      <description>&lt;p&gt;I am a Software Engineer at Shapeblue, working on Cloud Stack Orchestration and various tech related to Cloud Infra, container technology like Docker, Kubernetes&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://kiranchavala2.in/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kiranchavala2.in/contact/</guid>
+      <description>&lt;p&gt;You can reach me&lt;/p&gt;
+&lt;p&gt;Email
+&lt;a href=&#34;mailto:kiranchavala@gmail.com&#34;&gt;kiranchavala@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Twitter
+@kiranchavala&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

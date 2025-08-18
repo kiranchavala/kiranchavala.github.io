@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>sw on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/tags/sw/</link>
-    <description>Recent content in sw on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 15 Oct 2020 13:06:51 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/sw/index.xml" rel="self" type="application/rss+xml" />
+    <title>SW on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/tags/sw/</link>
+    <description>Recent content in SW on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Oct 2020 13:06:51 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/tags/sw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Downloading songs from Spotify</title>
-      <link>https://kiranchavala.in/blog/downloading-songs-from-spotify/</link>
+      <link>https://kiranchavala2.in/blog/downloading-songs-from-spotify/</link>
       <pubDate>Thu, 15 Oct 2020 13:06:51 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/downloading-songs-from-spotify/</guid>
-      <description>To download the songs from spotify
-https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4
-References
-https://github.com/SathyaBhat/spotify-dl
-https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/
-https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124</description>
+      <guid>https://kiranchavala2.in/blog/downloading-songs-from-spotify/</guid>
+      <description>&lt;p&gt;To download the songs from spotify&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4&#34;&gt;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/36afff2694c620421e26dd8c85cd74a4.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;References&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/SathyaBhat/spotify-dl&#34;&gt;https://github.com/SathyaBhat/spotify-dl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/&#34;&gt;https://sathyasays.com/2015/12/29/spotify-dl-download-your-spotify-my-music-songs-as-mp3/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124&#34;&gt;https://medium.com/@sachithmuhandiram/youtube-dl-cheatsheet-bcc0782e7124&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using Hugo</title>
-      <link>https://kiranchavala.in/blog/using-hugo/</link>
+      <link>https://kiranchavala2.in/blog/using-hugo/</link>
       <pubDate>Tue, 25 Aug 2020 16:26:27 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/using-hugo/</guid>
-      <description>Hugo Requires Go
-brew install hugo
-create a folder for your website files
-hugo server up #It will generate a site locally on port 1313
-Install a theme and copy exampleSite/config.toml to the root folder
-mkdir themes // Creates a &amp;ldquo;themes&amp;rdquo; Folder cd themes // Points to the &amp;ldquo;themes&amp;rdquo; Folder git submodule add https://github.com/pacollins/hugo-future-imperfect-slim.git
-Youtube references
-Mike Dane&amp;rsquo;s Playlist
-Ref
-Installation
-https://gohugo.io/getting-started/installing/
-Theme https://github.com/pacollins/hugo-future-imperfect-slim#examplesite</description>
+      <guid>https://kiranchavala2.in/blog/using-hugo/</guid>
+      <description>&lt;p&gt;Hugo Requires Go&lt;/p&gt;
+&lt;p&gt;brew install hugo&lt;/p&gt;
+&lt;p&gt;create a folder for your website files&lt;/p&gt;
+&lt;p&gt;hugo server up  #It will generate a site locally on port 1313&lt;/p&gt;
+&lt;p&gt;Install a theme and copy exampleSite/config.toml to the root folder&lt;/p&gt;
+&lt;p&gt;mkdir themes     // Creates a &amp;ldquo;themes&amp;rdquo; Folder
+cd themes        // Points to the &amp;ldquo;themes&amp;rdquo; Folder
+git submodule add &lt;a href=&#34;https://github.com/pacollins/hugo-future-imperfect-slim.git&#34;&gt;https://github.com/pacollins/hugo-future-imperfect-slim.git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Youtube references&lt;/p&gt;
+&lt;p&gt;Mike Dane&amp;rsquo;s Playlist&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/qtIqKaDlqXo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Ref&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using Jekyll</title>
-      <link>https://kiranchavala.in/blog/using-jekyll/</link>
+      <link>https://kiranchavala2.in/blog/using-jekyll/</link>
       <pubDate>Fri, 14 Aug 2020 12:43:02 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/using-jekyll/</guid>
-      <description>Jekyll is popular static site generator
-The steps are here
-https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d
-Youtube references
-Mike Dane&amp;rsquo;s Playlist
-Bill Raymond</description>
+      <guid>https://kiranchavala2.in/blog/using-jekyll/</guid>
+      <description>&lt;p&gt;Jekyll is popular static site generator&lt;/p&gt;
+&lt;p&gt;The steps are here&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d&#34;&gt;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kiranchavala/152291d148c3694b37d691ca1df1fe8d.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Youtube references&lt;/p&gt;
+&lt;p&gt;Mike Dane&amp;rsquo;s Playlist&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/T1itpPvFWHI?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Bill Raymond&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/EvYs1idcGnM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

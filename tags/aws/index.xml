@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>AWS on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/tags/aws/</link>
-    <description>Recent content in AWS on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 22 Sep 2021 12:14:02 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <title>AWS on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/tags/aws/</link>
+    <description>Recent content in AWS on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Sep 2021 12:14:02 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Import Existing Resources into Terrafrorm</title>
-      <link>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</link>
+      <link>https://kiranchavala2.in/blog/import-existing-resources-into-terrafrorm/</link>
       <pubDate>Wed, 22 Sep 2021 12:14:02 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/import-existing-resources-into-terrafrorm/</guid>
-      <description>There could be scenarios where you want to import the already existing resources from cloud providers into terraform.
-Terraform has an import modude which does this job and using the module is a tedious process
-https://www.terraform.io/docs/cli/import/index.html
-There is tool called Terraformer which does the job of reverese terraforming
-https://github.com/GoogleCloudPlatform/terraformer
-Google cloud https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba
-AWS https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea
-Azure https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7
-Openstack https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370
-Cloudstack https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48</description>
+      <guid>https://kiranchavala2.in/blog/import-existing-resources-into-terrafrorm/</guid>
+      <description>&lt;p&gt;There could be scenarios where you want to import the already existing resources from cloud providers into terraform.&lt;/p&gt;
+&lt;p&gt;Terraform has an import modude which does this job and using the module is a tedious process&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.terraform.io/docs/cli/import/index.html&#34;&gt;https://www.terraform.io/docs/cli/import/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is tool called Terraformer which does the job of reverese terraforming&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/GoogleCloudPlatform/terraformer&#34;&gt;https://github.com/GoogleCloudPlatform/terraformer&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;google-cloud&#34;&gt;Google cloud&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba&#34;&gt;https://gist.github.com/kiranchavala/54a930c8da148cc2b637c053dc1ba8ba&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;aws&#34;&gt;AWS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea&#34;&gt;https://gist.github.com/kiranchavala/c2a01a7a43ea15cb8921a710d6cf22ea&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;azure&#34;&gt;Azure&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7&#34;&gt;https://gist.github.com/kiranchavala/18a1c555c198eb0944cbad3791602dc7&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;openstack&#34;&gt;Openstack&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370&#34;&gt;https://gist.github.com/kiranchavala/c63243b0b76adcdafc7d06d87a304370&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cloudstack&#34;&gt;Cloudstack&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48&#34;&gt;https://gist.github.com/kiranchavala/c1b81f1d629b0567e08e219891d4ed48&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

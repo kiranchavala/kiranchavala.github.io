@@ -1,22 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Ubuntu on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 01 May 2023 13:39:22 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <title>Ubuntu on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2023 13:39:22 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Cloudstack on Ubuntu 22.04</title>
-      <link>https://kiranchavala.in/blog/building-cloudstack-on-ubuntu-22.04/</link>
+      <link>https://kiranchavala2.in/blog/building-cloudstack-on-ubuntu-22.04/</link>
       <pubDate>Mon, 01 May 2023 13:39:22 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/building-cloudstack-on-ubuntu-22.04/</guid>
-      <description>Building cloudstack on Ubuntu 22.0.4
-Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
-https://cloudstack.apache.org/ http://docs.cloudstack.apache.org/en/latest/</description>
+      <guid>https://kiranchavala2.in/blog/building-cloudstack-on-ubuntu-22.04/</guid>
+      <description>&lt;p&gt;Building cloudstack on Ubuntu 22.0.4&lt;/p&gt;
+&lt;p&gt;Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudstack.apache.org/&#34;&gt;https://cloudstack.apache.org/&lt;/a&gt;
+&lt;a href=&#34;http://docs.cloudstack.apache.org/en/latest/&#34;&gt;http://docs.cloudstack.apache.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the following packages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo add-apt-repository universe
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install cpu-checker build-essential zlib1g-dev libffi-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev vim git subversion mercurial patch rsync curl wget sed openssh-client gpg gnupg2 gzip bzip2 zip unzip p7zip-full p7zip-rar python-is-python3 openjdk-11-jdk maven mysql-server mysql-client bzip2 nfs-common uuid uuid-runtime python-setuptools python3-setuptools ipmitool genisoimage nfs-kernel-server quota python3-dev python3-openssl jq
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install git&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install git 
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Install Python and pyenv ( in order to manage multiple python versions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install python
+brew install pyenv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pouplate the .zshrc to&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

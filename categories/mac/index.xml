@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>mac on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/categories/mac/</link>
-    <description>Recent content in mac on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2020 17:15:07 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/categories/mac/index.xml" rel="self" type="application/rss+xml" />
+    <title>MAC on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/categories/mac/</link>
+    <description>Recent content in MAC on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Aug 2020 17:15:07 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/categories/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enabling zsh history</title>
-      <link>https://kiranchavala.in/blog/enabling-zsh-history/</link>
+      <link>https://kiranchavala2.in/blog/enabling-zsh-history/</link>
       <pubDate>Tue, 25 Aug 2020 17:15:07 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/enabling-zsh-history/</guid>
-      <description>Add alias in your .zshrc file
-alias history=&amp;ldquo;history 0&amp;rdquo;
-source ~/.zshrc</description>
+      <guid>https://kiranchavala2.in/blog/enabling-zsh-history/</guid>
+      <description>&lt;p&gt;Add  alias in your .zshrc file&lt;/p&gt;
+&lt;p&gt;alias history=&amp;ldquo;history 0&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;source ~/.zshrc&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using tmux</title>
-      <link>https://kiranchavala.in/blog/using-tmux/</link>
+      <link>https://kiranchavala2.in/blog/using-tmux/</link>
       <pubDate>Fri, 14 Aug 2020 12:35:09 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/using-tmux/</guid>
-      <description>If you want to execute the same command across different server
-https://github.com/tmux/tmux/wiki</description>
+      <guid>https://kiranchavala2.in/blog/using-tmux/</guid>
+      <description>&lt;p&gt;If you want to execute the same command across different server&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/tmux/tmux/wiki&#34;&gt;https://github.com/tmux/tmux/wiki&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/tmux.png&#34;/&gt; 
+&lt;/figure&gt;</description>
     </item>
-    
   </channel>
 </rss>

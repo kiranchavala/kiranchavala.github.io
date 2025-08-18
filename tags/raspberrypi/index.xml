@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Raspberrypi on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/tags/raspberrypi/</link>
-    <description>Recent content in Raspberrypi on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 03 Dec 2020 13:22:32 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    <title>Raspberrypi on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/tags/raspberrypi/</link>
+    <description>Recent content in Raspberrypi on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Dec 2020 13:22:32 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Raspberry pi</title>
-      <link>https://kiranchavala.in/blog/raspberrypi/</link>
+      <link>https://kiranchavala2.in/blog/raspberrypi/</link>
       <pubDate>Thu, 03 Dec 2020 13:22:32 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/raspberrypi/</guid>
-      <description>After hearing frequent mentions of Raspberry pi use cases, I had decided to buy Raspberry pi 4 model.
-The site https://www.thingbits.in was giving best discounts on pi and it&amp;rsquo;s accessories.
-The best use case of pi was the implementation of PI-HOLE which blocks all the ads on websites.
-Here are links i used for the complete installation of pi and implementation of PI-HOLE
-https://docs.pi-hole.net/
-https://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed
-https://filterlists.com/lists/pl-host-file</description>
+      <guid>https://kiranchavala2.in/blog/raspberrypi/</guid>
+      <description>&lt;p&gt;After hearing frequent mentions of Raspberry pi use cases, I had decided to buy Raspberry pi 4 model.&lt;/p&gt;
+&lt;p&gt;The site &lt;a href=&#34;https://www.thingbits.in&#34;&gt;https://www.thingbits.in&lt;/a&gt;  was giving best discounts on pi and it&amp;rsquo;s accessories.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/pi.png&#34;/&gt; 
+&lt;/figure&gt;
+
+&lt;p&gt;The best use case of pi was the implementation of PI-HOLE which blocks all the ads on websites.&lt;/p&gt;
+&lt;p&gt;Here are links i used for the complete installation of pi and implementation of PI-HOLE&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.pi-hole.net/&#34;&gt;https://docs.pi-hole.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed&#34;&gt;https://medium.com/swlh/how-to-set-up-pi-hole-2293246dc8ed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://filterlists.com/lists/pl-host-file&#34;&gt;https://filterlists.com/lists/pl-host-file&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

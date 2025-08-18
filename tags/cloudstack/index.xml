@@ -1,64 +1,157 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Cloudstack on Kiran Chavala Tech Notes</title>
-    <link>https://kiranchavala.in/tags/cloudstack/</link>
-    <description>Recent content in Cloudstack on Kiran Chavala Tech Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 01 May 2023 13:39:22 +0530</lastBuildDate><atom:link href="https://kiranchavala.in/tags/cloudstack/index.xml" rel="self" type="application/rss+xml" />
+    <title>Cloudstack on Kiran Chavala</title>
+    <link>https://kiranchavala2.in/tags/cloudstack/</link>
+    <description>Recent content in Cloudstack on Kiran Chavala</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 16:36:56 +0530</lastBuildDate>
+    <atom:link href="https://kiranchavala2.in/tags/cloudstack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudstack integration with AzureAD</title>
+      <link>https://kiranchavala2.in/blog/cloudstack-integration-with-azuread/</link>
+      <pubDate>Mon, 18 Aug 2025 16:36:56 +0530</pubDate>
+      <guid>https://kiranchavala2.in/blog/cloudstack-integration-with-azuread/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;Navigate to &lt;strong&gt;Azure portal &amp;gt; Services &amp;gt; Azure Entra ID&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image1.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Click on &lt;strong&gt;Enterprise Applications &amp;gt; Create a New Application&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image2.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image3.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Click on &lt;strong&gt;Create your own Application&lt;/strong&gt; and provide a name.&lt;br&gt;
+Select &lt;em&gt;Integrate any other application you don&amp;rsquo;t find in the gallery (Non-gallery)&lt;/em&gt; &amp;gt; &lt;strong&gt;Create&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image4.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image5.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Once in the Application, click on &lt;strong&gt;Set up Single Sign-on&lt;/strong&gt; and choose &lt;strong&gt;SAML&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image6.png&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image7.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Make sure SSL is enabled on the Cloudstack management server.&lt;br&gt;
+Login to Cloudstack UI &amp;gt; &lt;strong&gt;Global settings &amp;gt; Access &amp;gt; Saml&lt;/strong&gt; and set the following:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;saml2.enabled=true
+saml2.redirect.url=http://&amp;lt;mgmtip&amp;gt;:8080/client
+saml2.sp.slo.url=http://&amp;lt;mgmtip&amp;gt;:8080/client
+saml2.sp.sso.url=http://&amp;lt;mgmtip&amp;gt;:8080/client/api?command=samlSso
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Restart the Cloudstack Management service and execute the API to get
+the SP Metadata for Cloudstack&lt;br&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://cloudstack.apache.org/api/apidocs-4.19/apis/getSPMetadata.html&#34;&gt;https://cloudstack.apache.org/api/apidocs-4.19/apis/getSPMetadata.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; curl
+&amp;gt; [http://\&amp;lt;mgmt\&amp;gt;:8080/client/api?command=getSpMetadata](http://10.0.32.234:8080/client/api?command=getSpMetadata) \&amp;gt;
+&amp;gt; metadata.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Upload the generated metadata XML into Azure Entra&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;Upload Metadata&#34; loading=&#34;lazy&#34; src=&#34;https://kiranchavala2.in/img/image8.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building Cloudstack on Ubuntu 22.04</title>
-      <link>https://kiranchavala.in/blog/building-cloudstack-on-ubuntu-22.04/</link>
+      <link>https://kiranchavala2.in/blog/building-cloudstack-on-ubuntu-22.04/</link>
       <pubDate>Mon, 01 May 2023 13:39:22 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/building-cloudstack-on-ubuntu-22.04/</guid>
-      <description>Building cloudstack on Ubuntu 22.0.4
-Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
-https://cloudstack.apache.org/ http://docs.cloudstack.apache.org/en/latest/</description>
+      <guid>https://kiranchavala2.in/blog/building-cloudstack-on-ubuntu-22.04/</guid>
+      <description>&lt;p&gt;Building cloudstack on Ubuntu 22.0.4&lt;/p&gt;
+&lt;p&gt;Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudstack.apache.org/&#34;&gt;https://cloudstack.apache.org/&lt;/a&gt;
+&lt;a href=&#34;http://docs.cloudstack.apache.org/en/latest/&#34;&gt;http://docs.cloudstack.apache.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install the following packages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo add-apt-repository universe
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install cpu-checker build-essential zlib1g-dev libffi-dev libssl-dev libbz2-dev libreadline-dev libsqlite3-dev liblzma-dev vim git subversion mercurial patch rsync curl wget sed openssh-client gpg gnupg2 gzip bzip2 zip unzip p7zip-full p7zip-rar python-is-python3 openjdk-11-jdk maven mysql-server mysql-client bzip2 nfs-common uuid uuid-runtime python-setuptools python3-setuptools ipmitool genisoimage nfs-kernel-server quota python3-dev python3-openssl jq
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install git&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt install git 
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Install Python and pyenv ( in order to manage multiple python versions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install python
+brew install pyenv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pouplate the .zshrc to&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Building Cloudstack on Mac Os</title>
-      <link>https://kiranchavala.in/blog/building-cloudstack-on-mac-os/</link>
+      <link>https://kiranchavala2.in/blog/building-cloudstack-on-mac-os/</link>
       <pubDate>Mon, 01 May 2023 11:50:51 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/building-cloudstack-on-mac-os/</guid>
-      <description>Building cloudstack on Mac os
-Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
-https://cloudstack.apache.org/ http://docs.cloudstack.apache.org/en/latest/</description>
+      <guid>https://kiranchavala2.in/blog/building-cloudstack-on-mac-os/</guid>
+      <description>&lt;p&gt;Building cloudstack on Mac os&lt;/p&gt;
+&lt;p&gt;Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudstack.apache.org/&#34;&gt;https://cloudstack.apache.org/&lt;/a&gt;
+&lt;a href=&#34;http://docs.cloudstack.apache.org/en/latest/&#34;&gt;http://docs.cloudstack.apache.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Brew ( package manager)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Install git&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install git 
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Install Python and pyenv ( in order to manage multiple python versions)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install python
+brew install pyenv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pouplate the .zshrc to&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Logstash Cloudstack</title>
-      <link>https://kiranchavala.in/blog/logstash-cloudstack/</link>
+      <link>https://kiranchavala2.in/blog/logstash-cloudstack/</link>
       <pubDate>Sun, 13 Jun 2021 13:35:59 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/logstash-cloudstack/</guid>
-      <description>Using Elastic search is a great tool to analysze logs generated by your application
-Elastic search is made up of 3 parts
-Elastic search &amp;ndash;&amp;gt; the core search engine Logstah &amp;ndash;&amp;gt; to parse the logs Kibana &amp;ndash;&amp;gt; visualization Here i have imported the cloudstack management server logs to the ELK and I can perform various analytics
-Follow the below link to set up your elk infrstructure https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04
-Once done make sure your elastic, logstash, and kibana process are able to communicate with each other</description>
+      <guid>https://kiranchavala2.in/blog/logstash-cloudstack/</guid>
+      <description>&lt;p&gt;Using Elastic search is a great tool to analysze logs generated by your application&lt;/p&gt;
+&lt;p&gt;Elastic search is made up of 3 parts&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Elastic search &amp;ndash;&amp;gt; the core search engine&lt;/li&gt;
+&lt;li&gt;Logstah &amp;ndash;&amp;gt; to parse the logs&lt;/li&gt;
+&lt;li&gt;Kibana &amp;ndash;&amp;gt; visualization&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here i have  imported the cloudstack management server logs to the ELK and I can perform various analytics&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Follow the below link to set up your elk infrstructure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04&#34;&gt;https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Once done make sure your elastic, logstash, and kibana process are able to communicate with each other&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Terraformcloudstack</title>
-      <link>https://kiranchavala.in/blog/terraform-cloudstack/</link>
+      <link>https://kiranchavala2.in/blog/terraform-cloudstack/</link>
       <pubDate>Mon, 31 May 2021 21:38:24 +0530</pubDate>
-      
-      <guid>https://kiranchavala.in/blog/terraform-cloudstack/</guid>
-      <description>Terraform is a tool to deploy resources on cloud
-It is an infrastructure as code tool
-Generally the plugins are available at
-https://registry.terraform.io/
-To use the plugins which are archived and not available in the terraform registry
-Follow the steps a small tweak is necessary
-Currently the cloudstack plugin is archived https://github.com/hashicorp/terraform-provider-cloudstack
-https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown
-Download the terrform provider for cloudstack based on the os you are running https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/
-On linux and mac Move it</description>
+      <guid>https://kiranchavala2.in/blog/terraform-cloudstack/</guid>
+      <description>&lt;p&gt;Terraform is a tool to deploy resources on cloud&lt;/p&gt;
+&lt;p&gt;It is an infrastructure as code tool&lt;/p&gt;
+&lt;p&gt;Generally the plugins are available at&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://registry.terraform.io/&#34;&gt;https://registry.terraform.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To use the plugins which are archived and not available in the terraform registry&lt;/p&gt;
+&lt;p&gt;Follow the steps  a small tweak is necessary&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Currently the cloudstack plugin is archived&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hashicorp/terraform-provider-cloudstack&#34;&gt;https://github.com/hashicorp/terraform-provider-cloudstack&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown&#34;&gt;https://github.com/hashicorp/terraform-provider-cloudstack/blob/stable-website/website/docs/index.html.markdown&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Download the terrform provider for cloudstack based on the os you are running&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/&#34;&gt;https://releases.hashicorp.com/terraform-provider-cloudstack/0.3.0/&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;On linux and mac&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Move it&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
