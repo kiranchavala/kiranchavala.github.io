@@ -148,21 +148,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Cloudstack integration with Keycloak
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p> layout: post title: “Testing CloudStack Integration with KeyCloak” date: 2025-10-29 categories: [cloudstack, keycloak, integration, testing] Testing CloudStack Integration with KeyCloak Steps to Test Keycloak with CloudStack Set up Docker environment
-On a Linux host, ensure Docker is installed and that there’s connectivity to the CloudStack Management server. Example setup: Linux host IP: 10.0.32.236 CloudStack Management server IP: 10.0.34.45 Run the Keycloak container
-docker pull quay.io/keycloak/keycloak:23.0.6 docker run -d -p 8080:8080 \ -e KEYCLOAK_ADMIN=admin \ -e KEYCLOAK_ADMIN_PASSWORD=password \ -e KC_PROXY=edge \ --restart always \ -v /keycloak:/opt/jboss/keycloak/standalone/data \ --network=host \ quay.io/keycloak/keycloak:23.0.6 start-dev Access the Keycloak UI
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-10-29 10:43:03 +0530 IST'>October 29, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Kiran Chavala</footer>
-  <a class="entry-link" aria-label="post link to Cloudstack integration with Keycloak" href="https://kiranchavala.github.io/blog/cloudstack-integration-with-keycloak/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">Cloudstack integration with AzureAD
     </h2>
   </header>
