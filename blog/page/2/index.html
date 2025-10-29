@@ -163,6 +163,24 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Kind
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In order to quicly bring up a new kubernetes cluster in your local laptop, then you can use kind.
+Kind ( Kubernetes in Docker)
+Kind basically creates the nodes as a containers and create a kubernetes cluster
+https://kind.sigs.k8s.io/
+https://github.com/kubernetes-sigs/kind
+brew install kind Deploying a Single node cluster kind create cluster docker images kindest/node &lt;none&gt; d372b674475a 3 months ago 1.1GB docker ps -a 3047fe4988f4 kindest/node:v1.21.1 &#34;/usr/local/bin/entr…&#34; 8 days ago Up 8 days 127.0.0.1:50941-&gt;6443/tcp kind-control-plane docker exec -it kind-control-plane sh # crictl ps -a CONTAINER IMAGE CREATED STATE NAME ATTEMPT POD ID be7d88399e276 1a1f05a2cd7c2 8 days ago Running coredns 0 bb3eb2d8b0138 dc91af853f8d4 1a1f05a2cd7c2 8 days ago Running coredns 0 72e459f147b24 2bcbac91131f1 2b703ea309660 8 days ago Running local-path-provisioner 0 1b9b5b3329128 3787410dc6121 f37b7c809e5dc 8 days ago Running kindnet-cni 0 66b72ef1c9758 af1073c036c7b 4bbef4ca108cd 8 days ago Running kube-proxy 0 e254cfacdfb75 b29d7fa01b9ea 05b738aa1bc63 8 days ago Running etcd 0 4109caeae008c cb638fbd4988d 18e61c783b417 8 days ago Running kube-apiserver 0 f87bb12d4816e 181e0b63e3db1 0c6dccae49de8 8 days ago Running kube-controller-manager 0 0d00a01acb283 ccd3b21c436ec 8c783dd252088 8 days ago Running kube-scheduler 0 72a8570b0c0b2 kubectl get cluster-info
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-09-18 18:11:27 +0530 IST'>September 18, 2021</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Kiran Chavala</footer>
+  <a class="entry-link" aria-label="post link to Kind" href="https://kiranchavala.github.io/blog/kind/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Using crictl and nerdctl
     </h2>
   </header>
@@ -325,21 +343,6 @@ you can unset the KUBECONFIG later on
   </div>
   <footer class="entry-footer"><span title='2020-08-25 21:20:00 +0530 IST'>August 25, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Kiran Chavala</footer>
   <a class="entry-link" aria-label="post link to Mergingkubeconfig" href="https://kiranchavala.github.io/blog/merging-kube-config-files/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Enabling zsh history
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Add alias in your .zshrc file
-alias history=“history 0”
-source ~/.zshrc
-</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-08-25 17:15:07 +0530 IST'>August 25, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Kiran Chavala</footer>
-  <a class="entry-link" aria-label="post link to Enabling zsh history" href="https://kiranchavala.github.io/blog/enabling-zsh-history/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
